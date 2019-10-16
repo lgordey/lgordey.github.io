@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "export": "npm run build && next export",
+    "deploy": "npm export && touch out/.nojekyll && gh-pages -t -d out"
   },
   "repository": {
     "type": "git",
@@ -28,5 +30,8 @@
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-jss": "^10.0.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.1.1"
   }
 }
