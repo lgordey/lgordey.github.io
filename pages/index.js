@@ -57,8 +57,9 @@ const buttonBase = {
 
 const styles = {
   '@global': {
-    body: {
-      display: 'block'
+    '.rc-collapse-content > .rc-collapse-content-box': {
+      margin: '12px 0 69px!important',
+      lineHeight: '40px'
     }
   },
   app: {
