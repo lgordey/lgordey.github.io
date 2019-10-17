@@ -561,13 +561,13 @@ function App({ classes }) {
         <title>AstanaJS</title>
       </Head>
       <div className={classes.header}>
-        <div className={classes.logo} onClick={() => {window.open('https://www.facebook.com/events/450018115541840/', '_blank')}}>
+        <div className={classes.logo} onClick={() => {window.open('https://www.facebook.com/events/790754704680704/', '_blank')}}>
           <IconAstanaJSLogo />
           <div className={classes.jsLogo}>
             <IconJS />
           </div>
         </div>
-        <div className={classes.astanajs} onClick={() => {window.open('https://www.facebook.com/events/450018115541840/', '_blank')}}>
+        <div className={classes.astanajs} onClick={() => {window.open('https://www.facebook.com/events/790754704680704/', '_blank')}}>
           <div className={classes.astana}>Astana</div>
           <div className={classes.y2019}>2019</div>
           <div className={classes.jsLogo}>
@@ -584,7 +584,7 @@ function App({ classes }) {
         </div>
         <div className={classes.registrationWrapper}>
           <a 
-            href="https://astanajs.timepad.ru/event/978851/"
+            href="https://astanajs.timepad.ru/event/1093307/"
             target="_blank"
             rel="noopener noreferrer"
             className={classes.registration}
@@ -697,7 +697,7 @@ function App({ classes }) {
                 Благодаря нашему партнеру BTS Digital участие в митапе является бесплатным. Просто зарегистрируйтесь и приходите.
               </div>
               <a 
-                href="https://astanajs.timepad.ru/event/978851/"
+                href="https://astanajs.timepad.ru/event/1093307/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={classes.participate}
@@ -711,7 +711,7 @@ function App({ classes }) {
         <div className={classes.footerItem}>
           <a 
             className={classes.footerLink}
-            href="https://www.facebook.com/events/450018115541840/"
+            href="https://www.facebook.com/events/790754704680704/"
             target="_blank"
             rel="noopener noreferrer"
           >
