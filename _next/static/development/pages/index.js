@@ -14083,7 +14083,7 @@ var styles = Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_I
 });
 
 var speakers = [{
-  name: 'Сергей Попов',
+  name: 'Серёжа Попов',
   desc: 'Санкт-Петербург, Лига А.',
   talkTitle: 'Про Lighthouse',
   talkContent: 'Lighthouse делает за нас всю грязную работу, но мы продолжаем его игнорировать. Проверку на этом инструменте должен проходить каждый сайт и приложение, так как в современном мире фронтенда становится важным не то, на чём написано приложение, а то, как быстро оно грузится и какому объему пользователей оно доступно. Lighthouse проще использовать, чем игнорировать.',
@@ -14421,7 +14421,8 @@ function App(_ref) {
       lineNumber: 614
     },
     __self: this
-  }), "- AstanaJS #1 ", __jsx("a", {
+  }), "- ", __jsx("a", {
+    target: "_blank",
     className: classes.pastLink,
     href: "https://www.facebook.com/events/304756690289447/",
     __source: {
@@ -14429,13 +14430,14 @@ function App(_ref) {
       lineNumber: 615
     },
     __self: this
-  }, "https://www.facebook.com/events/304756690289447/"), " ", __jsx("br", {
+  }, "AstanaJS #1"), " ", __jsx("br", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 615
     },
     __self: this
-  }), "- AstanaJS #2 ", __jsx("a", {
+  }), "- ", __jsx("a", {
+    target: "_blank",
     className: classes.pastLink,
     href: "https://www.facebook.com/events/2116889328332193/",
     __source: {
@@ -14443,13 +14445,14 @@ function App(_ref) {
       lineNumber: 616
     },
     __self: this
-  }, "https://www.facebook.com/events/2116889328332193/"), "  ", __jsx("br", {
+  }, "AstanaJS #2 "), "  ", __jsx("br", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 616
     },
     __self: this
-  }), "- AstanaJS #3 ", __jsx("a", {
+  }), "- ", __jsx("a", {
+    target: "_blank",
     className: classes.pastLink,
     href: "https://www.facebook.com/events/450018115541840/",
     __source: {
@@ -14457,7 +14460,7 @@ function App(_ref) {
       lineNumber: 617
     },
     __self: this
-  }, "https://www.facebook.com/events/450018115541840/"), __jsx("div", {
+  }, "AstanaJS #3 "), __jsx("div", {
     className: classes.bottomLink,
     onClick: function onClick() {
       setActiveKey('2');
