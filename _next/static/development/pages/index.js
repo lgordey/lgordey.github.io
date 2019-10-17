@@ -14210,7 +14210,7 @@ function App(_ref) {
   }, __jsx("div", {
     className: classes.logo,
     onClick: function onClick() {
-      window.open('https://www.facebook.com/events/450018115541840/', '_blank');
+      window.open('https://www.facebook.com/events/790754704680704/', '_blank');
     },
     __source: {
       fileName: _jsxFileName,
@@ -14239,7 +14239,7 @@ function App(_ref) {
   }))), __jsx("div", {
     className: classes.astanajs,
     onClick: function onClick() {
-      window.open('https://www.facebook.com/events/450018115541840/', '_blank');
+      window.open('https://www.facebook.com/events/790754704680704/', '_blank');
     },
     __source: {
       fileName: _jsxFileName,
@@ -14311,7 +14311,7 @@ function App(_ref) {
     },
     __self: this
   }, __jsx("a", {
-    href: "https://astanajs.timepad.ru/event/978851/",
+    href: "https://astanajs.timepad.ru/event/1093307/",
     target: "_blank",
     rel: "noopener noreferrer",
     className: classes.registration,
@@ -14768,7 +14768,7 @@ function App(_ref) {
     },
     __self: this
   }, "\u0411\u043B\u0430\u0433\u043E\u0434\u0430\u0440\u044F \u043D\u0430\u0448\u0435\u043C\u0443 \u043F\u0430\u0440\u0442\u043D\u0435\u0440\u0443 BTS Digital \u0443\u0447\u0430\u0441\u0442\u0438\u0435 \u0432 \u043C\u0438\u0442\u0430\u043F\u0435 \u044F\u0432\u043B\u044F\u0435\u0442\u0441\u044F \u0431\u0435\u0441\u043F\u043B\u0430\u0442\u043D\u044B\u043C. \u041F\u0440\u043E\u0441\u0442\u043E \u0437\u0430\u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0438\u0440\u0443\u0439\u0442\u0435\u0441\u044C \u0438 \u043F\u0440\u0438\u0445\u043E\u0434\u0438\u0442\u0435."), __jsx("a", {
-    href: "https://astanajs.timepad.ru/event/978851/",
+    href: "https://astanajs.timepad.ru/event/1093307/",
     target: "_blank",
     rel: "noopener noreferrer",
     className: classes.participate,
@@ -14803,7 +14803,7 @@ function App(_ref) {
     __self: this
   }, __jsx("a", {
     className: classes.footerLink,
-    href: "https://www.facebook.com/events/450018115541840/",
+    href: "https://www.facebook.com/events/790754704680704/",
     target: "_blank",
     rel: "noopener noreferrer",
     __source: {
