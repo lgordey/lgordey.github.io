@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "export": "npm run build && next export",
-    "deploy": "npm export && touch out/.nojekyll && gh-pages -t -d out"
+    "deploy": "npm export && touch out/.nojekyll && gh-pages -b master -t -d out"
   },
   "repository": {
     "type": "git",

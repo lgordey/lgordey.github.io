@@ -313,6 +313,12 @@ const styles = {
       }
     }
   },
+  pastLink: {
+    color: black,
+    '&: hover': {
+      textDecoration: 'none'
+    }
+  },
   participate: {
     extend: buttonBase,
     width: 339,
@@ -572,10 +578,18 @@ function App({ classes }) {
             }}
           >
             <Panel header="Для кого?" {...panelProps}>
-              <b>15 июня</b> митап AstanaJS 2019 приглашает всех, кто пишет на JavaScript. А также всех, кому интересно узнать больше о frontend-разработке — бэкендеров, тестировщиков, дизайнеров, менеджеров, и студентов, которые планируют карьеру в IT.
+              <b>16 ноября</b> митап (или конференция?) <b>AstanaJS</b> приглашает всех, кто пишет на JavaScript. А также всех, кому интересно узнать больше о frontend-разработке — бэкендеров, тестировщиков, дизайнеров, менеджеров, и студентов, которые планируют карьеру в IT.
               <div className={classes.bottomLink} onClick={() => { setActiveKey('1') }}>ясно</div>
             </Panel>
-            <Panel header="Кто спикеры?" {...panelProps}>
+            <Panel header="Первый раз?" {...panelProps}>
+              Нет! Это уже <b>4-ое</b> по счету событие <b>AstanaJS</b>!<br />
+              Как это было:<br />
+              - AstanaJS #1 <a className={classes.pastLink} href="https://www.facebook.com/events/304756690289447/">https://www.facebook.com/events/304756690289447/</a> <br />
+              - AstanaJS #2 <a className={classes.pastLink} href="https://www.facebook.com/events/2116889328332193/">https://www.facebook.com/events/2116889328332193/</a>  <br />
+              - AstanaJS #3 <a className={classes.pastLink} href="https://www.facebook.com/events/450018115541840/">https://www.facebook.com/events/450018115541840/</a>  
+              <div className={classes.bottomLink} onClick={() => { setActiveKey('2') }}>ясно</div>
+            </Panel>
+            <Panel header="Кто в этот раз спикеры?" {...panelProps}>
               <div className={classes.speakers}>
                 {
                   speakers.map(({ img, name, desc }) => {
@@ -595,7 +609,7 @@ function App({ classes }) {
                   })
                 }
               </div>
-              <div className={classes.bottomLink} onClick={() => { setActiveKey('2') }}>понял</div>
+              <div className={classes.bottomLink} onClick={() => { setActiveKey('3') }}>понял</div>
             </Panel>
             <Panel header="Какое расписание?" {...panelProps}>
               <div className={classes.schedule}>
@@ -629,7 +643,7 @@ function App({ classes }) {
                   })
                 }
               </div>
-              <div className={classes.bottomLink} onClick={() => { setActiveKey('3') }}>ок-ок</div>
+              <div className={classes.bottomLink} onClick={() => { setActiveKey('4') }}>ок-ок</div>
             </Panel>
             <Panel header="Где?" {...panelProps}>
               <div className={classes.where}>
@@ -643,13 +657,13 @@ function App({ classes }) {
                   </div>
                 </div>
               </div>
-              <div className={classes.bottomLink} onClick={() => { setActiveKey('4') }}>годится</div>
+              <div className={classes.bottomLink} onClick={() => { setActiveKey('5') }}>годится</div>
             </Panel>
             <Panel header="Когда?" {...panelProps}>
               <div>
-                15 июня 2019 (суббота)
+                16 ноября 2019 (суббота)
               </div>
-              <div className={classes.bottomLink} onClick={() => { setActiveKey('5') }}>ага</div>
+              <div className={classes.bottomLink} onClick={() => { setActiveKey('6') }}>ага</div>
             </Panel>
             <Panel header="Как принять участие?" {...panelProps}>
               <div>
