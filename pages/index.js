@@ -612,9 +612,9 @@ function App({ classes }) {
             <Panel header="Первый раз?" {...panelProps}>
               Нет! Это уже <b>4-ое</b> по счету событие <b>AstanaJS</b>!<br />
               Как это было:<br />
-              - AstanaJS #1 <a className={classes.pastLink} href="https://www.facebook.com/events/304756690289447/">https://www.facebook.com/events/304756690289447/</a> <br />
-              - AstanaJS #2 <a className={classes.pastLink} href="https://www.facebook.com/events/2116889328332193/">https://www.facebook.com/events/2116889328332193/</a>  <br />
-              - AstanaJS #3 <a className={classes.pastLink} href="https://www.facebook.com/events/450018115541840/">https://www.facebook.com/events/450018115541840/</a>  
+              - <a target="_blank" className={classes.pastLink} href="https://www.facebook.com/events/304756690289447/">AstanaJS #1</a> <br />
+              - <a target="_blank" className={classes.pastLink} href="https://www.facebook.com/events/2116889328332193/">AstanaJS #2 </a>  <br />
+              - <a target="_blank" className={classes.pastLink} href="https://www.facebook.com/events/450018115541840/">AstanaJS #3 </a>  
               <div className={classes.bottomLink} onClick={() => { setActiveKey('2') }}>ясно</div>
             </Panel>
             <Panel header="Кто в этот раз спикеры?" {...panelProps}>
