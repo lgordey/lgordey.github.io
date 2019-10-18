@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Head from 'next/head'
 import '../components/index.css';
 import withStyles from 'react-jss'
@@ -549,6 +549,21 @@ const schedule = [
 
 function App({ classes }) {
   const [activeKey, setActiveKey] = useState('0')
+
+  useEffect(() => {
+    if (process.env.NODE_ENV === 'production') {
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+      gtag('config', 'UA-142482372-1', {
+        page_location: window.location.href,
+        page_path: window.location.pathname,
+        page_title: window.document.title,
+      })
+    }
+  }, [])
 
   const panelProps = {
     headerClass: classes.headerPanel,

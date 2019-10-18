@@ -34,6 +34,7 @@ export default class JssDocument extends Document {
       <Html>
         <Head>
           <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142482372-1"></script>
         </Head>
         <body>
           <Main />
