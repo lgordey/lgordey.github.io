@@ -1,5 +1,11 @@
 webpackHotUpdate("static/development/pages/test.js",{
 
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js":
+false,
+
+/***/ "./node_modules/core-js/library/fn/json/stringify.js":
+false,
+
 /***/ "./pages/test.js":
 /*!***********************!*\
   !*** ./pages/test.js ***!
@@ -135,4 +141,4 @@ function Test(_ref) {
 /***/ })
 
 })
-//# sourceMappingURL=test.js.015c6c560fa0f6cccd27.hot-update.js.map
+//# sourceMappingURL=test.js.c3d4ee844c840ea55f99.hot-update.js.map

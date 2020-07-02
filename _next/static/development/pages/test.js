@@ -33,6 +33,17 @@ module.exports = __webpack_require__(/*! core-js/library/fn/is-iterable */ "./no
 
 /***/ }),
 
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/json/stringify */ "./node_modules/core-js/library/fn/json/stringify.js");
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/arrayWithoutHoles.js":
 /*!******************************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/arrayWithoutHoles.js ***!
@@ -250,7 +261,7 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-var o="undefined"!=typeof window&&window.AndroidBridge,e="undefined"!=typeof window&&window.IosBridge,n={invoke:function(n,d){void 0===d&&(d={}),o&&o[n]&&o[n](d),e&&e[n]&&e[n].postMessage(d),console.log("=----------------------="),console.log("invoke method: ",n),console.log("params: ",d)}};/* harmony default export */ __webpack_exports__["default"] = (n);
+var o="undefined"!=typeof window&&window.AndroidBridge,e="undefined"!=typeof window&&window.IosBridge,n={invoke:function(n,d){void 0===d&&(d={}),d.userId="123-345-123",d.testBoolean=!0,o&&o[n]&&o[n](JSON.stringify(d)),e&&e[n]&&e[n].postMessage(d),console.log("=----------------------="),console.log("invoke method: ",n),console.log("params: ",d)}};/* harmony default export */ __webpack_exports__["default"] = (n);
 //# sourceMappingURL=index.module.js.map
 
 
@@ -344,6 +355,22 @@ module.exports = __webpack_require__(/*! ../../modules/_core */ "./node_modules/
 __webpack_require__(/*! ../modules/web.dom.iterable */ "./node_modules/core-js/library/modules/web.dom.iterable.js");
 __webpack_require__(/*! ../modules/es6.string.iterator */ "./node_modules/core-js/library/modules/es6.string.iterator.js");
 module.exports = __webpack_require__(/*! ../modules/core.is-iterable */ "./node_modules/core-js/library/modules/core.is-iterable.js");
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/library/fn/json/stringify.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/core-js/library/fn/json/stringify.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var core = __webpack_require__(/*! ../../modules/_core */ "./node_modules/core-js/library/modules/_core.js");
+var $JSON = core.JSON || (core.JSON = { stringify: JSON.stringify });
+module.exports = function stringify(it) { // eslint-disable-line no-unused-vars
+  return $JSON.stringify.apply($JSON, arguments);
+};
 
 
 /***/ }),
@@ -8842,16 +8869,20 @@ module.exports = function(originalModule) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/toConsumableArray */ "./node_modules/@babel/runtime-corejs2/helpers/esm/toConsumableArray.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_jss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-jss */ "./node_modules/react-jss/dist/react-jss.esm.js");
-/* harmony import */ var _btsd_aitu_bridge__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @btsd/aitu-bridge */ "./node_modules/@btsd/aitu-bridge/dist/index.module.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/json/stringify */ "./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_jss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-jss */ "./node_modules/react-jss/dist/react-jss.esm.js");
+/* harmony import */ var _btsd_aitu_bridge__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @btsd/aitu-bridge */ "./node_modules/@btsd/aitu-bridge/dist/index.module.js");
+
 
 var _jsxFileName = "/Users/gordey/github/lgordey.github.io/pages/test.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 
 
+var eventType = 'aituEvents';
 var styles = {
   testWrapper: {
     width: '100%',
@@ -8863,17 +8894,29 @@ var styles = {
 function Test(_ref) {
   var classes = _ref.classes;
 
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])([]),
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])([]),
       calledMethods = _useState[0],
       setCalledMethods = _useState[1];
 
-  var _useState2 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(''),
+  var _useState2 = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(''),
       methodName = _useState2[0],
       setMethodName = _useState2[1];
 
-  _btsd_aitu_bridge__WEBPACK_IMPORTED_MODULE_3__["default"];
-  Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])([]),
+      receivedData = _useState3[0],
+      setReceivedData = _useState3[1];
+
+  Object(react__WEBPACK_IMPORTED_MODULE_2__["useEffect"])(function () {
     invokeMethod('InitApps');
+    window.addEventListener(eventType, function (event) {
+      var evStr = _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1___default()(event.detail);
+
+      console.log('eventType', eventType);
+      console.log('event', event);
+      setReceivedData(function (prevArray) {
+        return [].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(prevArray), [evStr]);
+      });
+    });
   }, []);
 
   var handleChange = function handleChange(event) {
@@ -8886,7 +8929,7 @@ function Test(_ref) {
   };
 
   var invokeMethod = function invokeMethod(name) {
-    _btsd_aitu_bridge__WEBPACK_IMPORTED_MODULE_3__["default"].invoke(name);
+    _btsd_aitu_bridge__WEBPACK_IMPORTED_MODULE_4__["default"].invoke(name);
     setCalledMethods(function (prevArray) {
       return [].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(prevArray), [name]);
     });
@@ -8897,20 +8940,20 @@ function Test(_ref) {
     className: classes.testWrapper,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 47
     },
     __self: this
   }, __jsx("form", {
     onSubmit: handleSubmit,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 48
     },
     __self: this
   }, __jsx("label", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 49
     },
     __self: this
   }, "Method name:", __jsx("input", {
@@ -8920,7 +8963,7 @@ function Test(_ref) {
     onChange: handleChange,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 51
     },
     __self: this
   })), __jsx("input", {
@@ -8928,16 +8971,26 @@ function Test(_ref) {
     value: "Invoke method",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 53
     },
     __self: this
   })), __jsx("div", {
     style: {
-      marginTop: 20
+      marginTop: 20,
+      display: 'flex'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 55
+    },
+    __self: this
+  }, __jsx("div", {
+    style: {
+      width: '50%'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 56
     },
     __self: this
   }, __jsx("b", {
@@ -8946,7 +8999,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 57
     },
     __self: this
   }, "Invoked methods:"), calledMethods.map(function (method, i) {
@@ -8954,19 +9007,46 @@ function Test(_ref) {
       key: i + method,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 47
+        lineNumber: 59
       },
       __self: this
     }, i + 1 + ') ', method);
-  })));
+  })), __jsx("div", {
+    style: {
+      width: '50%'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 62
+    },
+    __self: this
+  }, __jsx("b", {
+    style: {
+      marginBottom: 10
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 63
+    },
+    __self: this
+  }, "Received data:"), receivedData && receivedData.map(function (data, i) {
+    return __jsx("div", {
+      key: i + data,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 65
+      },
+      __self: this
+    }, i + 1 + '. ', data);
+  }))));
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_jss__WEBPACK_IMPORTED_MODULE_2__["default"])(styles)(Test));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_jss__WEBPACK_IMPORTED_MODULE_3__["default"])(styles)(Test));
 ;
 
 /***/ }),
 
-/***/ 1:
+/***/ 0:
 /*!*************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Ftest&absolutePagePath=%2FUsers%2Fgordey%2Fgithub%2Flgordey.github.io%2Fpages%2Ftest.js ***!
   \*************************************************************************************************************************************/
@@ -8989,5 +9069,5 @@ module.exports = dll_b35e09dc2ca94ac6d9c1;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[0,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=test.js.map
