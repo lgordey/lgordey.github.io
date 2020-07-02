@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import withStyles from 'react-jss';
 import aituBridge from '@btsd/aitu-bridge';
 
+const eventType = 'aituEvents';
+
 const styles = {
   testWrapper: {
     width: '100%',
@@ -12,9 +14,18 @@ const styles = {
 
 function Test({ classes }) {
   const [calledMethods, setCalledMethods] = useState([]);
-  const [methodName, setMethodName] = useState('');aituBridge
+  const [methodName, setMethodName] = useState('');
+  const [receivedData, setReceivedData] = useState([]);
+
   useEffect(() => {
     invokeMethod('InitApps');
+
+    window.addEventListener(eventType, (event) => {
+      const evStr = JSON.stringify(event.detail);
+      console.log('eventType', eventType);
+      console.log('event', event);
+      setReceivedData(prevArray => [...prevArray, evStr])
+    });
   }, []);
 
   const handleChange = (event) => {
@@ -41,11 +52,19 @@ function Test({ classes }) {
         </label>
         <input type="submit" value="Invoke method" />
       </form>
-      <div style={{ marginTop: 20 }}>
-        <b style={{ marginBottom: 10 }}>Invoked methods:</b>
-        {calledMethods.map((method, i) => (
-          <div key={i + method}>{i+1 + ') '}{method}</div>
-        ))}
+      <div style={{ marginTop: 20, display: 'flex' }}>
+        <div style={{ width: '50%' }}>
+          <b style={{ marginBottom: 10 }}>Invoked methods:</b>
+          {calledMethods.map((method, i) => (
+            <div key={i + method}>{i+1 + ') '}{method}</div>
+          ))}
+        </div>
+        <div style={{ width: '50%' }}>
+          <b style={{ marginBottom: 10 }}>Received data:</b>
+          {receivedData && receivedData.map((data, i) => (
+            <div key={i + data}>{i+1 + '. '}{data}</div>
+          ))}
+        </div>
       </div>
     </div>
   )
