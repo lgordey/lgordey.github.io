@@ -28,9 +28,14 @@ function Test({ classes }) {
 
   const handleMethod = async (methodName) => {
     setCalledMethods(prevArray => [...prevArray, methodName])
-    const data = await aituBridge.invoke(methodName);
-    console.log('__Received__data!', data);
-    setReceivedData(prevArray => [...prevArray, data])
+    try {
+      const data = await aituBridge.invoke(methodName);
+      console.log('____Received__data!', JSON.stringify(data));
+      setReceivedData(prevArray => [...prevArray, JSON.stringify(data)])
+    } catch(e) {
+      console.log('ERROR ---- on client');
+      console.log(e);
+    }
   }
 
   return (
@@ -42,15 +47,19 @@ function Test({ classes }) {
       <div style={{ marginTop: 20, display: 'flex' }}>
         <div style={{ width: '50%' }}>
           <b style={{ marginBottom: 10 }}>Invoked methods:</b>
-          {calledMethods.map((method, i) => (
-            <div key={i + method}>{i+1 + ') '}{method}</div>
-          ))}
+          {calledMethods.map((method, i) => {
+            return (
+              <div key={i + method}>{i+1 + ') '}{method}</div>
+            );
+          })}
         </div>
         <div style={{ width: '50%' }}>
           <b style={{ marginBottom: 10 }}>Received data:</b>
-          {receivedData && receivedData.map((data, i) => (
-            <div key={i + data}>{i+1 + '. '}{data}</div>
-          ))}
+          {receivedData && receivedData.map((data, i) => {
+            return (
+              <div key={i + data}>{i+1 + '. '}{data}</div>
+            )
+          })}
         </div>
       </div>
     </div>
