@@ -21,6 +21,7 @@ const styles = {
 function Test({ classes }) {
   const [calledMethods, setCalledMethods] = useState([]);
   const [receivedData, setReceivedData] = useState([]);
+  const [receivedError, setReceivedError] = useState([]);
 
   useEffect(() => {
     handleMethod('InitApps');
@@ -35,6 +36,7 @@ function Test({ classes }) {
     } catch(e) {
       console.log('ERROR ---- on client');
       console.log(e);
+      setReceivedError(prevArray => [...prevArray, JSON.stringify(e)])
     }
   }
 
@@ -45,7 +47,7 @@ function Test({ classes }) {
         <button onClick={() => handleMethod('getPhone')}>getPhone</button>
       </div>
       <div style={{ marginTop: 20, display: 'flex' }}>
-        <div style={{ width: '50%' }}>
+        <div style={{ width: '30%' }}>
           <b style={{ marginBottom: 10 }}>Invoked methods:</b>
           {calledMethods.map((method, i) => {
             return (
@@ -53,11 +55,19 @@ function Test({ classes }) {
             );
           })}
         </div>
-        <div style={{ width: '50%' }}>
+        <div style={{ width: '30%' }}>
           <b style={{ marginBottom: 10 }}>Received data:</b>
           {receivedData && receivedData.map((data, i) => {
             return (
               <div key={i + data}>{i+1 + '. '}{data}</div>
+            )
+          })}
+        </div>
+        <div style={{ width: '30%' }}>
+          <b style={{ marginBottom: 10 }}>Received errors:</b>
+          {receivedError && receivedError.map((error, i) => {
+            return (
+              <div key={i + error}>{i+1 + '. '}{error}</div>
             )
           })}
         </div>
