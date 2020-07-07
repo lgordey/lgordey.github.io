@@ -19,13 +19,12 @@ function Test({ classes }) {
 
   useEffect(() => {
     invokeMethod('InitApps');
-
-    window.addEventListener(eventType, (event) => {
-      const evStr = JSON.stringify(event.detail);
-      console.log('eventType', eventType);
-      console.log('event', event);
-      setReceivedData(prevArray => [...prevArray, evStr])
-    });
+    // window.addEventListener(eventType, (event) => {
+    //   const evStr = JSON.stringify(event.detail);
+    //   console.log('eventType', eventType);
+    //   console.log('event', event);
+    //   setReceivedData(prevArray => [...prevArray, evStr])
+    // });
   }, []);
 
   const handleChange = (event) => {
@@ -70,4 +69,4 @@ function Test({ classes }) {
   )
 }
 
-export default withStyles(styles)(Test);;
+export default withStyles(styles)(Test);
