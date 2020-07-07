@@ -1,5 +1,20 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/test.js"],{
 
+/***/ "../aitu-bridge/dist/index.module.js":
+/*!*******************************************!*\
+  !*** ../aitu-bridge/dist/index.module.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var n="undefined"!=typeof window&&window.AndroidBridge,e="undefined"!=typeof window&&window.IosBridge,o=function(){var o=[];"undefined"!=typeof window&&window.addEventListener("aituEvents",function(n){var e=JSON.stringify(n.detail);console.log("subs_data",e),[].concat(o).map(function(e){return e.call(null,n)})});var i,t,r,d,u=function(n){o.push(n)};return{invoke:(i=u,t={current:0,next:function(){return++this.current}},r={},d={add:function(n,e){var o=null!=e?e:t.next();return r[o]=n,o},resolve:function(n,e,o,i){var t=r[n];t&&(o(i)?t.resolve(e):t.reject(i),r[n]=null)}},i(function(n){if(n.detail&&n.detail.data&&"reqId"in n.detail){var e=n.detail,o=e.reqId;o&&d.resolve(o,e.data,function(n){return!n},e.error)}}),function(o,i){return void 0===i&&(i={}),new Promise(function(t,r){!function(o,i,t){void 0===t&&(t={}),n&&n.invoke&&n.invoke(o,i,JSON.stringify(t)),e&&e.invoke&&e.invoke.postMessage(o,i,t),console.log("=----------------------="),console.log("invoke method: ",i),console.log("params: ",t)}(d.add({resolve:t,reject:r},i.reqId),o,i)})}),sub:u}}();/* harmony default export */ __webpack_exports__["default"] = (o);
+//# sourceMappingURL=index.module.js.map
+
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime-corejs2/core-js/array/from.js":
 /*!*******************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/core-js/array/from.js ***!
@@ -30,6 +45,17 @@ module.exports = __webpack_require__(/*! core-js/library/fn/array/is-array */ ".
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(/*! core-js/library/fn/is-iterable */ "./node_modules/core-js/library/fn/is-iterable.js");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/json/stringify */ "./node_modules/core-js/library/fn/json/stringify.js");
 
 /***/ }),
 
@@ -316,21 +342,6 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 
 /***/ }),
 
-/***/ "./node_modules/@btsd/aitu-bridge/dist/index.module.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/@btsd/aitu-bridge/dist/index.module.js ***!
-  \*************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-var n="undefined"!=typeof window&&window.AndroidBridge,e="undefined"!=typeof window&&window.IosBridge,o=function(){var o=[];"undefined"!=typeof window&&window.addEventListener("aituEvents",function(n){var e=JSON.stringify(n.detail);console.log("subs_data",e),[].concat(o).map(function(e){return e.call(null,n)})});var i,t,r,d,u=function(n){o.push(n)};return{invoke:(i=u,t={current:0,next:function(){return++this.current}},r={},d={add:function(n,e){var o=null!=e?e:t.next();return r[o]=n,o},resolve:function(n,e,o){var i=r[n];i&&(o(e)?i.resolve(e):i.reject(e),r[n]=null)}},i(function(n){if(n.detail&&n.detail.data&&"reqId"in n.detail){var e=n.detail,o=e.reqId;o&&d.resolve(o,e.data,function(e){return!("error"in n.detail)})}}),function(o,i){return void 0===i&&(i={}),new Promise(function(t,r){!function(o,i,t){void 0===t&&(t={}),n&&n.invoke&&n.invoke(o,i,JSON.stringify(t)),e&&e.invoke&&e.invoke.postMessage(o,i,t),console.log("=----------------------="),console.log("invoke method: ",i),console.log("params: ",t)}(d.add({resolve:t,reject:r},i.reqId),o,i)})}),sub:u}}();/* harmony default export */ __webpack_exports__["default"] = (o);
-//# sourceMappingURL=index.module.js.map
-
-
-/***/ }),
-
 /***/ "./node_modules/@emotion/is-prop-valid/dist/is-prop-valid.browser.esm.js":
 /*!*******************************************************************************!*\
   !*** ./node_modules/@emotion/is-prop-valid/dist/is-prop-valid.browser.esm.js ***!
@@ -419,6 +430,22 @@ module.exports = __webpack_require__(/*! ../../modules/_core */ "./node_modules/
 __webpack_require__(/*! ../modules/web.dom.iterable */ "./node_modules/core-js/library/modules/web.dom.iterable.js");
 __webpack_require__(/*! ../modules/es6.string.iterator */ "./node_modules/core-js/library/modules/es6.string.iterator.js");
 module.exports = __webpack_require__(/*! ../modules/core.is-iterable */ "./node_modules/core-js/library/modules/core.is-iterable.js");
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/library/fn/json/stringify.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/core-js/library/fn/json/stringify.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var core = __webpack_require__(/*! ../../modules/_core */ "./node_modules/core-js/library/modules/_core.js");
+var $JSON = core.JSON || (core.JSON = { stringify: JSON.stringify });
+module.exports = function stringify(it) { // eslint-disable-line no-unused-vars
+  return $JSON.stringify.apply($JSON, arguments);
+};
 
 
 /***/ }),
@@ -10442,22 +10469,23 @@ module.exports = function(originalModule) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
 /* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/toConsumableArray */ "./node_modules/@babel/runtime-corejs2/helpers/esm/toConsumableArray.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var react_jss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-jss */ "./node_modules/react-jss/dist/react-jss.esm.js");
-/* harmony import */ var _btsd_aitu_bridge__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @btsd/aitu-bridge */ "./node_modules/@btsd/aitu-bridge/dist/index.module.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/json/stringify */ "./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/toConsumableArray */ "./node_modules/@babel/runtime-corejs2/helpers/esm/toConsumableArray.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react_jss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-jss */ "./node_modules/react-jss/dist/react-jss.esm.js");
+/* harmony import */ var _btsd_aitu_bridge__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @btsd/aitu-bridge */ "../aitu-bridge/dist/index.module.js");
+
 
 
 
 var _jsxFileName = "/Users/gordey/github/lgordey.github.io/pages/test.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement;
+var __jsx = react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement;
 
 
 
-
-var eventType = 'aituEvents';
 var styles = {
   testWrapper: {
     width: '100%',
@@ -10477,22 +10505,26 @@ var styles = {
 function Test(_ref) {
   var classes = _ref.classes;
 
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])([]),
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])([]),
       calledMethods = _useState[0],
       setCalledMethods = _useState[1];
 
-  var _useState2 = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])([]),
+  var _useState2 = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])([]),
       receivedData = _useState2[0],
       setReceivedData = _useState2[1];
 
-  Object(react__WEBPACK_IMPORTED_MODULE_3__["useEffect"])(function () {
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])([]),
+      receivedError = _useState3[0],
+      setReceivedError = _useState3[1];
+
+  Object(react__WEBPACK_IMPORTED_MODULE_4__["useEffect"])(function () {
     handleMethod('InitApps');
   }, []);
 
   var handleMethod =
   /*#__PURE__*/
   function () {
-    var _ref2 = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])(
+    var _ref2 = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])(
     /*#__PURE__*/
     _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(methodName) {
       var data;
@@ -10501,24 +10533,36 @@ function Test(_ref) {
           switch (_context.prev = _context.next) {
             case 0:
               setCalledMethods(function (prevArray) {
-                return [].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__["default"])(prevArray), [methodName]);
+                return [].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__["default"])(prevArray), [methodName]);
               });
-              _context.next = 3;
-              return _btsd_aitu_bridge__WEBPACK_IMPORTED_MODULE_5__["default"].invoke(methodName);
+              _context.prev = 1;
+              _context.next = 4;
+              return _btsd_aitu_bridge__WEBPACK_IMPORTED_MODULE_6__["default"].invoke(methodName);
 
-            case 3:
+            case 4:
               data = _context.sent;
-              console.log('__Received__data!', data);
+              console.log('____Received__data!', _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1___default()(data));
               setReceivedData(function (prevArray) {
-                return [].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__["default"])(prevArray), [data]);
+                return [].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__["default"])(prevArray), [_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1___default()(data)]);
+              });
+              _context.next = 14;
+              break;
+
+            case 9:
+              _context.prev = 9;
+              _context.t0 = _context["catch"](1);
+              console.log('ERROR ---- on client');
+              console.log(_context.t0);
+              setReceivedError(function (prevArray) {
+                return [].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__["default"])(prevArray), [_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1___default()(_context.t0)]);
               });
 
-            case 6:
+            case 14:
             case "end":
               return _context.stop();
           }
         }
-      }, _callee);
+      }, _callee, null, [[1, 9]]);
     }));
 
     return function handleMethod(_x) {
@@ -10530,14 +10574,14 @@ function Test(_ref) {
     className: classes.testWrapper,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 44
     },
     __self: this
   }, __jsx("div", {
     className: classes.btnWrapper,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 45
     },
     __self: this
   }, __jsx("button", {
@@ -10546,7 +10590,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 46
     },
     __self: this
   }, "getMe"), __jsx("button", {
@@ -10555,7 +10599,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 47
     },
     __self: this
   }, "getPhone")), __jsx("div", {
@@ -10565,16 +10609,16 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 49
     },
     __self: this
   }, __jsx("div", {
     style: {
-      width: '50%'
+      width: '30%'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 50
     },
     __self: this
   }, __jsx("b", {
@@ -10583,7 +10627,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 51
     },
     __self: this
   }, "Invoked methods:"), calledMethods.map(function (method, i) {
@@ -10591,17 +10635,17 @@ function Test(_ref) {
       key: i + method,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 49
+        lineNumber: 54
       },
       __self: this
     }, i + 1 + ') ', method);
   })), __jsx("div", {
     style: {
-      width: '50%'
+      width: '30%'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 58
     },
     __self: this
   }, __jsx("b", {
@@ -10610,7 +10654,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 59
     },
     __self: this
   }, "Received data:"), receivedData && receivedData.map(function (data, i) {
@@ -10618,14 +10662,41 @@ function Test(_ref) {
       key: i + data,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 55
+        lineNumber: 62
       },
       __self: this
     }, i + 1 + '. ', data);
+  })), __jsx("div", {
+    style: {
+      width: '30%'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 66
+    },
+    __self: this
+  }, __jsx("b", {
+    style: {
+      marginBottom: 10
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 67
+    },
+    __self: this
+  }, "Received errors:"), receivedError && receivedError.map(function (error, i) {
+    return __jsx("div", {
+      key: i + error,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 70
+      },
+      __self: this
+    }, i + 1 + '. ', error);
   }))));
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_jss__WEBPACK_IMPORTED_MODULE_4__["default"])(styles)(Test));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_jss__WEBPACK_IMPORTED_MODULE_5__["default"])(styles)(Test));
 
 /***/ }),
 
