@@ -336,7 +336,7 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-var n="undefined"!=typeof window&&window.AndroidBridge,e="undefined"!=typeof window&&window.IosBridge,o=function(){var o=[];"undefined"!=typeof window&&window.addEventListener("aituEvents",function(n){var e=JSON.stringify(n.detail);console.log("subs_data",e),[].concat(o).map(function(e){return e.call(null,n)})});var i,t,r,d,u=function(n){o.push(n)};return{invoke:(i=u,t={current:0,next:function(){return++this.current}},r={},d={add:function(n,e){var o=null!=e?e:t.next();return r[o]=n,o},resolve:function(n,e,o,i){var t=r[n];t&&(o(i)?t.resolve(e):t.reject(i),r[n]=null)}},i(function(n){if(n.detail&&n.detail.data&&"reqId"in n.detail){var e=n.detail,o=e.reqId;o&&d.resolve(o,e.data,function(n){return!n},e.error)}}),function(o,i){return void 0===i&&(i={}),new Promise(function(t,r){!function(o,i,t){void 0===t&&(t={}),n&&n.invoke&&n.invoke(o,i,JSON.stringify(t)),e&&e.invoke&&e.invoke.postMessage(o,i,t),console.log("=----------------------="),console.log("invoke method: ",i),console.log("params: ",t)}(d.add({resolve:t,reject:r},i.reqId),o,i)})}),sub:u}}();/* harmony default export */ __webpack_exports__["default"] = (o);
+var e="undefined"!=typeof window&&window.AndroidBridge,n="undefined"!=typeof window&&window.webkit.messageHandlers,o=function(){var o=[];"undefined"!=typeof window&&window.addEventListener("aituEvents",function(e){var n=JSON.stringify(e.detail);console.log("subs_data",n),[].concat(o).map(function(n){return n.call(null,e)})});var t,i,r,d,s=function(e){o.push(e)};return{invoke:(t=s,i={current:0,next:function(){return++this.current}},r={},d={add:function(e,n){var o=null!=n?n:i.next();return r[o]=e,o},resolve:function(e,n,o,t){var i=r[e];i&&(o(t)?i.resolve(n):i.reject(t),r[e]=null)}},t(function(e){if(e.detail&&e.detail.data&&"reqId"in e.detail){var n=e.detail,o=n.reqId;o&&d.resolve(o,n.data,function(e){return!e},n.error)}}),function(o,t){return void 0===t&&(t={}),new Promise(function(i,r){!function(o,t,i){void 0===i&&(i={}),console.log("_start_____INVOKE"),console.log("reqId: ",o),console.log("method: ",t),console.log("data: ",i),e&&e.invoke&&e.invoke(o,t,JSON.stringify(i)),console.log("----before ios PostMessage"),n&&n.invoke&&(console.log("----INSIDE if - GO ios PostMessage"),n.invoke.postMessage({reqId:o,method:t,data:i})),console.log("----after ios PostMessage")}(d.add({resolve:i,reject:r},t.reqId),o,t)})}),sub:s}}();/* harmony default export */ __webpack_exports__["default"] = (o);
 //# sourceMappingURL=index.module.js.map
 
 
@@ -10494,7 +10494,7 @@ var styles = {
   },
   btnWrapper: {
     padding: 20,
-    border: '2px solid black',
+    border: '10px solid black',
     marginTop: 20,
     '& button:not(:first-child)': {
       marginLeft: 20

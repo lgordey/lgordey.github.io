@@ -36,7 +36,7 @@ var styles = {
   },
   btnWrapper: {
     padding: 20,
-    border: '2px solid black',
+    border: '10px solid black',
     marginTop: 20,
     '& button:not(:first-child)': {
       marginLeft: 20
@@ -243,4 +243,4 @@ function Test(_ref) {
 /***/ })
 
 })
-//# sourceMappingURL=test.js.3856c59cb33f6ea8f932.hot-update.js.map
+//# sourceMappingURL=test.js.9781aaaa27c1d049cf62.hot-update.js.map
