@@ -10494,7 +10494,7 @@ var styles = {
   },
   btnWrapper: {
     padding: 20,
-    border: '2px solid black',
+    border: '2px solid green',
     marginTop: 20,
     '& button:not(:first-child)': {
       marginLeft: 20
