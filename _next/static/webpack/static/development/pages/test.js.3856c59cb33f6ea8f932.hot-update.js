@@ -18,7 +18,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var react_jss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-jss */ "./node_modules/react-jss/dist/react-jss.esm.js");
-/* harmony import */ var _btsd_aitu_bridge__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @btsd/aitu-bridge */ "../aitu-bridge/dist/index.module.js");
+/* harmony import */ var _btsd_aitu_bridge__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @btsd/aitu-bridge */ "./node_modules/@btsd/aitu-bridge/dist/index.module.js");
 
 
 
@@ -36,7 +36,7 @@ var styles = {
   },
   btnWrapper: {
     padding: 20,
-    border: '2px solid green',
+    border: '2px solid black',
     marginTop: 20,
     '& button:not(:first-child)': {
       marginLeft: 20
@@ -243,4 +243,4 @@ function Test(_ref) {
 /***/ })
 
 })
-//# sourceMappingURL=test.js.f2179eea6bb20c51514f.hot-update.js.map
+//# sourceMappingURL=test.js.3856c59cb33f6ea8f932.hot-update.js.map

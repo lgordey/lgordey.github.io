@@ -1,20 +1,5 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/test.js"],{
 
-/***/ "../aitu-bridge/dist/index.module.js":
-/*!*******************************************!*\
-  !*** ../aitu-bridge/dist/index.module.js ***!
-  \*******************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-var n="undefined"!=typeof window&&window.AndroidBridge,e="undefined"!=typeof window&&window.IosBridge,o=function(){var o=[];"undefined"!=typeof window&&window.addEventListener("aituEvents",function(n){var e=JSON.stringify(n.detail);console.log("subs_data",e),[].concat(o).map(function(e){return e.call(null,n)})});var i,t,r,d,u=function(n){o.push(n)};return{invoke:(i=u,t={current:0,next:function(){return++this.current}},r={},d={add:function(n,e){var o=null!=e?e:t.next();return r[o]=n,o},resolve:function(n,e,o,i){var t=r[n];t&&(o(i)?t.resolve(e):t.reject(i),r[n]=null)}},i(function(n){if(n.detail&&n.detail.data&&"reqId"in n.detail){var e=n.detail,o=e.reqId;o&&d.resolve(o,e.data,function(n){return!n},e.error)}}),function(o,i){return void 0===i&&(i={}),new Promise(function(t,r){!function(o,i,t){void 0===t&&(t={}),n&&n.invoke&&n.invoke(o,i,JSON.stringify(t)),e&&e.invoke&&e.invoke.postMessage(o,i,t),console.log("=----------------------="),console.log("invoke method: ",i),console.log("params: ",t)}(d.add({resolve:t,reject:r},i.reqId),o,i)})}),sub:u}}();/* harmony default export */ __webpack_exports__["default"] = (o);
-//# sourceMappingURL=index.module.js.map
-
-
-/***/ }),
-
 /***/ "./node_modules/@babel/runtime-corejs2/core-js/array/from.js":
 /*!*******************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/core-js/array/from.js ***!
@@ -339,6 +324,21 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 
   return target;
 }
+
+/***/ }),
+
+/***/ "./node_modules/@btsd/aitu-bridge/dist/index.module.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/@btsd/aitu-bridge/dist/index.module.js ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var n="undefined"!=typeof window&&window.AndroidBridge,e="undefined"!=typeof window&&window.IosBridge,o=function(){var o=[];"undefined"!=typeof window&&window.addEventListener("aituEvents",function(n){var e=JSON.stringify(n.detail);console.log("subs_data",e),[].concat(o).map(function(e){return e.call(null,n)})});var i,t,r,d,u=function(n){o.push(n)};return{invoke:(i=u,t={current:0,next:function(){return++this.current}},r={},d={add:function(n,e){var o=null!=e?e:t.next();return r[o]=n,o},resolve:function(n,e,o,i){var t=r[n];t&&(o(i)?t.resolve(e):t.reject(i),r[n]=null)}},i(function(n){if(n.detail&&n.detail.data&&"reqId"in n.detail){var e=n.detail,o=e.reqId;o&&d.resolve(o,e.data,function(n){return!n},e.error)}}),function(o,i){return void 0===i&&(i={}),new Promise(function(t,r){!function(o,i,t){void 0===t&&(t={}),n&&n.invoke&&n.invoke(o,i,JSON.stringify(t)),e&&e.invoke&&e.invoke.postMessage(o,i,t),console.log("=----------------------="),console.log("invoke method: ",i),console.log("params: ",t)}(d.add({resolve:t,reject:r},i.reqId),o,i)})}),sub:u}}();/* harmony default export */ __webpack_exports__["default"] = (o);
+//# sourceMappingURL=index.module.js.map
+
 
 /***/ }),
 
@@ -10476,7 +10476,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var react_jss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-jss */ "./node_modules/react-jss/dist/react-jss.esm.js");
-/* harmony import */ var _btsd_aitu_bridge__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @btsd/aitu-bridge */ "../aitu-bridge/dist/index.module.js");
+/* harmony import */ var _btsd_aitu_bridge__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @btsd/aitu-bridge */ "./node_modules/@btsd/aitu-bridge/dist/index.module.js");
 
 
 
@@ -10494,7 +10494,7 @@ var styles = {
   },
   btnWrapper: {
     padding: 20,
-    border: '2px solid red',
+    border: '2px solid black',
     marginTop: 20,
     '& button:not(:first-child)': {
       marginLeft: 20
