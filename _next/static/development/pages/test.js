@@ -10494,7 +10494,7 @@ var styles = {
   },
   btnWrapper: {
     padding: 20,
-    border: '10px solid black',
+    border: '5px solid black',
     marginTop: 20,
     '& button:not(:first-child)': {
       marginLeft: 20
@@ -10517,10 +10517,6 @@ function Test(_ref) {
       receivedError = _useState3[0],
       setReceivedError = _useState3[1];
 
-  Object(react__WEBPACK_IMPORTED_MODULE_4__["useEffect"])(function () {
-    handleMethod('InitApps');
-  }, []);
-
   var handleMethod =
   /*#__PURE__*/
   function () {
@@ -10541,28 +10537,25 @@ function Test(_ref) {
 
             case 4:
               data = _context.sent;
-              console.log('____Received__data!', _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1___default()(data));
               setReceivedData(function (prevArray) {
                 return [].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__["default"])(prevArray), [_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1___default()(data)]);
               });
-              _context.next = 14;
+              _context.next = 11;
               break;
 
-            case 9:
-              _context.prev = 9;
+            case 8:
+              _context.prev = 8;
               _context.t0 = _context["catch"](1);
-              console.log('ERROR ---- on client');
-              console.log(_context.t0);
               setReceivedError(function (prevArray) {
                 return [].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__["default"])(prevArray), [_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1___default()(_context.t0)]);
               });
 
-            case 14:
+            case 11:
             case "end":
               return _context.stop();
           }
         }
-      }, _callee, null, [[1, 9]]);
+      }, _callee, null, [[1, 8]]);
     }));
 
     return function handleMethod(_x) {
@@ -10574,42 +10567,51 @@ function Test(_ref) {
     className: classes.testWrapper,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 37
     },
     __self: this
   }, __jsx("div", {
     className: classes.btnWrapper,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 38
     },
     __self: this
   }, __jsx("button", {
     onClick: function onClick() {
-      return handleMethod('getMe');
+      return handleMethod('GetMe');
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 39
     },
     __self: this
-  }, "getMe"), __jsx("button", {
+  }, "GetMe"), __jsx("button", {
     onClick: function onClick() {
-      return handleMethod('getPhone');
+      return handleMethod('GetPhone');
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 40
     },
     __self: this
-  }, "getPhone")), __jsx("div", {
+  }, "GetPhone"), __jsx("button", {
+    onClick: function onClick() {
+      return handleMethod('GetAdminPassword');
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 41
+    },
+    __self: this
+  }, "GetAdminPassword")), __jsx("div", {
     style: {
       marginTop: 20,
       display: 'flex'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 43
     },
     __self: this
   }, __jsx("div", {
@@ -10618,7 +10620,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 44
     },
     __self: this
   }, __jsx("b", {
@@ -10627,7 +10629,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 45
     },
     __self: this
   }, "Invoked methods:"), calledMethods.map(function (method, i) {
@@ -10635,7 +10637,7 @@ function Test(_ref) {
       key: i + method,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 54
+        lineNumber: 48
       },
       __self: this
     }, i + 1 + ') ', method);
@@ -10645,7 +10647,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 52
     },
     __self: this
   }, __jsx("b", {
@@ -10654,7 +10656,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 53
     },
     __self: this
   }, "Received data:"), receivedData && receivedData.map(function (data, i) {
@@ -10662,7 +10664,7 @@ function Test(_ref) {
       key: i + data,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 62
+        lineNumber: 56
       },
       __self: this
     }, i + 1 + '. ', data);
@@ -10672,7 +10674,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 60
     },
     __self: this
   }, __jsx("b", {
@@ -10681,7 +10683,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 61
     },
     __self: this
   }, "Received errors:"), receivedError && receivedError.map(function (error, i) {
@@ -10689,7 +10691,7 @@ function Test(_ref) {
       key: i + error,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 70
+        lineNumber: 64
       },
       __self: this
     }, i + 1 + '. ', error);
@@ -10700,7 +10702,7 @@ function Test(_ref) {
 
 /***/ }),
 
-/***/ 0:
+/***/ 4:
 /*!*************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Ftest&absolutePagePath=%2FUsers%2Fgordey%2Fgithub%2Flgordey.github.io%2Fpages%2Ftest.js ***!
   \*************************************************************************************************************************************/
@@ -10723,5 +10725,5 @@ module.exports = dll_b35e09dc2ca94ac6d9c1;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js"]]]);
+},[[4,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=test.js.map
