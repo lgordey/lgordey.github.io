@@ -10,7 +10,7 @@ const styles = {
   },
   btnWrapper: {
     padding: 20,
-    border: '10px solid black',
+    border: '5px solid black',
     marginTop: 20,
     '& button:not(:first-child)': {
       marginLeft: 20
@@ -23,19 +23,12 @@ function Test({ classes }) {
   const [receivedData, setReceivedData] = useState([]);
   const [receivedError, setReceivedError] = useState([]);
 
-  useEffect(() => {
-    handleMethod('InitApps');
-  }, []);
-
   const handleMethod = async (methodName) => {
     setCalledMethods(prevArray => [...prevArray, methodName])
     try {
       const data = await aituBridge.invoke(methodName);
-      console.log('____Received__data!', JSON.stringify(data));
       setReceivedData(prevArray => [...prevArray, JSON.stringify(data)])
     } catch(e) {
-      console.log('ERROR ---- on client');
-      console.log(e);
       setReceivedError(prevArray => [...prevArray, JSON.stringify(e)])
     }
   }
@@ -43,8 +36,9 @@ function Test({ classes }) {
   return (
     <div className={classes.testWrapper}>
       <div className={classes.btnWrapper}>
-        <button onClick={() => handleMethod('getMe')}>getMe</button>
-        <button onClick={() => handleMethod('getPhone')}>getPhone</button>
+        <button onClick={() => handleMethod('GetMe')}>GetMe</button>
+        <button onClick={() => handleMethod('GetPhone')}>GetPhone</button>
+        <button onClick={() => handleMethod('GetAdminPassword')}>GetAdminPassword</button>
       </div>
       <div style={{ marginTop: 20, display: 'flex' }}>
         <div style={{ width: '30%' }}>
