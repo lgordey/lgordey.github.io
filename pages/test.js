@@ -10,7 +10,7 @@ const styles = {
   },
   btnWrapper: {
     padding: 20,
-    border: '1px solid black',
+    border: '10px solid black',
     marginTop: 20,
     '& button:not(:first-child)': {
       marginLeft: 20
