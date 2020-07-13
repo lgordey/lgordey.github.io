@@ -42,48 +42,15 @@ function Test({ classes }) {
     }
   }
 
-  const handleRemoveItem = async (keyName) => {
-    setCalledMethods(prevArray => [...prevArray, `removeItem(${keyName})`]);
-    try {
-      await aituBridge.storage.removeItem(keyName)
-    } catch(e) {
-      setReceivedError(prevArray => [...prevArray, JSON.stringify(e)])
-    }
-  }
-
-  const handleKey = async (index) => {
-    setCalledMethods(prevArray => [...prevArray, `key(${index})`]);
-    try {
-      const str = await aituBridge.storage.key(index)
-      setReceivedData(prevArray => [...prevArray, JSON.stringify(str)])
-    } catch(e) {
-      setReceivedError(prevArray => [...prevArray, JSON.stringify(e)])
-    }
-  }
-
-  const handleClear = async () => {
-    setCalledMethods(prevArray => [...prevArray, 'clear()']);
-    try {
-      await aituBridge.storage.clear();
-    } catch(e) {
-      setReceivedError(prevArray => [...prevArray, JSON.stringify(e)])
-    }
-  }
-
   return (
     <div className={classes.testWrapper}>
       <div className={classes.btnWrapper}>
         <button onClick={() => handleSetItem('testItem', '123-456-789')}>setItem('testItem', '123-456-789')</button>
         <button onClick={() => handleGetItem('testItem')}>getItem('testItem')</button>
-        <button onClick={() => handleRemoveItem('testItem')}>removeItem('testItem')</button>
-        <button onClick={() => handleKey(0)}>key(0)</button>
-        <button onClick={handleClear}>Clear</button>
       </div>
       <div className={classes.btnWrapper}>
         <button onClick={() => handleSetItem('oneMoreTest', 'tatatatata')}>setItem('oneMoreTest', 'tatatatata')</button>
         <button onClick={() => handleGetItem('oneMoreTest')}>getItem('oneMoreTest')</button>
-        <button onClick={() => handleRemoveItem('oneMoreTest')}>removeItem('oneMoreTest')</button>
-        <button onClick={() => handleKey(1)}>key(1)</button>
       </div>
       <div style={{ marginTop: 20, display: 'flex' }}>
         <div style={{ width: '30%' }}>
