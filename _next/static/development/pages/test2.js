@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/test.js"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/test2.js"],{
 
 /***/ "../aitu-bridge/dist/index.module.js":
 /*!*******************************************!*\
@@ -7369,21 +7369,21 @@ var index = create();
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Ftest&absolutePagePath=%2FUsers%2Fgordey%2Fgithub%2Flgordey.github.io%2Fpages%2Ftest.js!./":
-/*!*********************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Ftest&absolutePagePath=%2FUsers%2Fgordey%2Fgithub%2Flgordey.github.io%2Fpages%2Ftest.js ***!
-  \*********************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Ftest2&absolutePagePath=%2FUsers%2Fgordey%2Fgithub%2Flgordey.github.io%2Fpages%2Ftest2.js!./":
+/*!***********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Ftest2&absolutePagePath=%2FUsers%2Fgordey%2Fgithub%2Flgordey.github.io%2Fpages%2Ftest2.js ***!
+  \***********************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-    (window.__NEXT_P=window.__NEXT_P||[]).push(["/test", function() {
-      var mod = __webpack_require__(/*! ./pages/test.js */ "./pages/test.js")
+    (window.__NEXT_P=window.__NEXT_P||[]).push(["/test2", function() {
+      var mod = __webpack_require__(/*! ./pages/test2.js */ "./pages/test2.js")
       if(true) {
-        module.hot.accept(/*! ./pages/test.js */ "./pages/test.js", function() {
-          if(!next.router.components["/test"]) return
-          var updatedPage = __webpack_require__(/*! ./pages/test.js */ "./pages/test.js")
-          next.router.update("/test", updatedPage)
+        module.hot.accept(/*! ./pages/test2.js */ "./pages/test2.js", function() {
+          if(!next.router.components["/test2"]) return
+          var updatedPage = __webpack_require__(/*! ./pages/test2.js */ "./pages/test2.js")
+          next.router.update("/test2", updatedPage)
         })
       }
       return mod
@@ -10458,10 +10458,10 @@ module.exports = function(originalModule) {
 
 /***/ }),
 
-/***/ "./pages/test.js":
-/*!***********************!*\
-  !*** ./pages/test.js ***!
-  \***********************/
+/***/ "./pages/test2.js":
+/*!************************!*\
+  !*** ./pages/test2.js ***!
+  \************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -10481,7 +10481,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/gordey/github/lgordey.github.io/pages/test.js";
+var _jsxFileName = "/Users/gordey/github/lgordey.github.io/pages/test2.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement;
 
 
@@ -10517,49 +10517,218 @@ function Test(_ref) {
       receivedError = _useState3[0],
       setReceivedError = _useState3[1];
 
-  var handleMethod =
+  var handleSetItem =
   /*#__PURE__*/
   function () {
     var _ref2 = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])(
     /*#__PURE__*/
-    _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(methodName) {
-      var data;
+    _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(keyName, keyValue) {
       return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
               setCalledMethods(function (prevArray) {
-                return [].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__["default"])(prevArray), [methodName]);
+                return [].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__["default"])(prevArray), ["setItem(".concat(keyName, ", ").concat(keyValue, ")")]);
               });
               _context.prev = 1;
               _context.next = 4;
-              return _btsd_aitu_bridge__WEBPACK_IMPORTED_MODULE_6__["default"].invoke(methodName);
+              return _btsd_aitu_bridge__WEBPACK_IMPORTED_MODULE_6__["default"].storage.setItem(keyName, keyValue);
 
             case 4:
-              data = _context.sent;
-              setReceivedData(function (prevArray) {
-                return [].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__["default"])(prevArray), [_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1___default()(data)]);
-              });
-              _context.next = 11;
+              _context.next = 9;
               break;
 
-            case 8:
-              _context.prev = 8;
+            case 6:
+              _context.prev = 6;
               _context.t0 = _context["catch"](1);
               setReceivedError(function (prevArray) {
                 return [].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__["default"])(prevArray), [_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1___default()(_context.t0)]);
               });
 
-            case 11:
+            case 9:
             case "end":
               return _context.stop();
           }
         }
-      }, _callee, null, [[1, 8]]);
+      }, _callee, null, [[1, 6]]);
     }));
 
-    return function handleMethod(_x) {
+    return function handleSetItem(_x, _x2) {
       return _ref2.apply(this, arguments);
+    };
+  }();
+
+  var handleGetItem =
+  /*#__PURE__*/
+  function () {
+    var _ref3 = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])(
+    /*#__PURE__*/
+    _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2(keyName) {
+      var str;
+      return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
+        while (1) {
+          switch (_context2.prev = _context2.next) {
+            case 0:
+              setCalledMethods(function (prevArray) {
+                return [].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__["default"])(prevArray), ["getItem(".concat(keyName, ")")]);
+              });
+              _context2.prev = 1;
+              _context2.next = 4;
+              return _btsd_aitu_bridge__WEBPACK_IMPORTED_MODULE_6__["default"].storage.getItem(keyName);
+
+            case 4:
+              str = _context2.sent;
+              setReceivedData(function (prevArray) {
+                return [].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__["default"])(prevArray), [_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1___default()(str)]);
+              });
+              _context2.next = 11;
+              break;
+
+            case 8:
+              _context2.prev = 8;
+              _context2.t0 = _context2["catch"](1);
+              setReceivedError(function (prevArray) {
+                return [].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__["default"])(prevArray), [_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1___default()(_context2.t0)]);
+              });
+
+            case 11:
+            case "end":
+              return _context2.stop();
+          }
+        }
+      }, _callee2, null, [[1, 8]]);
+    }));
+
+    return function handleGetItem(_x3) {
+      return _ref3.apply(this, arguments);
+    };
+  }();
+
+  var handleRemoveItem =
+  /*#__PURE__*/
+  function () {
+    var _ref4 = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])(
+    /*#__PURE__*/
+    _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3(keyName) {
+      return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee3$(_context3) {
+        while (1) {
+          switch (_context3.prev = _context3.next) {
+            case 0:
+              setCalledMethods(function (prevArray) {
+                return [].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__["default"])(prevArray), ["removeItem(".concat(keyName, ")")]);
+              });
+              _context3.prev = 1;
+              _context3.next = 4;
+              return _btsd_aitu_bridge__WEBPACK_IMPORTED_MODULE_6__["default"].storage.removeItem(keyName);
+
+            case 4:
+              _context3.next = 9;
+              break;
+
+            case 6:
+              _context3.prev = 6;
+              _context3.t0 = _context3["catch"](1);
+              setReceivedError(function (prevArray) {
+                return [].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__["default"])(prevArray), [_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1___default()(_context3.t0)]);
+              });
+
+            case 9:
+            case "end":
+              return _context3.stop();
+          }
+        }
+      }, _callee3, null, [[1, 6]]);
+    }));
+
+    return function handleRemoveItem(_x4) {
+      return _ref4.apply(this, arguments);
+    };
+  }();
+
+  var handleKey =
+  /*#__PURE__*/
+  function () {
+    var _ref5 = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])(
+    /*#__PURE__*/
+    _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee4(index) {
+      var str;
+      return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee4$(_context4) {
+        while (1) {
+          switch (_context4.prev = _context4.next) {
+            case 0:
+              setCalledMethods(function (prevArray) {
+                return [].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__["default"])(prevArray), ["key(".concat(index, ")")]);
+              });
+              _context4.prev = 1;
+              _context4.next = 4;
+              return _btsd_aitu_bridge__WEBPACK_IMPORTED_MODULE_6__["default"].storage.key(index);
+
+            case 4:
+              str = _context4.sent;
+              setReceivedData(function (prevArray) {
+                return [].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__["default"])(prevArray), [_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1___default()(str)]);
+              });
+              _context4.next = 11;
+              break;
+
+            case 8:
+              _context4.prev = 8;
+              _context4.t0 = _context4["catch"](1);
+              setReceivedError(function (prevArray) {
+                return [].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__["default"])(prevArray), [_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1___default()(_context4.t0)]);
+              });
+
+            case 11:
+            case "end":
+              return _context4.stop();
+          }
+        }
+      }, _callee4, null, [[1, 8]]);
+    }));
+
+    return function handleKey(_x5) {
+      return _ref5.apply(this, arguments);
+    };
+  }();
+
+  var handleClear =
+  /*#__PURE__*/
+  function () {
+    var _ref6 = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])(
+    /*#__PURE__*/
+    _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee5() {
+      return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee5$(_context5) {
+        while (1) {
+          switch (_context5.prev = _context5.next) {
+            case 0:
+              setCalledMethods(function (prevArray) {
+                return [].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__["default"])(prevArray), ['clear()']);
+              });
+              _context5.prev = 1;
+              _context5.next = 4;
+              return _btsd_aitu_bridge__WEBPACK_IMPORTED_MODULE_6__["default"].storage.clear();
+
+            case 4:
+              _context5.next = 9;
+              break;
+
+            case 6:
+              _context5.prev = 6;
+              _context5.t0 = _context5["catch"](1);
+              setReceivedError(function (prevArray) {
+                return [].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__["default"])(prevArray), [_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1___default()(_context5.t0)]);
+              });
+
+            case 9:
+            case "end":
+              return _context5.stop();
+          }
+        }
+      }, _callee5, null, [[1, 6]]);
+    }));
+
+    return function handleClear() {
+      return _ref6.apply(this, arguments);
     };
   }();
 
@@ -10567,51 +10736,110 @@ function Test(_ref) {
     className: classes.testWrapper,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 74
     },
     __self: this
   }, __jsx("div", {
     className: classes.btnWrapper,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 75
     },
     __self: this
   }, __jsx("button", {
     onClick: function onClick() {
-      return handleMethod('GetMe');
+      return handleSetItem('testItem', '123-456-789');
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 76
     },
     __self: this
-  }, "GetMe"), __jsx("button", {
+  }, "setItem('testItem', '123-456-789')"), __jsx("button", {
     onClick: function onClick() {
-      return handleMethod('GetPhone');
+      return handleGetItem('testItem');
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 77
     },
     __self: this
-  }, "GetPhone"), __jsx("button", {
+  }, "getItem('testItem')"), __jsx("button", {
     onClick: function onClick() {
-      return handleMethod('GetAdminPassword');
+      return handleRemoveItem('testItem');
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 78
     },
     __self: this
-  }, "GetAdminPassword")), __jsx("div", {
+  }, "removeItem('testItem')"), __jsx("button", {
+    onClick: function onClick() {
+      return handleKey(0);
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 79
+    },
+    __self: this
+  }, "key(0)"), __jsx("button", {
+    onClick: handleClear,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 80
+    },
+    __self: this
+  }, "Clear")), __jsx("div", {
+    className: classes.btnWrapper,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 82
+    },
+    __self: this
+  }, __jsx("button", {
+    onClick: function onClick() {
+      return handleSetItem('oneMoreTest', 'tatatatata');
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 83
+    },
+    __self: this
+  }, "setItem('oneMoreTest', 'tatatatata')"), __jsx("button", {
+    onClick: function onClick() {
+      return handleGetItem('oneMoreTest');
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 84
+    },
+    __self: this
+  }, "getItem('oneMoreTest')"), __jsx("button", {
+    onClick: function onClick() {
+      return handleRemoveItem('oneMoreTest');
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 85
+    },
+    __self: this
+  }, "removeItem('oneMoreTest')"), __jsx("button", {
+    onClick: function onClick() {
+      return handleKey(1);
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 86
+    },
+    __self: this
+  }, "key(1)")), __jsx("div", {
     style: {
       marginTop: 20,
       display: 'flex'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 88
     },
     __self: this
   }, __jsx("div", {
@@ -10620,7 +10848,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 89
     },
     __self: this
   }, __jsx("b", {
@@ -10629,7 +10857,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 90
     },
     __self: this
   }, "Invoked methods:"), calledMethods.map(function (method, i) {
@@ -10637,7 +10865,7 @@ function Test(_ref) {
       key: i + method,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 48
+        lineNumber: 93
       },
       __self: this
     }, i + 1 + ') ', method);
@@ -10647,7 +10875,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 97
     },
     __self: this
   }, __jsx("b", {
@@ -10656,7 +10884,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 98
     },
     __self: this
   }, "Received data:"), receivedData && receivedData.map(function (data, i) {
@@ -10664,7 +10892,7 @@ function Test(_ref) {
       key: i + data,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 56
+        lineNumber: 101
       },
       __self: this
     }, i + 1 + '. ', data);
@@ -10674,7 +10902,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 105
     },
     __self: this
   }, __jsx("b", {
@@ -10683,7 +10911,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 106
     },
     __self: this
   }, "Received errors:"), receivedError && receivedError.map(function (error, i) {
@@ -10691,7 +10919,7 @@ function Test(_ref) {
       key: i + error,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 64
+        lineNumber: 109
       },
       __self: this
     }, i + 1 + '. ', error);
@@ -10702,14 +10930,14 @@ function Test(_ref) {
 
 /***/ }),
 
-/***/ 0:
-/*!*************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2Ftest&absolutePagePath=%2FUsers%2Fgordey%2Fgithub%2Flgordey.github.io%2Fpages%2Ftest.js ***!
-  \*************************************************************************************************************************************/
+/***/ 2:
+/*!***************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2Ftest2&absolutePagePath=%2FUsers%2Fgordey%2Fgithub%2Flgordey.github.io%2Fpages%2Ftest2.js ***!
+  \***************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Ftest&absolutePagePath=%2FUsers%2Fgordey%2Fgithub%2Flgordey.github.io%2Fpages%2Ftest.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Ftest&absolutePagePath=%2FUsers%2Fgordey%2Fgithub%2Flgordey.github.io%2Fpages%2Ftest.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Ftest2&absolutePagePath=%2FUsers%2Fgordey%2Fgithub%2Flgordey.github.io%2Fpages%2Ftest2.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Ftest2&absolutePagePath=%2FUsers%2Fgordey%2Fgithub%2Flgordey.github.io%2Fpages%2Ftest2.js!./");
 
 
 /***/ }),
@@ -10725,5 +10953,5 @@ module.exports = dll_b35e09dc2ca94ac6d9c1;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js"]]]);
-//# sourceMappingURL=test.js.map
+},[[2,"static/runtime/webpack.js"]]]);
+//# sourceMappingURL=test2.js.map
