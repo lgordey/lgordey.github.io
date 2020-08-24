@@ -39,6 +39,7 @@ function Test({ classes }) {
         <button onClick={() => handleMethod('GetMe')}>GetMe</button>
         <button onClick={() => handleMethod('GetPhone')}>GetPhone</button>
         <button onClick={() => handleMethod('GetAdminPassword')}>GetAdminPassword</button>
+        <button onClick={() => handleMethod('GetContacts')}>GetContacts</button>
       </div>
       <div style={{ marginTop: 20, display: 'flex' }}>
         <div style={{ width: '30%' }}>
