@@ -45,6 +45,19 @@ function Test({ classes }) {
     }
   }
 
+
+  const handleGetGeoMethod = async (methodName) => {
+    setCalledMethods(prevArray => [...prevArray, methodName])
+
+    console.log('==handleGetGeoMethod');
+    try {
+      const data = await aituBridge.getGeo();
+      setReceivedData(prevArray => [...prevArray, JSON.stringify(data)])
+    } catch(e) {
+      setReceivedError(prevArray => [...prevArray, JSON.stringify(e)])
+    }
+  }
+
   return (
     <div className={classes.testWrapper}>
       <div className={classes.btnWrapper}>
@@ -52,7 +65,7 @@ function Test({ classes }) {
         <button onClick={() => handleInvokeMethod('GetPhone')}>GetPhone</button>
         <button onClick={() => handleInvokeMethod('GetAdminPassword')}>GetAdminPassword</button>
         <button onClick={() => handleInvokeMethod('GetContacts')}>GetContacts</button>
-        <button onClick={() => handleMethod('getGeo')}>getGeo</button>
+        <button onClick={() => handleGetGeoMethod('getGeo')}>getGeo</button>
         <button onClick={() => handleMethod('openSettings')}>openSettings</button>
       </div>
       <div style={{ marginTop: 20, display: 'flex' }}>
