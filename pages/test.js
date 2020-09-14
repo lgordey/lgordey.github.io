@@ -35,8 +35,10 @@ function Test({ classes }) {
 
   const handleMethod = async (methodName) => {
     setCalledMethods(prevArray => [...prevArray, methodName])
+
+    console.log('method name', methodName);
     try {
-      const data = await aituBridge[metthodName]()
+      const data = await aituBridge[methodName]()
       setReceivedData(prevArray => [...prevArray, JSON.stringify(data)])
     } catch(e) {
       setReceivedError(prevArray => [...prevArray, JSON.stringify(e)])
@@ -50,8 +52,8 @@ function Test({ classes }) {
         <button onClick={() => handleInvokeMethod('GetPhone')}>GetPhone</button>
         <button onClick={() => handleInvokeMethod('GetAdminPassword')}>GetAdminPassword</button>
         <button onClick={() => handleInvokeMethod('GetContacts')}>GetContacts</button>
-        <button onClick={() => handleMethod('GetGeo')}>GetGeo</button>
-        <button onClick={() => handleMethod('OpenSettings')}>OpenSettings</button>
+        <button onClick={() => handleMethod('getGeo')}>getGeo</button>
+        <button onClick={() => handleMethod('openSettings')}>openSettings</button>
       </div>
       <div style={{ marginTop: 20, display: 'flex' }}>
         <div style={{ width: '30%' }}>
