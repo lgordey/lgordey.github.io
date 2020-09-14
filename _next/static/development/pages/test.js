@@ -10577,31 +10577,32 @@ function Test(_ref) {
               setCalledMethods(function (prevArray) {
                 return [].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__["default"])(prevArray), [methodName]);
               });
-              _context2.prev = 1;
-              _context2.next = 4;
-              return _btsd_aitu_bridge__WEBPACK_IMPORTED_MODULE_6__["default"][metthodName]();
+              console.log('method name', methodName);
+              _context2.prev = 2;
+              _context2.next = 5;
+              return _btsd_aitu_bridge__WEBPACK_IMPORTED_MODULE_6__["default"][methodName]();
 
-            case 4:
+            case 5:
               data = _context2.sent;
               setReceivedData(function (prevArray) {
                 return [].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__["default"])(prevArray), [_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1___default()(data)]);
               });
-              _context2.next = 11;
+              _context2.next = 12;
               break;
 
-            case 8:
-              _context2.prev = 8;
-              _context2.t0 = _context2["catch"](1);
+            case 9:
+              _context2.prev = 9;
+              _context2.t0 = _context2["catch"](2);
               setReceivedError(function (prevArray) {
                 return [].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__["default"])(prevArray), [_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1___default()(_context2.t0)]);
               });
 
-            case 11:
+            case 12:
             case "end":
               return _context2.stop();
           }
         }
-      }, _callee2, null, [[1, 8]]);
+      }, _callee2, null, [[2, 9]]);
     }));
 
     return function handleMethod(_x2) {
@@ -10613,14 +10614,14 @@ function Test(_ref) {
     className: classes.testWrapper,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 49
     },
     __self: this
   }, __jsx("div", {
     className: classes.btnWrapper,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 50
     },
     __self: this
   }, __jsx("button", {
@@ -10629,7 +10630,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 51
     },
     __self: this
   }, "GetMe"), __jsx("button", {
@@ -10638,7 +10639,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 52
     },
     __self: this
   }, "GetPhone"), __jsx("button", {
@@ -10647,7 +10648,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 53
     },
     __self: this
   }, "GetAdminPassword"), __jsx("button", {
@@ -10656,35 +10657,35 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 54
     },
     __self: this
   }, "GetContacts"), __jsx("button", {
     onClick: function onClick() {
-      return handleMethod('GetGeo');
+      return handleMethod('getGeo');
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 55
     },
     __self: this
-  }, "GetGeo"), __jsx("button", {
+  }, "getGeo"), __jsx("button", {
     onClick: function onClick() {
-      return handleMethod('OpenSettings');
+      return handleMethod('openSettings');
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 56
     },
     __self: this
-  }, "OpenSettings")), __jsx("div", {
+  }, "openSettings")), __jsx("div", {
     style: {
       marginTop: 20,
       display: 'flex'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 58
     },
     __self: this
   }, __jsx("div", {
@@ -10693,7 +10694,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 59
     },
     __self: this
   }, __jsx("b", {
@@ -10702,7 +10703,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 60
     },
     __self: this
   }, "Invoked methods:"), calledMethods.map(function (method, i) {
@@ -10710,7 +10711,7 @@ function Test(_ref) {
       key: i + method,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 61
+        lineNumber: 63
       },
       __self: this
     }, i + 1 + ') ', method);
@@ -10720,7 +10721,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 67
     },
     __self: this
   }, __jsx("b", {
@@ -10729,7 +10730,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 68
     },
     __self: this
   }, "Received data:"), receivedData && receivedData.map(function (data, i) {
@@ -10737,7 +10738,7 @@ function Test(_ref) {
       key: i + data,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 69
+        lineNumber: 71
       },
       __self: this
     }, i + 1 + '. ', data);
@@ -10747,7 +10748,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 75
     },
     __self: this
   }, __jsx("b", {
@@ -10756,7 +10757,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 76
     },
     __self: this
   }, "Received errors:"), receivedError && receivedError.map(function (error, i) {
@@ -10764,7 +10765,7 @@ function Test(_ref) {
       key: i + error,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 77
+        lineNumber: 79
       },
       __self: this
     }, i + 1 + '. ', error);
