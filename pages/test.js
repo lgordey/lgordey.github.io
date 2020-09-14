@@ -23,7 +23,7 @@ function Test({ classes }) {
   const [receivedData, setReceivedData] = useState([]);
   const [receivedError, setReceivedError] = useState([]);
 
-  const handleMethod = async (methodName) => {
+  const handleInvokeMethod = async (methodName) => {
     setCalledMethods(prevArray => [...prevArray, methodName])
     try {
       const data = await aituBridge.invoke(methodName);
@@ -33,13 +33,25 @@ function Test({ classes }) {
     }
   }
 
+  const handleMethod = async (methodName) => {
+    setCalledMethods(prevArray => [...prevArray, methodName])
+    try {
+      const data = await aituBridge[metthodName]()
+      setReceivedData(prevArray => [...prevArray, JSON.stringify(data)])
+    } catch(e) {
+      setReceivedError(prevArray => [...prevArray, JSON.stringify(e)])
+    }
+  }
+
   return (
     <div className={classes.testWrapper}>
       <div className={classes.btnWrapper}>
-        <button onClick={() => handleMethod('GetMe')}>GetMe</button>
-        <button onClick={() => handleMethod('GetPhone')}>GetPhone</button>
-        <button onClick={() => handleMethod('GetAdminPassword')}>GetAdminPassword</button>
-        <button onClick={() => handleMethod('GetContacts')}>GetContacts</button>
+        <button onClick={() => handleInvokeMethod('GetMe')}>GetMe</button>
+        <button onClick={() => handleInvokeMethod('GetPhone')}>GetPhone</button>
+        <button onClick={() => handleInvokeMethod('GetAdminPassword')}>GetAdminPassword</button>
+        <button onClick={() => handleInvokeMethod('GetContacts')}>GetContacts</button>
+        <button onClick={() => handleMethod('GetGeo')}>GetGeo</button>
+        <button onClick={() => handleMethod('OpenSettings')}>OpenSettings</button>
       </div>
       <div style={{ marginTop: 20, display: 'flex' }}>
         <div style={{ width: '30%' }}>
