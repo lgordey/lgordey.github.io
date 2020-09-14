@@ -65,7 +65,7 @@ function Test({ classes }) {
         <button onClick={() => handleInvokeMethod('GetPhone')}>GetPhone</button>
         <button onClick={() => handleInvokeMethod('GetAdminPassword')}>GetAdminPassword</button>
         <button onClick={() => handleInvokeMethod('GetContacts')}>GetContacts</button>
-        <button onClick={() => handleGetGeoMethod('getGeo')}>getGeo</button>
+        <button onClick={() => handleGetGeoMethod('getGeo')}>aituBridge.getGeo()</button>
         <button onClick={() => handleMethod('openSettings')}>openSettings</button>
       </div>
       <div style={{ marginTop: 20, display: 'flex' }}>
