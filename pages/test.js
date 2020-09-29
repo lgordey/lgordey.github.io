@@ -56,7 +56,7 @@ function Test({ classes }) {
       setReceivedError(prevArray => [...prevArray, JSON.stringify(e)])
     }
   }
-
+ 
   return (
     <div className={classes.testWrapper}>
       <div className={classes.btnWrapper}>
