@@ -67,6 +67,9 @@ function Test({ classes }) {
         <button onClick={() => handleGetGeoMethod('getGeo')}>aituBridge.getGeo()</button>
         <button onClick={() => handleOpenSettingsMethod('openSettings')}>openSettings</button>
       </div>
+      <div className={classes.btnWrapper}>
+        <button onClick={() => handleInvokeMethod('AllowNotifications')}>AllowNotifications</button>
+      </div>
       <div style={{ marginTop: 20, display: 'flex' }}>
         <div style={{ width: '30%' }}>
           <b style={{ marginBottom: 10 }}>Invoked methods:</b>
