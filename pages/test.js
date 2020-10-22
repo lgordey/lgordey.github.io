@@ -34,6 +34,11 @@ function Test({ classes }) {
   }
 
   const handleGetGeoMethod = async (methodName) => {
+    if (!aituBridge.supports(methodName)) {
+      alert(`Метод ${methodName} не поддерживается в текущей версии приложения`);
+      return;
+    }
+
     setCalledMethods(prevArray => [...prevArray, methodName])
 
     console.log('==handleGetGeoMethod');
@@ -46,6 +51,11 @@ function Test({ classes }) {
   }
 
   const handleOpenSettingsMethod = async (methodName) => {
+    if (!aituBridge.supports(methodName)) {
+      alert(`Метод ${methodName} не поддерживается в текущей версии приложения`);
+      return;
+    }
+
     setCalledMethods(prevArray => [...prevArray, methodName])
 
     console.log('==handleOpenSettingsMethod');
