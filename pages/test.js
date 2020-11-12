@@ -22,6 +22,7 @@ function Test({ classes }) {
   const [calledMethods, setCalledMethods] = useState([]);
   const [receivedData, setReceivedData] = useState([]);
   const [receivedError, setReceivedError] = useState([]);
+  const [ errors, setErrors ] = useState([]);
 
   const handleInvokeMethod = async (methodName) => {
     setCalledMethods(prevArray => [...prevArray, methodName])
@@ -35,7 +36,7 @@ function Test({ classes }) {
 
   const handleGetGeoMethod = async (methodName) => {
     if (!aituBridge.supports(methodName)) {
-      alert(`Метод ${methodName} не поддерживается в текущей версии приложения`);
+      setErrors(prevArray => [...prevArray, `Метод "${methodName}" не поддерживается в текущей версии приложения`]);
       return;
     }
 
@@ -52,7 +53,7 @@ function Test({ classes }) {
 
   const handleOpenSettingsMethod = async (methodName) => {
     if (!aituBridge.supports(methodName)) {
-      alert(`Метод ${methodName} не поддерживается в текущей версии приложения`);
+      setErrors(prevArray => [...prevArray, `Метод "${methodName}" не поддерживается в текущей версии приложения`]);
       return;
     }
 
@@ -66,7 +67,7 @@ function Test({ classes }) {
       setReceivedError(prevArray => [...prevArray, JSON.stringify(e)])
     }
   }
- 
+
   return (
     <div className={classes.testWrapper}>
       <div className={classes.btnWrapper}>
@@ -79,6 +80,12 @@ function Test({ classes }) {
       </div>
       <div className={classes.btnWrapper}>
         <button onClick={() => handleInvokeMethod('AllowNotifications')}>AllowNotifications</button>
+      </div>
+      <div style={{ marginTop: 20 }} >
+        <b>Errors:</b>
+        {errors.map((errMessage, i) => (
+            <div key={i + errMessage}>{errMessage}</div>
+          ))}
       </div>
       <div style={{ marginTop: 20, display: 'flex' }}>
         <div style={{ width: '30%' }}>
