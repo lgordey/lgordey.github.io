@@ -7369,9 +7369,9 @@ var index = create();
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Ftest&absolutePagePath=%2FUsers%2Fgordey%2Fgithub%2Flgordey.github.io%2Fpages%2Ftest.js!./":
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Ftest&absolutePagePath=%2FUsers%2Fyury%2F_projects%2Fastanajs_miniApp%2Fpages%2Ftest.js!./":
 /*!*********************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Ftest&absolutePagePath=%2FUsers%2Fgordey%2Fgithub%2Flgordey.github.io%2Fpages%2Ftest.js ***!
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Ftest&absolutePagePath=%2FUsers%2Fyury%2F_projects%2Fastanajs_miniApp%2Fpages%2Ftest.js ***!
   \*********************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -10481,7 +10481,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/gordey/github/lgordey.github.io/pages/test.js";
+var _jsxFileName = "/Users/yury/_projects/astanajs_miniApp/pages/test.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement;
 
 
@@ -10516,6 +10516,10 @@ function Test(_ref) {
   var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])([]),
       receivedError = _useState3[0],
       setReceivedError = _useState3[1];
+
+  var _useState4 = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])([]),
+      errors = _useState4[0],
+      setErrors = _useState4[1];
 
   var handleInvokeMethod =
   /*#__PURE__*/
@@ -10579,7 +10583,9 @@ function Test(_ref) {
                 break;
               }
 
-              alert("\u041C\u0435\u0442\u043E\u0434 ".concat(methodName, " \u043D\u0435 \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0435\u0442\u0441\u044F \u0432 \u0442\u0435\u043A\u0443\u0449\u0435\u0439 \u0432\u0435\u0440\u0441\u0438\u0438 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F"));
+              setErrors(function (prevArray) {
+                return [].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__["default"])(prevArray), ["\u041C\u0435\u0442\u043E\u0434 \"".concat(methodName, "\" \u043D\u0435 \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0435\u0442\u0441\u044F \u0432 \u0442\u0435\u043A\u0443\u0449\u0435\u0439 \u0432\u0435\u0440\u0441\u0438\u0438 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F")]);
+              });
               return _context2.abrupt("return");
 
             case 3:
@@ -10635,7 +10641,9 @@ function Test(_ref) {
                 break;
               }
 
-              alert("\u041C\u0435\u0442\u043E\u0434 ".concat(methodName, " \u043D\u0435 \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0435\u0442\u0441\u044F \u0432 \u0442\u0435\u043A\u0443\u0449\u0435\u0439 \u0432\u0435\u0440\u0441\u0438\u0438 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F"));
+              setErrors(function (prevArray) {
+                return [].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__["default"])(prevArray), ["\u041C\u0435\u0442\u043E\u0434 \"".concat(methodName, "\" \u043D\u0435 \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0435\u0442\u0441\u044F \u0432 \u0442\u0435\u043A\u0443\u0449\u0435\u0439 \u0432\u0435\u0440\u0441\u0438\u0438 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F")]);
+              });
               return _context3.abrupt("return");
 
             case 3:
@@ -10679,14 +10687,14 @@ function Test(_ref) {
     className: classes.testWrapper,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 72
     },
     __self: this
   }, __jsx("div", {
     className: classes.btnWrapper,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 73
     },
     __self: this
   }, __jsx("button", {
@@ -10695,7 +10703,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 74
     },
     __self: this
   }, "GetMe"), __jsx("button", {
@@ -10704,7 +10712,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 75
     },
     __self: this
   }, "GetPhone"), __jsx("button", {
@@ -10713,7 +10721,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75
+      lineNumber: 76
     },
     __self: this
   }, "GetAdminPassword"), __jsx("button", {
@@ -10722,7 +10730,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
+      lineNumber: 77
     },
     __self: this
   }, "GetContacts"), __jsx("button", {
@@ -10731,7 +10739,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
+      lineNumber: 78
     },
     __self: this
   }, "aituBridge.getGeo()"), __jsx("button", {
@@ -10740,14 +10748,14 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 79
     },
     __self: this
   }, "openSettings")), __jsx("div", {
     className: classes.btnWrapper,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80
+      lineNumber: 81
     },
     __self: this
   }, __jsx("button", {
@@ -10756,17 +10764,41 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81
+      lineNumber: 82
     },
     __self: this
   }, "AllowNotifications")), __jsx("div", {
+    style: {
+      marginTop: 20
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 84
+    },
+    __self: this
+  }, __jsx("b", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 85
+    },
+    __self: this
+  }, "Errors:"), errors.map(function (errMessage, i) {
+    return __jsx("div", {
+      key: i + errMessage,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 87
+      },
+      __self: this
+    }, errMessage);
+  })), __jsx("div", {
     style: {
       marginTop: 20,
       display: 'flex'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83
+      lineNumber: 90
     },
     __self: this
   }, __jsx("div", {
@@ -10775,7 +10807,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 84
+      lineNumber: 91
     },
     __self: this
   }, __jsx("b", {
@@ -10784,7 +10816,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 85
+      lineNumber: 92
     },
     __self: this
   }, "Invoked methods:"), calledMethods.map(function (method, i) {
@@ -10792,7 +10824,7 @@ function Test(_ref) {
       key: i + method,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 88
+        lineNumber: 95
       },
       __self: this
     }, i + 1 + ') ', method);
@@ -10802,7 +10834,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92
+      lineNumber: 99
     },
     __self: this
   }, __jsx("b", {
@@ -10811,7 +10843,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93
+      lineNumber: 100
     },
     __self: this
   }, "Received data:"), receivedData && receivedData.map(function (data, i) {
@@ -10819,7 +10851,7 @@ function Test(_ref) {
       key: i + data,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 96
+        lineNumber: 103
       },
       __self: this
     }, i + 1 + '. ', data);
@@ -10829,7 +10861,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 100
+      lineNumber: 107
     },
     __self: this
   }, __jsx("b", {
@@ -10838,7 +10870,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101
+      lineNumber: 108
     },
     __self: this
   }, "Received errors:"), receivedError && receivedError.map(function (error, i) {
@@ -10846,7 +10878,7 @@ function Test(_ref) {
       key: i + error,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 104
+        lineNumber: 111
       },
       __self: this
     }, i + 1 + '. ', error);
@@ -10857,14 +10889,14 @@ function Test(_ref) {
 
 /***/ }),
 
-/***/ 0:
+/***/ 3:
 /*!*************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2Ftest&absolutePagePath=%2FUsers%2Fgordey%2Fgithub%2Flgordey.github.io%2Fpages%2Ftest.js ***!
+  !*** multi next-client-pages-loader?page=%2Ftest&absolutePagePath=%2FUsers%2Fyury%2F_projects%2Fastanajs_miniApp%2Fpages%2Ftest.js ***!
   \*************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Ftest&absolutePagePath=%2FUsers%2Fgordey%2Fgithub%2Flgordey.github.io%2Fpages%2Ftest.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Ftest&absolutePagePath=%2FUsers%2Fgordey%2Fgithub%2Flgordey.github.io%2Fpages%2Ftest.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Ftest&absolutePagePath=%2FUsers%2Fyury%2F_projects%2Fastanajs_miniApp%2Fpages%2Ftest.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Ftest&absolutePagePath=%2FUsers%2Fyury%2F_projects%2Fastanajs_miniApp%2Fpages%2Ftest.js!./");
 
 
 /***/ }),
@@ -10880,5 +10912,5 @@ module.exports = dll_b35e09dc2ca94ac6d9c1;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js"]]]);
+},[[3,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=test.js.map
