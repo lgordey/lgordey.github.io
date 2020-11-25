@@ -68,6 +68,23 @@ function Test({ classes }) {
     }
   }
 
+  const handleShareMethod = async (methodName) => {
+    if (!aituBridge.supports(methodName)) {
+      setErrors(prevArray => [...prevArray, `Метод "${methodName}" не поддерживается в текущей версии приложения`]);
+      return;
+    }
+
+    setCalledMethods(prevArray => [...prevArray, methodName])
+
+    console.log('==handleShareMethod');
+    try {
+      const data = await aituBridge.share('privet ya kakaoi-to straniy text ЛАЛА');
+      setReceivedData(prevArray => [...prevArray, JSON.stringify(data)])
+    } catch(e) {
+      setReceivedError(prevArray => [...prevArray, JSON.stringify(e)])
+    }
+  }
+
   return (
     <div className={classes.testWrapper}>
       <div className={classes.btnWrapper}>
@@ -77,6 +94,9 @@ function Test({ classes }) {
         <button onClick={() => handleInvokeMethod('GetContacts')}>GetContacts</button>
         <button onClick={() => handleGetGeoMethod('getGeo')}>aituBridge.getGeo()</button>
         <button onClick={() => handleOpenSettingsMethod('openSettings')}>openSettings</button>
+      </div>
+      <div className={classes.btnWrapper}>
+        <button onClick={() => handleShareMethod('share')}>aituBridge.share('privet ya kakaoi-to straniy text ЛАЛА')</button>
       </div>
       <div className={classes.btnWrapper}>
         <button onClick={() => handleInvokeMethod('AllowNotifications')}>AllowNotifications</button>
