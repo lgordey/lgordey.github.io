@@ -101,6 +101,9 @@ function Test({ classes }) {
       <div className={classes.btnWrapper}>
         <button onClick={() => handleInvokeMethod('AllowNotifications')}>AllowNotifications</button>
       </div>
+      <div className={classes.btnWrapper}>
+        <a href="/javascriptquestions.pdf">PDF Link</a>
+      </div>
       <div style={{ marginTop: 20 }} >
         <b>Errors:</b>
         {errors.map((errMessage, i) => (
