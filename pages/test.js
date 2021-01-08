@@ -51,6 +51,23 @@ function Test({ classes }) {
     }
   }
 
+  const handleGetQrMethod = async (methodName) => {
+    if (!aituBridge.supports(methodName)) {
+      setErrors(prevArray => [...prevArray, `Метод "${methodName}" не поддерживается в текущей версии приложения`]);
+      return;
+    }
+
+    setCalledMethods(prevArray => [...prevArray, methodName])
+
+    console.log('==handleGetQrMethod');
+    try {
+      const data = await aituBridge.getQr();
+      setReceivedData(prevArray => [...prevArray, JSON.stringify(data)])
+    } catch(e) {
+      setReceivedError(prevArray => [...prevArray, JSON.stringify(e)])
+    }
+  }
+
   const handleOpenSettingsMethod = async (methodName) => {
     if (!aituBridge.supports(methodName)) {
       setErrors(prevArray => [...prevArray, `Метод "${methodName}" не поддерживается в текущей версии приложения`]);
@@ -93,6 +110,7 @@ function Test({ classes }) {
         <button onClick={() => handleInvokeMethod('GetAdminPassword')}>GetAdminPassword</button>
         <button onClick={() => handleInvokeMethod('GetContacts')}>GetContacts</button>
         <button onClick={() => handleGetGeoMethod('getGeo')}>aituBridge.getGeo()</button>
+        <button onClick={() => handleGetQrMethod('getQr')}>aituBridge.getQr()</button>
         <button onClick={() => handleOpenSettingsMethod('openSettings')}>openSettings</button>
       </div>
       <div className={classes.btnWrapper}>
