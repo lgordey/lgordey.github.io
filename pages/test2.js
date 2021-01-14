@@ -42,6 +42,15 @@ function Test({ classes }) {
     }
   }
 
+  const handleClear = async () => {
+    setCalledMethods(prevArray => [...prevArray, 'clear()']);
+    try {
+      await aituBridge.storage.clear();
+    } catch(e) {
+      setReceivedError(prevArray => [...prevArray, JSON.stringify(e)])
+    }
+  }
+
   return (
     <div className={classes.testWrapper}>
       <div className={classes.btnWrapper}>
@@ -51,6 +60,9 @@ function Test({ classes }) {
       <div className={classes.btnWrapper}>
         <button onClick={() => handleSetItem('oneMoreTest', 'tatatatata')}>setItem('oneMoreTest', 'tatatatata')</button>
         <button onClick={() => handleGetItem('oneMoreTest')}>getItem('oneMoreTest')</button>
+      </div>
+      <div className={classes.btnWrapper}>
+        <button onClick={() => handleClear()}>clear()</button>
       </div>
       <div style={{ marginTop: 20, display: 'flex' }}>
         <div style={{ width: '30%' }}>
