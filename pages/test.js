@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import withStyles from 'react-jss';
 import aituBridge from '@btsd/aitu-bridge';
 
+import { basedGif, basedJpg, basedPng } from '../basedImages';
+
 const styles = {
   testWrapper: {
     width: '100%',
@@ -16,6 +18,14 @@ const styles = {
       marginLeft: 20
     }
   }
+};
+
+const shareTestData = {
+  textOnly: { text: 'privet ya kakaoi-to straniy text ЛАЛА' },
+  gif: { text: 'Look at this magical present!', media: basedGif },
+  jpg: { text: 'Look at this silly upside-down cat!', media: basedJpg },
+  jpgOnly: { media: basedJpg },
+  png: { text: 'Look at this beautiful Earth-in-space wallpaper!', media: basedPng },
 };
 
 function Test({ classes }) {
@@ -85,7 +95,7 @@ function Test({ classes }) {
     }
   }
 
-  const handleShareMethod = async (methodName) => {
+  const handleShareMethod = async (methodName, { text, media }) => {
     if (!aituBridge.supports(methodName)) {
       setErrors(prevArray => [...prevArray, `Метод "${methodName}" не поддерживается в текущей версии приложения`]);
       return;
@@ -95,7 +105,7 @@ function Test({ classes }) {
 
     console.log('==handleShareMethod');
     try {
-      const data = await aituBridge.share('privet ya kakaoi-to straniy text ЛАЛА');
+      const data = await aituBridge.share(text, media);
       setReceivedData(prevArray => [...prevArray, JSON.stringify(data)])
     } catch(e) {
       setReceivedError(prevArray => [...prevArray, JSON.stringify(e)])
@@ -114,7 +124,11 @@ function Test({ classes }) {
         <button onClick={() => handleOpenSettingsMethod('openSettings')}>openSettings</button>
       </div>
       <div className={classes.btnWrapper}>
-        <button onClick={() => handleShareMethod('share')}>aituBridge.share('privet ya kakaoi-to straniy text ЛАЛА')</button>
+        <button onClick={() => handleShareMethod('share', shareTestData.textOnly)}>share text only</button>
+        <button onClick={() => handleShareMethod('share', shareTestData.jpg)}>share jpg</button>
+        <button onClick={() => handleShareMethod('share', shareTestData.gif)}>share gif</button>
+        <button onClick={() => handleShareMethod('share', shareTestData.png)}>share png</button>
+        <button onClick={() => handleShareMethod('share', shareTestData.jpgOnly)}>share jpg w/o caption</button>
       </div>
       <div className={classes.btnWrapper}>
         <button onClick={() => handleInvokeMethod('AllowNotifications')}>AllowNotifications</button>
