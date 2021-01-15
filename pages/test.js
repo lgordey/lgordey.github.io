@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import withStyles from 'react-jss';
 import aituBridge from '@btsd/aitu-bridge';
 
@@ -20,12 +20,14 @@ const styles = {
   }
 };
 
-const shareTestData = {
-  textOnly: { text: 'privet ya kakaoi-to straniy text ЛАЛА' },
-  gif: { text: 'Look at this magical present!', media: basedGif },
-  jpg: { text: 'Look at this silly upside-down cat!', media: basedJpg },
-  jpgOnly: { media: basedJpg },
-  png: { text: 'Look at this beautiful Earth-in-space wallpaper!', media: basedPng },
+const invokeMethods = ['getMe', 'getPhone', 'getContacts', 'enableNotifications', 'disableNotifications'];
+
+const shareParams = {
+  textOnly: ['privet ya kakaoi-to straniy text ЛАЛА'],
+  gif: ['Look at this magical present!', basedGif],
+  jpg: ['Look at this silly upside-down cat!', basedJpg],
+  jpgOnly: ['', basedJpg],
+  png: ['Look at this beautiful Earth-in-space wallpaper!', basedPng],
 };
 
 function Test({ classes }) {
@@ -34,8 +36,10 @@ function Test({ classes }) {
   const [receivedError, setReceivedError] = useState([]);
   const [ errors, setErrors ] = useState([]);
 
-  const handleInvokeMethod = async (methodName) => {
+  const handleInvokeFakeMethod = async (methodName = 'fakeMethod') => {
     setCalledMethods(prevArray => [...prevArray, methodName])
+
+    console.log(`==handle ${methodName} method`);
     try {
       const data = await aituBridge.invoke(methodName);
       setReceivedData(prevArray => [...prevArray, JSON.stringify(data)])
@@ -44,68 +48,16 @@ function Test({ classes }) {
     }
   }
 
-  const handleGetGeoMethod = async (methodName) => {
-    if (!aituBridge.supports(methodName)) {
+  const handleMethod = async (methodName, params = []) => {
+    if (!invokeMethods.includes(methodName) && !aituBridge.supports(methodName)) {
       setErrors(prevArray => [...prevArray, `Метод "${methodName}" не поддерживается в текущей версии приложения`]);
       return;
     }
-
     setCalledMethods(prevArray => [...prevArray, methodName])
 
-    console.log('==handleGetGeoMethod');
+    console.log(`==handle ${methodName} method${params.length > 0 ? ` with params ${JSON.stringify(params)}`: ''}`);
     try {
-      const data = await aituBridge.getGeo();
-      setReceivedData(prevArray => [...prevArray, JSON.stringify(data)])
-    } catch(e) {
-      setReceivedError(prevArray => [...prevArray, JSON.stringify(e)])
-    }
-  }
-
-  const handleGetQrMethod = async (methodName) => {
-    if (!aituBridge.supports(methodName)) {
-      setErrors(prevArray => [...prevArray, `Метод "${methodName}" не поддерживается в текущей версии приложения`]);
-      return;
-    }
-
-    setCalledMethods(prevArray => [...prevArray, methodName])
-
-    console.log('==handleGetQrMethod');
-    try {
-      const data = await aituBridge.getQr();
-      setReceivedData(prevArray => [...prevArray, JSON.stringify(data)])
-    } catch(e) {
-      setReceivedError(prevArray => [...prevArray, JSON.stringify(e)])
-    }
-  }
-
-  const handleOpenSettingsMethod = async (methodName) => {
-    if (!aituBridge.supports(methodName)) {
-      setErrors(prevArray => [...prevArray, `Метод "${methodName}" не поддерживается в текущей версии приложения`]);
-      return;
-    }
-
-    setCalledMethods(prevArray => [...prevArray, methodName])
-
-    console.log('==handleOpenSettingsMethod');
-    try {
-      const data = await aituBridge.openSettings();
-      setReceivedData(prevArray => [...prevArray, JSON.stringify(data)])
-    } catch(e) {
-      setReceivedError(prevArray => [...prevArray, JSON.stringify(e)])
-    }
-  }
-
-  const handleShareMethod = async (methodName, { text, media }) => {
-    if (!aituBridge.supports(methodName)) {
-      setErrors(prevArray => [...prevArray, `Метод "${methodName}" не поддерживается в текущей версии приложения`]);
-      return;
-    }
-
-    setCalledMethods(prevArray => [...prevArray, methodName])
-
-    console.log('==handleShareMethod');
-    try {
-      const data = await aituBridge.share(text, media);
+      const data = await aituBridge[methodName](...params);
       setReceivedData(prevArray => [...prevArray, JSON.stringify(data)])
     } catch(e) {
       setReceivedError(prevArray => [...prevArray, JSON.stringify(e)])
@@ -115,23 +67,24 @@ function Test({ classes }) {
   return (
     <div className={classes.testWrapper}>
       <div className={classes.btnWrapper}>
-        <button onClick={() => handleInvokeMethod('GetMe')}>GetMe</button>
-        <button onClick={() => handleInvokeMethod('GetPhone')}>GetPhone</button>
-        <button onClick={() => handleInvokeMethod('GetAdminPassword')}>GetAdminPassword</button>
-        <button onClick={() => handleInvokeMethod('GetContacts')}>GetContacts</button>
-        <button onClick={() => handleGetGeoMethod('getGeo')}>aituBridge.getGeo()</button>
-        <button onClick={() => handleGetQrMethod('getQr')}>aituBridge.getQr()</button>
-        <button onClick={() => handleOpenSettingsMethod('openSettings')}>openSettings</button>
+        <button onClick={() => handleMethod('getMe')}>getMe</button>
+        <button onClick={() => handleMethod('getPhone')}>getPhone</button>
+        <button onClick={() => handleInvokeFakeMethod()}>fakeMethod</button>
+        <button onClick={() => handleMethod('getContacts')}>getContacts</button>
+        <button onClick={() => handleMethod('getGeo')}>getGeo</button>
+        <button onClick={() => handleMethod('getQr')}>getQr</button>
+        <button onClick={() => handleMethod('openSettings')}>openSettings</button>
       </div>
       <div className={classes.btnWrapper}>
-        <button onClick={() => handleShareMethod('share', shareTestData.textOnly)}>share text only</button>
-        <button onClick={() => handleShareMethod('share', shareTestData.jpg)}>share jpg</button>
-        <button onClick={() => handleShareMethod('share', shareTestData.gif)}>share gif</button>
-        <button onClick={() => handleShareMethod('share', shareTestData.png)}>share png</button>
-        <button onClick={() => handleShareMethod('share', shareTestData.jpgOnly)}>share jpg w/o caption</button>
+        <button onClick={() => handleMethod('share', shareParams.textOnly)}>share text only</button>
+        <button onClick={() => handleMethod('share', shareParams.jpg)}>share jpg</button>
+        <button onClick={() => handleMethod('share', shareParams.gif)}>share gif</button>
+        <button onClick={() => handleMethod('share', shareParams.png)}>share png</button>
+        <button onClick={() => handleMethod('share', shareParams.jpgOnly)}>share jpg w/o caption</button>
       </div>
       <div className={classes.btnWrapper}>
-        <button onClick={() => handleInvokeMethod('AllowNotifications')}>AllowNotifications</button>
+        <button onClick={() => handleMethod('enableNotifications')}>enableNotifications</button>
+        <button onClick={() => handleMethod('disableNotifications')}>disableNotifications</button>
       </div>
       <div className={classes.btnWrapper}>
         <a href="/javascriptquestions.pdf">PDF Link</a>
