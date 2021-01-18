@@ -11,11 +11,12 @@ const styles = {
     margin: '0 auto'
   },
   btnWrapper: {
-    padding: 20,
+    padding: '0 20px 20px 0',
     border: '10px solid black',
     marginTop: 20,
-    '& button:not(:first-child)': {
-      marginLeft: 20
+    '& button, & a': {
+      margin: '20px 0 0 20px',
+      display: 'inline-block'
     }
   }
 };
