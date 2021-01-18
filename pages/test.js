@@ -44,6 +44,7 @@ function Test({ classes }) {
       const data = await aituBridge.invoke(methodName);
       setReceivedData(prevArray => [...prevArray, JSON.stringify(data)])
     } catch(e) {
+      console.error(e);
       setReceivedError(prevArray => [...prevArray, JSON.stringify(e)])
     }
   }
@@ -60,7 +61,9 @@ function Test({ classes }) {
       const data = await aituBridge[methodName](...params);
       setReceivedData(prevArray => [...prevArray, JSON.stringify(data)])
     } catch(e) {
-      setReceivedError(prevArray => [...prevArray, JSON.stringify(e)])
+      console.error(e);
+      const errorText = e instanceof Error ? `${e.name}: ${e.message}` : JSON.stringify(e);
+      setReceivedError(prevArray => [...prevArray, errorText])
     }
   }
 
