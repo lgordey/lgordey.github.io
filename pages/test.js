@@ -80,11 +80,11 @@ function Test({ classes }) {
         <button onClick={() => handleMethod('openSettings')}>openSettings</button>
       </div>
       <div className={classes.btnWrapper}>
-        <button onClick={() => handleMethod('share', shareParams.textOnly)}>share text only</button>
-        <button onClick={() => handleMethod('share', shareParams.jpg)}>share jpg</button>
-        <button onClick={() => handleMethod('share', shareParams.gif)}>share gif</button>
-        <button onClick={() => handleMethod('share', shareParams.png)}>share png</button>
-        <button onClick={() => handleMethod('share', shareParams.jpgOnly)}>share jpg w/o caption</button>
+        <button onClick={() => handleMethod('share', shareParams.textOnly)}>share text</button>
+        <button onClick={() => handleMethod('shareImage', shareParams.jpg)}>shareImage jpg</button>
+        <button onClick={() => handleMethod('shareImage', shareParams.gif)}>shareImage gif</button>
+        <button onClick={() => handleMethod('shareImage', shareParams.png)}>shareImage png</button>
+        <button onClick={() => handleMethod('shareImage', shareParams.jpgOnly)}>shareImage jpg w/o caption</button>
       </div>
       <div className={classes.btnWrapper}>
         <button onClick={() => handleMethod('enableNotifications')}>enableNotifications</button>
