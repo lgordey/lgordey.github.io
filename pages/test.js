@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import withStyles from 'react-jss';
 import aituBridge from '@btsd/aitu-bridge';
 
@@ -36,6 +36,14 @@ function Test({ classes }) {
   const [receivedData, setReceivedData] = useState([]);
   const [receivedError, setReceivedError] = useState([]);
   const [ errors, setErrors ] = useState([]);
+
+  useEffect(() => {
+    window.onShake = () => setReceivedData(prevArray => [...prevArray, 'Shaken']);
+
+    return () => {
+      delete window.onShake;
+    };
+  }, []);
 
   const handleInvokeFakeMethod = async (methodName = 'fakeMethod') => {
     setCalledMethods(prevArray => [...prevArray, methodName])
