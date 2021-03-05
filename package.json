@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/lgordey/lgordey.github.io#readme",
   "dependencies": {
-    "@btsd/aitu-bridge": "^0.1.39",
+    "@btsd/aitu-bridge": "^0.1.42",
     "@svgr/webpack": "^4.3.3",
     "@zeit/next-css": "^1.0.1",
     "next": "^9.1.1",

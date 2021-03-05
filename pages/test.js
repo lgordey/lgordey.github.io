@@ -21,7 +21,7 @@ const styles = {
   }
 };
 
-const invokeMethods = ['getMe', 'getPhone', 'getContacts', 'enableNotifications', 'disableNotifications'];
+const invokeMethods = ['getMe', 'getPhone', 'getContacts', 'enableNotifications', 'disableNotifications', 'copyToClipboard'];
 
 const shareParams = {
   textOnly: ['privet ya kakaoi-to straniy text ЛАЛА'],
@@ -88,6 +88,7 @@ function Test({ classes }) {
         <button onClick={() => handleMethod('openSettings')}>openSettings</button>
       </div>
       <div className={classes.btnWrapper}>
+        <button onClick={() => handleMethod('copyToClipboard', shareParams.textOnly)}>copyToClipboard</button>
         <button onClick={() => handleMethod('share', shareParams.textOnly)}>share text</button>
         <button onClick={() => handleMethod('shareImage', shareParams.jpg)}>shareImage jpg</button>
         <button onClick={() => handleMethod('shareImage', shareParams.gif)}>shareImage gif</button>
