@@ -31,19 +31,37 @@ const shareParams = {
   png: ['Look at this beautiful Earth-in-space wallpaper!', basedPng],
 };
 
+const vibrateParams = {
+  once: [[1000]],
+  march: [[
+    291, 291,
+    291, 291,
+    291, 291,
+    291, 291,
+    145, 146, 145, 146,
+    291, 291,
+    145, 146, 145, 728,
+
+    291, 291,
+    291, 291,
+    291, 291,
+    291, 291,
+    145, 146, 145, 146,
+    291, 291,
+    145, 146, 145, 146
+  ]],
+};
+
 function Test({ classes }) {
   const [calledMethods, setCalledMethods] = useState([]);
   const [receivedData, setReceivedData] = useState([]);
   const [receivedError, setReceivedError] = useState([]);
   const [ errors, setErrors ] = useState([]);
 
-  useEffect(() => {
-    window.onShake = () => setReceivedData(prevArray => [...prevArray, 'Shaken']);
-
-    return () => {
-      delete window.onShake;
-    };
-  }, []);
+  const setShakeHandlerParams = {
+    log: [() => setReceivedData(prevArray => [...prevArray, 'Shaken'])],
+    off: [null],
+  };
 
   const handleInvokeFakeMethod = async (methodName = 'fakeMethod') => {
     setCalledMethods(prevArray => [...prevArray, methodName])
@@ -94,6 +112,12 @@ function Test({ classes }) {
         <button onClick={() => handleMethod('shareImage', shareParams.gif)}>shareImage gif</button>
         <button onClick={() => handleMethod('shareImage', shareParams.png)}>shareImage png</button>
         <button onClick={() => handleMethod('shareImage', shareParams.jpgOnly)}>shareImage jpg w/o caption</button>
+      </div>
+      <div className={classes.btnWrapper}>
+        <button onClick={() => handleMethod('vibrate', vibrateParams.once)}>vibrate once</button>
+        <button onClick={() => handleMethod('vibrate', vibrateParams.march)}>vibrate march</button>
+        <button onClick={() => handleMethod('setShakeHandler', setShakeHandlerParams.log)}>enable log on shake</button>
+        <button onClick={() => handleMethod('setShakeHandler', setShakeHandlerParams.off)}>disable log on shake</button>
       </div>
       <div className={classes.btnWrapper}>
         <button onClick={() => handleMethod('enableNotifications')}>enableNotifications</button>
