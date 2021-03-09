@@ -23,7 +23,7 @@ const styles = {
 
 const invokeMethods = ['getMe', 'getPhone', 'getContacts', 'enableNotifications', 'disableNotifications'];
 
-const copyToClipboardParams = 'some text';
+const copyToClipboardParams = ['some text'];
 
 const shareParams = {
   textOnly: ['privet ya kakaoi-to straniy text ЛАЛА'],
