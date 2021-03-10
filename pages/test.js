@@ -128,6 +128,7 @@ function Test({ classes }) {
       <div className={classes.btnWrapper}>
         <a href="/javascriptquestions.pdf">PDF Link</a>
         <a href="https://i2.app.link/rNwc1ePWheb">Contest mini-app</a>
+        <a href="https://i2.app.link/open_chat_with?user_id=9c860e79-b04a-11e8-81c4-0242c0a88006">DeepLink Open Chat With</a>
       </div>
       <div style={{ marginTop: 20 }} >
         <b>Errors:</b>
