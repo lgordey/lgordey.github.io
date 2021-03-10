@@ -106,6 +106,7 @@ function Test({ classes }) {
         <button onClick={() => handleMethod('getGeo')}>getGeo</button>
         <button onClick={() => handleMethod('getQr')}>getQr</button>
         <button onClick={() => handleMethod('openSettings')}>openSettings</button>
+        <button onClick={() => handleMethod('selectContact')}>selectContact</button>
       </div>
       <div className={classes.btnWrapper}>
         <button onClick={() => handleMethod('copyToClipboard', copyToClipboardParams)}>copyToClipboard</button>
