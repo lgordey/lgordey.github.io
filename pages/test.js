@@ -14,7 +14,7 @@ const styles = {
     padding: '0 20px 20px 0',
     border: '10px solid black',
     marginTop: 20,
-    '& button, & a': {
+    '& button, & a, & span': {
       margin: '20px 0 0 20px',
       display: 'inline-block'
     }
@@ -59,6 +59,11 @@ function Test({ classes }) {
   const [receivedData, setReceivedData] = useState([]);
   const [receivedError, setReceivedError] = useState([]);
   const [ errors, setErrors ] = useState([]);
+  const [url, setUrl] = useState('loading...');
+
+  useEffect(() => {
+    setUrl(window.location.href);
+  }, []);
 
   const setShakeHandlerParams = {
     log: [() => setReceivedData(prevArray => [...prevArray, 'Shaken'])],
@@ -98,6 +103,7 @@ function Test({ classes }) {
 
   return (
     <div className={classes.testWrapper}>
+      <div className={classes.btnWrapper}><span>Current url: {url}</span></div>
       <div className={classes.btnWrapper}>
         <button onClick={() => handleMethod('getMe')}>getMe</button>
         <button onClick={() => handleMethod('getPhone')}>getPhone</button>
