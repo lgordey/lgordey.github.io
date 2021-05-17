@@ -24,12 +24,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/angly/Work/lgordey.github.io/pages/test.js";
+var _jsxFileName = "/Users/gordey/github/lgordey.github.io/pages/test.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement;
 
 
 
-console.log('aituBridge', _btsd_aitu_bridge__WEBPACK_IMPORTED_MODULE_6__["default"]);
 
 var styles = {
   testWrapper: {
@@ -47,7 +46,8 @@ var styles = {
     }
   }
 };
-var invokeMethods = ['getMe', 'getPhone', 'getContacts', 'enableNotifications', 'disableNotifications', 'copyToClipboard'];
+var invokeMethods = ['getMe', 'getPhone', 'getContacts', 'enableNotifications', 'disableNotifications'];
+var copyToClipboardParams = ['some text'];
 var shareParams = {
   textOnly: ['privet ya kakaoi-to straniy text ЛАЛА'],
   gif: ['Look at this magical present!', _basedImages__WEBPACK_IMPORTED_MODULE_7__["basedGif"]],
@@ -208,14 +208,14 @@ function Test(_ref) {
     className: classes.testWrapper,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101
+      lineNumber: 100
     },
     __self: this
   }, __jsx("div", {
     className: classes.btnWrapper,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 102
+      lineNumber: 101
     },
     __self: this
   }, __jsx("button", {
@@ -224,7 +224,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 103
+      lineNumber: 102
     },
     __self: this
   }, "getMe"), __jsx("button", {
@@ -233,7 +233,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 104
+      lineNumber: 103
     },
     __self: this
   }, "getPhone"), __jsx("button", {
@@ -242,7 +242,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 105
+      lineNumber: 104
     },
     __self: this
   }, "fakeMethod"), __jsx("button", {
@@ -251,7 +251,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 106
+      lineNumber: 105
     },
     __self: this
   }, "getContacts"), __jsx("button", {
@@ -260,7 +260,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 107
+      lineNumber: 106
     },
     __self: this
   }, "getGeo"), __jsx("button", {
@@ -269,7 +269,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 108
+      lineNumber: 107
     },
     __self: this
   }, "getQr"), __jsx("button", {
@@ -278,10 +278,19 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
+      lineNumber: 108
+    },
+    __self: this
+  }, "openSettings"), __jsx("button", {
+    onClick: function onClick() {
+      return handleMethod('selectContact');
+    },
+    __source: {
+      fileName: _jsxFileName,
       lineNumber: 109
     },
     __self: this
-  }, "openSettings")), __jsx("div", {
+  }, "selectContact")), __jsx("div", {
     className: classes.btnWrapper,
     __source: {
       fileName: _jsxFileName,
@@ -290,7 +299,7 @@ function Test(_ref) {
     __self: this
   }, __jsx("button", {
     onClick: function onClick() {
-      return handleMethod('copyToClipboard', shareParams.textOnly);
+      return handleMethod('copyToClipboard', copyToClipboardParams);
     },
     __source: {
       fileName: _jsxFileName,
@@ -431,19 +440,26 @@ function Test(_ref) {
       lineNumber: 131
     },
     __self: this
-  }, "Contest mini-app")), __jsx("div", {
+  }, "Contest mini-app"), __jsx("a", {
+    href: "https://i2.app.link/open_chat_with?user_id=a92a86e7-e677-11e8-89fc-5a93b0f4e028",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 132
+    },
+    __self: this
+  }, "DeepLink Open Chat")), __jsx("div", {
     style: {
       marginTop: 20
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 133
+      lineNumber: 134
     },
     __self: this
   }, __jsx("b", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 134
+      lineNumber: 135
     },
     __self: this
   }, "Errors:"), errors.map(function (errMessage, i) {
@@ -451,7 +467,7 @@ function Test(_ref) {
       key: i + errMessage,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 136
+        lineNumber: 137
       },
       __self: this
     }, errMessage);
@@ -462,7 +478,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 139
+      lineNumber: 140
     },
     __self: this
   }, __jsx("div", {
@@ -471,7 +487,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 140
+      lineNumber: 141
     },
     __self: this
   }, __jsx("b", {
@@ -480,7 +496,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 141
+      lineNumber: 142
     },
     __self: this
   }, "Invoked methods:"), calledMethods.map(function (method, i) {
@@ -488,7 +504,7 @@ function Test(_ref) {
       key: i + method,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 144
+        lineNumber: 145
       },
       __self: this
     }, i + 1 + ') ', method);
@@ -498,7 +514,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 148
+      lineNumber: 149
     },
     __self: this
   }, __jsx("b", {
@@ -507,7 +523,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 149
+      lineNumber: 150
     },
     __self: this
   }, "Received data:"), receivedData && receivedData.map(function (data, i) {
@@ -515,7 +531,7 @@ function Test(_ref) {
       key: i + data,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 152
+        lineNumber: 153
       },
       __self: this
     }, i + 1 + '. ', data);
@@ -525,7 +541,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 156
+      lineNumber: 157
     },
     __self: this
   }, __jsx("b", {
@@ -534,7 +550,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 157
+      lineNumber: 158
     },
     __self: this
   }, "Received errors:"), receivedError && receivedError.map(function (error, i) {
@@ -542,7 +558,7 @@ function Test(_ref) {
       key: i + error,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 160
+        lineNumber: 161
       },
       __self: this
     }, i + 1 + '. ', error);
@@ -554,4 +570,4 @@ function Test(_ref) {
 /***/ })
 
 })
-//# sourceMappingURL=test.js.5769dbdbb95c162b48b3.hot-update.js.map
+//# sourceMappingURL=test.js.3a099b4be326ddddca18.hot-update.js.map
