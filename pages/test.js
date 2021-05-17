@@ -73,7 +73,7 @@ function Test({ classes }) {
   const handleInvokeFakeMethod = async (methodName = 'fakeMethod') => {
     setCalledMethods(prevArray => [...prevArray, methodName])
 
-    console.log(`==handle ${methodName} method`);
+    console.log(`===handle ${methodName} method`);
     try {
       const data = await aituBridge.invoke(methodName);
       setReceivedData(prevArray => [...prevArray, JSON.stringify(data)])
