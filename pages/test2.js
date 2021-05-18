@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import withStyles from 'react-jss';
-import aituBridge from '@btsd/aitu-bridge';
 
 const styles = {
   testWrapper: {
@@ -22,6 +21,12 @@ function Test({ classes }) {
   const [calledMethods, setCalledMethods] = useState([]);
   const [receivedData, setReceivedData] = useState([]);
   const [receivedError, setReceivedError] = useState([]);
+  const [aituBridge, setAituBridge] = useState();
+
+  useEffect(() => {
+    window.AITU_ORIGIN = 'http://localhost:3000';
+    setAituBridge(require('@btsd/aitu-bridge').default);
+  }, []);
 
   const handleSetItem = async (keyName, keyValue) => {
     setCalledMethods(prevArray => [...prevArray, `setItem(${keyName}, ${keyValue})`]);
@@ -53,6 +58,7 @@ function Test({ classes }) {
 
   return (
     <div className={classes.testWrapper}>
+      <a href="/test">To test</a>
       <div className={classes.btnWrapper}>
         <button onClick={() => handleSetItem('testItem', '123-456-789')}>setItem('testItem', '123-456-789')</button>
         <button onClick={() => handleGetItem('testItem')}>getItem('testItem')</button>

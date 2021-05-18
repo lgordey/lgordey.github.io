@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import withStyles from 'react-jss';
-import aituBridge from '@btsd/aitu-bridge';
 
 import { basedGif, basedJpg, basedPng } from '../basedImages';
 
@@ -60,9 +59,13 @@ function Test({ classes }) {
   const [receivedError, setReceivedError] = useState([]);
   const [ errors, setErrors ] = useState([]);
   const [url, setUrl] = useState('loading...');
+  const [aituBridge, setAituBridge] = useState();
 
   useEffect(() => {
     setUrl(window.location.href);
+
+    window.AITU_ORIGIN = 'http://localhost:3000';
+    setAituBridge(require('@btsd/aitu-bridge').default);
   }, []);
 
   const setShakeHandlerParams = {
@@ -103,6 +106,7 @@ function Test({ classes }) {
 
   return (
     <div className={classes.testWrapper}>
+      <a href="/test2">To test2</a>
       <div className={classes.btnWrapper}><span>Current url: {url}</span></div>
       <div className={classes.btnWrapper}>
         <button onClick={() => handleMethod('getMe')}>getMe</button>
