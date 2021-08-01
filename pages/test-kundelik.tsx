@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import withStyles from 'react-jss';
 
-import kundelikBridge from '../kundelik-bridge';
+import kundelikBridge from '@btsd/kundelik-bridge';
 
 const styles = {
   testWrapper: {
@@ -46,6 +46,8 @@ function Test({ classes }) {
         <button onClick={() => handleMethod('getKundelikAuthToken')}>getKundelikAuthToken</button>
         <button onClick={() => handleMethod('openSettings')}>openSettings</button>
         <button onClick={() => handleMethod('getContacts')}>getContacts</button>
+        <button onClick={() => handleMethod('getKundelikUserInfo')}>getKundelikUserInfo</button>
+        <button onClick={() => handleMethod('showNewMessengerEvent')}>showNewMessengerEvent</button>
       </div>
       <div style={{ marginTop: 20 }} >
         <b>Errors:</b>
