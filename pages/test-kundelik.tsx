@@ -20,6 +20,10 @@ const styles = {
   }
 };
 
+const showNewMessengerEventData = {
+  eventType: 'new_message'
+};
+
 function Test({ classes }) {
   const [calledMethods, setCalledMethods] = useState([]);
   const [receivedData, setReceivedData] = useState([]);
@@ -40,6 +44,20 @@ function Test({ classes }) {
     }
   }
 
+  const handleMethodObject = async (methodName, params = {}) => {
+    setCalledMethods(prevArray => [...prevArray, methodName])
+
+    console.log(`==handle ${methodName} method${` with params ${JSON.stringify(params)}`}`);
+    try {
+      const data = await kundelikBridge[methodName](params);
+      setReceivedData(prevArray => [...prevArray, JSON.stringify(data)])
+    } catch(e) {
+      console.error(e);
+      const errorText = e instanceof Error ? `${e.name}: ${e.message}` : JSON.stringify(e);
+      setReceivedError(prevArray => [...prevArray, errorText])
+    }
+  }
+
   return (
     <div className={classes.testWrapper}>
       <div className={classes.btnWrapper}>
@@ -47,7 +65,7 @@ function Test({ classes }) {
         <button onClick={() => handleMethod('openSettings')}>openSettings</button>
         <button onClick={() => handleMethod('getContacts')}>getContacts</button>
         <button onClick={() => handleMethod('getKundelikUserInfo')}>getKundelikUserInfo</button>
-        <button onClick={() => handleMethod('showNewMessengerEvent')}>showNewMessengerEvent</button>
+        <button onClick={() => handleMethodObject('showNewMessengerEvent', showNewMessengerEventData)}>showNewMessengerEvent</button>
       </div>
       <div style={{ marginTop: 20 }} >
         <b>Errors:</b>
