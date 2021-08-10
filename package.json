@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/lgordey/lgordey.github.io#readme",
   "dependencies": {
-    "@btsd/kundelik-bridge": "^0.0.5",
+    "@btsd/kundelik-bridge": "^0.0.6",
     "@btsd/aitu-bridge": "^0.2.2",
     "@svgr/webpack": "^4.3.3",
     "@zeit/next-css": "^1.0.1",
