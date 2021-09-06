@@ -63,6 +63,7 @@ function Test({ classes }) {
       <div className={classes.btnWrapper}>
         <button onClick={() => handleMethod('getKundelikAuthToken')}>getKundelikAuthToken</button>
         <button onClick={() => handleMethod('openSettings')}>openSettings</button>
+        <button onClick={() => handleMethod('getContactsVersion')}>getContactsVersion</button>
         <button onClick={() => handleMethod('getContacts')}>getContacts</button>
         <button onClick={() => handleMethod('getKundelikUserInfo')}>getKundelikUserInfo</button>
         <button onClick={() => handleMethodObject('showNewMessengerEvent', showNewMessengerEventData)}>showNewMessengerEvent</button>
