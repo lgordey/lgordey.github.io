@@ -32,10 +32,7 @@ function Test({ classes }) {
 
   useEffect(() => {
     setUrl(window.location.href);
-
-    window.AITU_ORIGIN = 'http://localhost:3000';
     setAituBridge(require('@btsd/aitu-bridge').default);
-    
   }, []);
 
   const handleFileInput = (e) => {
