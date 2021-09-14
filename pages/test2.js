@@ -58,7 +58,8 @@ function Test({ classes }) {
 
   return (
     <div className={classes.testWrapper}>
-      <a href="/test">To test</a>
+      <a href="/test">To test</a><br />
+      <a href="/test-share">To test share</a>
       <div className={classes.btnWrapper}>
         <button onClick={() => handleSetItem('testItem', '123-456-789')}>setItem('testItem', '123-456-789')</button>
         <button onClick={() => handleGetItem('testItem')}>getItem('testItem')</button>

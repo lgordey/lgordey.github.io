@@ -106,7 +106,8 @@ function Test({ classes }) {
 
   return (
     <div className={classes.testWrapper}>
-      <a href="/test2">To test2</a>
+      <a href="/test2">To test2</a><br />
+      <a href="/test-share">To test share</a>
       <div className={classes.btnWrapper}><span>Current url: {url}</span></div>
       <div className={classes.btnWrapper}>
         <button onClick={() => handleMethod('getMe')}>getMe</button>
