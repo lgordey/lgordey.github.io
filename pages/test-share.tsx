@@ -43,7 +43,7 @@ function Test({ classes }) {
     reader.onloadend = () => {
       console.log('===============base64String');
       console.log(reader.result);
-      handleMethod('shareImage', reader.result)
+      handleMethod('shareImage', [reader.result]);
     };
   }
 
