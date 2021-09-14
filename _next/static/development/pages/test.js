@@ -399,7 +399,7 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-function e(e,n){var t,o,r=(t={current:0,next:function(){return++this.current}},o={},{add:function(e,n){var r=null!=n?n:t.next();return o[r]=e,r},resolve:function(e,n,t,r){var i=o[e];i&&(t(r)?i.resolve(n):i.reject(r),o[e]=null)}});return n(function(e){if(e.detail&&"reqId"in e.detail){var n=e.detail,t=n.reqId;t&&r.resolve(t,n.data,function(e){return!e},n.error)}}),function(){var n=arguments;return new Promise(function(t,o){var i=r.add({resolve:t,reject:o});e.apply(void 0,[i].concat([].slice.call(n)))})}}var n;!function(e){e.getMe="GetMe",e.getPhone="GetPhone",e.getContacts="GetContacts",e.enableNotifications="AllowNotifications",e.disableNotifications="DisableNotifications"}(n||(n={}));var t="invoke",o="storage",r="undefined"!=typeof window&&window.AndroidBridge,i="undefined"!=typeof window&&window.webkit&&window.webkit.messageHandlers,a="undefined"!=typeof window&&window.top!==window&&(window.WebBridge=window.WebBridge||{});if(a){var s=window.AITU_ORIGIN||"https://aitu.io";[t,o].forEach(function(e){a[e]||(a[e]=function(){return window.top.postMessage(JSON.stringify({method:e,payload:[].slice.call(arguments)}),s)})}),window.addEventListener("message",function(e){if(e.origin===s&&e.data)try{var n=JSON.parse(e.data);window.dispatchEvent(new CustomEvent("aituEvents",{detail:n}))}catch(e){}})}var d=function(){var s=[];"undefined"!=typeof window&&window.addEventListener("aituEvents",function(e){[].concat(s).map(function(n){return n.call(null,e)})});var d,c,u,f=function(e){s.push(e)},l=(d={current:0,next:function(){return++this.current}},c={},u={add:function(e,n){var t=null!=n?n:d.next();return c[t]=e,t},resolve:function(e,n,t,o){var r=c[e];r&&(t(o)?r.resolve(n):r.reject(o),c[e]=null)}},f(function(e){if(e.detail&&"reqId"in e.detail){var n=e.detail,t=n.reqId;t&&u.resolve(t,n.data,function(e){return!e},n.error)}}),function(e,n){return void 0===n&&(n={}),new Promise(function(o,s){!function(e,n,o){void 0===o&&(o={});var s=i&&i[t],d=a&&a[t];r&&r[t]?r[t](e,n,JSON.stringify(o)):s?i[t].postMessage({reqId:e,method:n,data:o}):d?a[t](e,n,o):"undefined"!=typeof window&&console.log("--invoke-isUnknown")}(u.add({resolve:o,reject:s},n.reqId),e,n)})}),g=function(e,n){var t,o,r=(t={current:0,next:function(){return++this.current}},o={},{add:function(e,n){var r="s"+(null!=n?n:t.next());return o[r]=e,r},resolve:function(e,n,t,r){var i=o[e];i&&(t(r)?i.resolve(n):i.reject(r),o[e]=null)}});return n(function(e){if(e.detail&&"reqId"in e.detail){var n=e.detail,t=n.reqId;t&&r.resolve(t,n.data,function(e){return!e},n.error)}}),{setItem:function(n,t){return new Promise(function(o,i){var a=r.add({resolve:o,reject:i});e(a,"setItem",{keyName:n,keyValue:t})})},getItem:function(n){return new Promise(function(t,o){var i=r.add({resolve:t,reject:o});e(i,"getItem",{keyName:n})})},clear:function(){return new Promise(function(n,t){var o=r.add({resolve:n,reject:t});e(o,"clear",{})})}}}(function(e,n,t){void 0===t&&(t={});var s=i&&i[o],d=a&&a[o];r&&r[o]?r[o](e,n,JSON.stringify(t)):s?i[o].postMessage({reqId:e,method:n,data:t}):d?a[o](e,n,t):"undefined"!=typeof window&&console.log("--storage-isUnknown")},f),v=e(function(e){var n=i&&i.getGeo;r&&r.getGeo?r.getGeo(e):n?i.getGeo.postMessage({reqId:e}):"undefined"!=typeof window&&console.log("--getGeo-isWeb")},f),w=e(function(e){var n=i&&i.getQr;r&&r.getQr?r.getQr(e):n?i.getQr.postMessage({reqId:e}):"undefined"!=typeof window&&console.log("--getQr-isWeb")},f),p=e(function(e){var n=i&&i.selectContact;r&&r.selectContact?r.selectContact(e):n?i.selectContact.postMessage({reqId:e}):"undefined"!=typeof window&&console.log("--selectContact-isWeb")},f),y=e(function(e){var n=i&&i.openSettings;r&&r.openSettings?r.openSettings(e):n?i.openSettings.postMessage({reqId:e}):"undefined"!=typeof window&&console.log("--openSettings-isWeb")},f),h=e(function(e,n){var t=i&&i.share;r&&r.share?r.share(e,n):t?i.share.postMessage({reqId:e,text:n}):"undefined"!=typeof window&&console.log("--share-isWeb")},f),b=e(function(e,n){var t=i&&i.copyToClipboard;r&&r.copyToClipboard?r.copyToClipboard(e,n):t?i.copyToClipboard.postMessage({reqId:e,text:n}):"undefined"!=typeof window&&console.log("--copyToClipboard-isWeb")},f),I=e(function(e,n,t){var o=i&&i.shareImage;r&&r.shareImage?r.shareImage(e,n,t):o?i.shareImage.postMessage({reqId:e,text:n,image:t}):"undefined"!=typeof window&&console.log("--shareImage-isWeb")},f),m=e(function(e,n){if(!Array.isArray(n)||n.some(function(e){return e<1||e!==Math.floor(e)})||n.reduce(function(e,n){return e+n})>1e4)console.error("Pattern should be an array of positive integers no longer than 10000ms total");else{var t=i&&i.vibrate;r&&r.vibrate?r.vibrate(e,JSON.stringify(n)):t?i.vibrate.postMessage({reqId:e,pattern:n}):"undefined"!=typeof window&&console.log("--vibrate-isWeb")}},f);return{copyToClipboard:b,invoke:l,storage:g,getMe:function(){return l(n.getMe)},getPhone:function(){return l(n.getPhone)},getContacts:function(){return l(n.getContacts)},getGeo:v,getQr:w,selectContact:p,enableNotifications:function(){return l(n.enableNotifications)},disableNotifications:function(){return l(n.disableNotifications)},openSettings:y,share:h,shareImage:I,setShakeHandler:function(e){r&&r.setShakeHandler||i&&i.setShakeHandler?window.onAituBridgeShake=e:"undefined"!=typeof window&&console.log("--setShakeHandler-isWeb")},vibrate:m,isSupported:function(){return Boolean(r||i||a)},supports:function(e){return r&&"function"==typeof r[e]||i&&i[e]&&"function"==typeof i[e].postMessage||a&&"function"==typeof a[e]},sub:f}}();/* harmony default export */ __webpack_exports__["default"] = (d);
+function e(e,n){var t,o,i=(t={current:0,next:function(){return++this.current}},o={},{add:function(e,n){var i=null!=n?n:t.next();return o[i]=e,i},resolve:function(e,n,t,i){var r=o[e];r&&(t(i)?r.resolve(n):r.reject(i),o[e]=null)}});return n(function(e){if(e.detail&&"reqId"in e.detail){var n=e.detail,t=n.reqId;t&&i.resolve(t,n.data,function(e){return!e},n.error)}}),function(){var n=arguments;return new Promise(function(t,o){var r=i.add({resolve:t,reject:o});e.apply(void 0,[r].concat([].slice.call(n)))})}}var n;!function(e){e.getMe="GetMe",e.getPhone="GetPhone",e.getContacts="GetContacts",e.enableNotifications="AllowNotifications",e.disableNotifications="DisableNotifications"}(n||(n={}));var t="invoke",o="storage",i="undefined"!=typeof window&&window.AndroidBridge,r="undefined"!=typeof window&&window.webkit&&window.webkit.messageHandlers&&window.webkit.messageHandlers.invoke,a="undefined"!=typeof window&&window.top!==window&&(window.WebBridge=window.WebBridge||{});if(a){var s=window.AITU_ORIGIN||"https://aitu.io";[t,o].forEach(function(e){a[e]||(a[e]=function(){return window.top.postMessage(JSON.stringify({method:e,payload:[].slice.call(arguments)}),s)})}),window.addEventListener("message",function(e){if(e.origin===s&&e.data)try{var n=JSON.parse(e.data);window.dispatchEvent(new CustomEvent("aituEvents",{detail:n}))}catch(e){}})}var d=function(){var s=[];"undefined"!=typeof window&&window.addEventListener("aituEvents",function(e){[].concat(s).map(function(n){return n.call(null,e)})});var d,c,u,f=function(e){s.push(e)},l=(d={current:0,next:function(){return++this.current}},c={},u={add:function(e,n){var t=null!=n?n:d.next();return c[t]=e,t},resolve:function(e,n,t,o){var i=c[e];i&&(t(o)?i.resolve(n):i.reject(o),c[e]=null)}},f(function(e){if(e.detail&&"reqId"in e.detail){var n=e.detail,t=n.reqId;t&&u.resolve(t,n.data,function(e){return!e},n.error)}}),function(e,n){return void 0===n&&(n={}),new Promise(function(o,s){!function(e,n,o){void 0===o&&(o={});var s=r&&r[t],d=a&&a[t];i&&i[t]?i[t](e,n,JSON.stringify(o)):s?r[t].postMessage({reqId:e,method:n,data:o}):d?a[t](e,n,o):"undefined"!=typeof window&&console.log("--invoke-isUnknown")}(u.add({resolve:o,reject:s},n.reqId),e,n)})}),g=function(e,n){var t,o,i=(t={current:0,next:function(){return++this.current}},o={},{add:function(e,n){var i="s"+(null!=n?n:t.next());return o[i]=e,i},resolve:function(e,n,t,i){var r=o[e];r&&(t(i)?r.resolve(n):r.reject(i),o[e]=null)}});return n(function(e){if(e.detail&&"reqId"in e.detail){var n=e.detail,t=n.reqId;t&&i.resolve(t,n.data,function(e){return!e},n.error)}}),{setItem:function(n,t){return new Promise(function(o,r){var a=i.add({resolve:o,reject:r});e(a,"setItem",{keyName:n,keyValue:t})})},getItem:function(n){return new Promise(function(t,o){var r=i.add({resolve:t,reject:o});e(r,"getItem",{keyName:n})})},clear:function(){return new Promise(function(n,t){var o=i.add({resolve:n,reject:t});e(o,"clear",{})})}}}(function(e,n,t){void 0===t&&(t={});var s=r&&r[o],d=a&&a[o];i&&i[o]?i[o](e,n,JSON.stringify(t)):s?r[o].postMessage({reqId:e,method:n,data:t}):d?a[o](e,n,t):"undefined"!=typeof window&&console.log("--storage-isUnknown")},f),w=e(function(e){var n=r&&r.getGeo;i&&i.getGeo?i.getGeo(e):n?r.getGeo.postMessage({reqId:e}):"undefined"!=typeof window&&console.log("--getGeo-isWeb")},f),v=e(function(e){var n=r&&r.getQr;i&&i.getQr?i.getQr(e):n?r.getQr.postMessage({reqId:e}):"undefined"!=typeof window&&console.log("--getQr-isWeb")},f),p=e(function(e){var n=r&&r.getSMSCode;i&&i.getSMSCode?i.getSMSCode(e):n?r.getSMSCode.postMessage({reqId:e}):"undefined"!=typeof window&&console.log("--getSMSCode-isWeb")},f),h=e(function(e){var n=r&&r.selectContact;i&&i.selectContact?i.selectContact(e):n?r.selectContact.postMessage({reqId:e}):"undefined"!=typeof window&&console.log("--selectContact-isWeb")},f),y=e(function(e){var n=r&&r.openSettings;i&&i.openSettings?i.openSettings(e):n?r.openSettings.postMessage({reqId:e}):"undefined"!=typeof window&&console.log("--openSettings-isWeb")},f),b=e(function(e,n){var t=r&&r.share;i&&i.share?i.share(e,n):t?r.share.postMessage({reqId:e,text:n}):"undefined"!=typeof window&&console.log("--share-isWeb")},f),I=e(function(e,n){var t=r&&r.copyToClipboard;i&&i.copyToClipboard?i.copyToClipboard(e,n):t?r.copyToClipboard.postMessage({reqId:e,text:n}):"undefined"!=typeof window&&console.log("--copyToClipboard-isWeb")},f),S=e(function(e,n,t){var o=r&&r.shareImage;i&&i.shareImage?i.shareImage(e,n,t):o?r.shareImage.postMessage({reqId:e,text:n,image:t}):"undefined"!=typeof window&&console.log("--shareImage-isWeb")},f),m=e(function(e,n,t){var o=r&&r.shareFile;i&&i.shareFile?i.shareFile(e,n,t):o?r.shareFile.postMessage({reqId:e,text:n,file:t}):"undefined"!=typeof window&&console.log("--shareFile-isWeb")},f),M=e(function(e,n){if(!Array.isArray(n)||n.some(function(e){return e<1||e!==Math.floor(e)})||n.reduce(function(e,n){return e+n})>1e4)console.error("Pattern should be an array of positive integers no longer than 10000ms total");else{var t=r&&r.vibrate;i&&i.vibrate?i.vibrate(e,JSON.stringify(n)):t?r.vibrate.postMessage({reqId:e,pattern:n}):"undefined"!=typeof window&&console.log("--vibrate-isWeb")}},f);return{copyToClipboard:I,invoke:l,storage:g,getMe:function(){return l(n.getMe)},getPhone:function(){return l(n.getPhone)},getContacts:function(){return l(n.getContacts)},getGeo:w,getQr:v,getSMSCode:p,selectContact:h,enableNotifications:function(){return l(n.enableNotifications)},disableNotifications:function(){return l(n.disableNotifications)},openSettings:y,share:b,shareImage:S,shareFile:m,setShakeHandler:function(e){i&&i.setShakeHandler||r&&r.setShakeHandler?window.onAituBridgeShake=e:"undefined"!=typeof window&&console.log("--setShakeHandler-isWeb")},vibrate:M,isSupported:function(){return Boolean(i||r||a)},supports:function(e){return i&&"function"==typeof i[e]||r&&r[e]&&"function"==typeof r[e].postMessage||a&&"function"==typeof a[e]},sub:f}}();/* harmony default export */ __webpack_exports__["default"] = (d);
 //# sourceMappingURL=index.module.js.map
 
 
@@ -10750,24 +10750,37 @@ function Test(_ref) {
       lineNumber: 109
     },
     __self: this
-  }, "To test2"), __jsx("div", {
-    className: classes.btnWrapper,
+  }, "To test2"), __jsx("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 109
+    },
+    __self: this
+  }), __jsx("a", {
+    href: "/test-share",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 110
     },
     __self: this
+  }, "To test share"), __jsx("div", {
+    className: classes.btnWrapper,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 111
+    },
+    __self: this
   }, __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 110
+      lineNumber: 111
     },
     __self: this
   }, "Current url: ", url)), __jsx("div", {
     className: classes.btnWrapper,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 111
+      lineNumber: 112
     },
     __self: this
   }, __jsx("button", {
@@ -10776,7 +10789,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 112
+      lineNumber: 113
     },
     __self: this
   }, "getMe"), __jsx("button", {
@@ -10785,7 +10798,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 113
+      lineNumber: 114
     },
     __self: this
   }, "getPhone"), __jsx("button", {
@@ -10794,7 +10807,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 114
+      lineNumber: 115
     },
     __self: this
   }, "fakeMethod"), __jsx("button", {
@@ -10803,7 +10816,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 115
+      lineNumber: 116
     },
     __self: this
   }, "getContacts"), __jsx("button", {
@@ -10812,7 +10825,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 116
+      lineNumber: 117
     },
     __self: this
   }, "getGeo"), __jsx("button", {
@@ -10821,7 +10834,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 117
+      lineNumber: 118
     },
     __self: this
   }, "getQr"), __jsx("button", {
@@ -10830,7 +10843,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 118
+      lineNumber: 119
     },
     __self: this
   }, "openSettings"), __jsx("button", {
@@ -10839,14 +10852,14 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 119
+      lineNumber: 120
     },
     __self: this
   }, "selectContact")), __jsx("div", {
     className: classes.btnWrapper,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 121
+      lineNumber: 122
     },
     __self: this
   }, __jsx("button", {
@@ -10855,7 +10868,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 122
+      lineNumber: 123
     },
     __self: this
   }, "copyToClipboard"), __jsx("button", {
@@ -10864,7 +10877,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 123
+      lineNumber: 124
     },
     __self: this
   }, "share text"), __jsx("button", {
@@ -10873,7 +10886,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 124
+      lineNumber: 125
     },
     __self: this
   }, "shareImage jpg"), __jsx("button", {
@@ -10882,7 +10895,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 125
+      lineNumber: 126
     },
     __self: this
   }, "shareImage gif"), __jsx("button", {
@@ -10891,7 +10904,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 126
+      lineNumber: 127
     },
     __self: this
   }, "shareImage png"), __jsx("button", {
@@ -10900,14 +10913,14 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 127
+      lineNumber: 128
     },
     __self: this
   }, "shareImage jpg w/o caption")), __jsx("div", {
     className: classes.btnWrapper,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 129
+      lineNumber: 130
     },
     __self: this
   }, __jsx("button", {
@@ -10916,7 +10929,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 130
+      lineNumber: 131
     },
     __self: this
   }, "vibrate once"), __jsx("button", {
@@ -10925,7 +10938,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 131
+      lineNumber: 132
     },
     __self: this
   }, "vibrate march"), __jsx("button", {
@@ -10934,7 +10947,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 132
+      lineNumber: 133
     },
     __self: this
   }, "enable log on shake"), __jsx("button", {
@@ -10943,14 +10956,14 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 133
+      lineNumber: 134
     },
     __self: this
   }, "disable log on shake")), __jsx("div", {
     className: classes.btnWrapper,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 135
+      lineNumber: 136
     },
     __self: this
   }, __jsx("button", {
@@ -10959,7 +10972,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 136
+      lineNumber: 137
     },
     __self: this
   }, "enableNotifications"), __jsx("button", {
@@ -10968,35 +10981,35 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 137
+      lineNumber: 138
     },
     __self: this
   }, "disableNotifications")), __jsx("div", {
     className: classes.btnWrapper,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 139
+      lineNumber: 140
     },
     __self: this
   }, __jsx("a", {
     href: "/javascriptquestions.pdf",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 140
+      lineNumber: 141
     },
     __self: this
   }, "PDF Link"), __jsx("a", {
     href: "https://i2.app.link/rNwc1ePWheb?promocode=ABCDE",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 141
+      lineNumber: 142
     },
     __self: this
   }, "Contest mini-app"), __jsx("a", {
     href: "https://i2.app.link/open_chat_with?user_id=a92a86e7-e677-11e8-89fc-5a93b0f4e028",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 142
+      lineNumber: 143
     },
     __self: this
   }, "DeepLink Open Chat")), __jsx("div", {
@@ -11005,13 +11018,13 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 144
+      lineNumber: 145
     },
     __self: this
   }, __jsx("b", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 145
+      lineNumber: 146
     },
     __self: this
   }, "Errors:"), errors.map(function (errMessage, i) {
@@ -11019,7 +11032,7 @@ function Test(_ref) {
       key: i + errMessage,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 147
+        lineNumber: 148
       },
       __self: this
     }, errMessage);
@@ -11030,7 +11043,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 150
+      lineNumber: 151
     },
     __self: this
   }, __jsx("div", {
@@ -11039,7 +11052,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 151
+      lineNumber: 152
     },
     __self: this
   }, __jsx("b", {
@@ -11048,7 +11061,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 152
+      lineNumber: 153
     },
     __self: this
   }, "Invoked methods:"), calledMethods.map(function (method, i) {
@@ -11056,7 +11069,7 @@ function Test(_ref) {
       key: i + method,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 155
+        lineNumber: 156
       },
       __self: this
     }, i + 1 + ') ', method);
@@ -11066,7 +11079,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 159
+      lineNumber: 160
     },
     __self: this
   }, __jsx("b", {
@@ -11075,7 +11088,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 160
+      lineNumber: 161
     },
     __self: this
   }, "Received data:"), receivedData && receivedData.map(function (data, i) {
@@ -11083,7 +11096,7 @@ function Test(_ref) {
       key: i + data,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 163
+        lineNumber: 164
       },
       __self: this
     }, i + 1 + '. ', data);
@@ -11093,7 +11106,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 167
+      lineNumber: 168
     },
     __self: this
   }, __jsx("b", {
@@ -11102,7 +11115,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 168
+      lineNumber: 169
     },
     __self: this
   }, "Received errors:"), receivedError && receivedError.map(function (error, i) {
@@ -11110,7 +11123,7 @@ function Test(_ref) {
       key: i + error,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 171
+        lineNumber: 172
       },
       __self: this
     }, i + 1 + '. ', error);
@@ -11121,7 +11134,7 @@ function Test(_ref) {
 
 /***/ }),
 
-/***/ 1:
+/***/ 3:
 /*!***********************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Ftest&absolutePagePath=%2FUsers%2Flgordey%2FBTS%2Flgordey.github.io%2Fpages%2Ftest.js ***!
   \***********************************************************************************************************************************/
@@ -11144,5 +11157,5 @@ module.exports = dll_b35e09dc2ca94ac6d9c1;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[3,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=test.js.map
