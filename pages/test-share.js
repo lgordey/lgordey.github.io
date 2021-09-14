@@ -50,7 +50,7 @@ function Test({ classes }) {
   }
 
   const handleMethod = async (methodName, params = []) => {
-    if (!invokeMethods.includes(methodName) && !aituBridge!.supports(methodName)) {
+    if (!invokeMethods.includes(methodName) && !aituBridge.supports(methodName)) {
       setErrors(prevArray => [...prevArray, `Метод "${methodName}" не поддерживается в текущей версии приложения`]);
       return;
     }
