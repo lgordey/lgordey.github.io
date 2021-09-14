@@ -43,12 +43,14 @@ function Test({ classes }) {
     reader.onloadend = () => {
       console.log('===============base64String');
       console.log(reader.result);
-      handleMethod('shareImage', [reader.result]);
+      if (typeof reader.result === 'string') {
+        handleMethod('shareImage', [reader.result])
+      }
     };
   }
 
   const handleMethod = async (methodName, params = []) => {
-    if (!invokeMethods.includes(methodName) && !aituBridge.supports(methodName)) {
+    if (!invokeMethods.includes(methodName) && aituBridge && !aituBridge.supports(methodName)) {
       setErrors(prevArray => [...prevArray, `Метод "${methodName}" не поддерживается в текущей версии приложения`]);
       return;
     }
