@@ -116,6 +116,7 @@ function Test({ classes }) {
         <button onClick={() => handleMethod('getContacts')}>getContacts</button>
         <button onClick={() => handleMethod('getGeo')}>getGeo</button>
         <button onClick={() => handleMethod('getQr')}>getQr</button>
+        <button onClick={() => handleMethod('getSMSCode')}>getSMSCode</button>
         <button onClick={() => handleMethod('openSettings')}>openSettings</button>
         <button onClick={() => handleMethod('selectContact')}>selectContact</button>
       </div>
