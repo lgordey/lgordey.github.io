@@ -44,7 +44,7 @@ function Test({ classes }) {
       console.log('===============base64String');
       console.log(reader.result);
       if (typeof reader.result === 'string') {
-        handleMethod('shareImage', [reader.result])
+        handleMethod('shareFile', 'Test filename', [reader.result])
       }
     };
   }
@@ -73,7 +73,8 @@ function Test({ classes }) {
       <a href="/test2">To test2</a>
       <div className={classes.btnWrapper}><span>Current url: {url}</span></div>
       <div className={classes.btnWrapper}>
-        <input type="file" onChange={handleFileInput} style={{ margin: '20px 20px 0' }} />
+        <input type="file" onChange={handleFileInput} style={{ margin: '20px 20px 0' }} /><br />
+        <p style={{ margin: '20px 20px 0' }}>При выборе файла вызовется метод shareFile() с filename: 'Test filename' и содержимым в base64</p>
       </div>
       <div style={{ marginTop: 20 }} >
         <b>Errors:</b>
