@@ -119,6 +119,8 @@ function Test({ classes }) {
         <button onClick={() => handleMethod('getSMSCode')}>getSMSCode</button>
         <button onClick={() => handleMethod('openSettings')}>openSettings</button>
         <button onClick={() => handleMethod('selectContact')}>selectContact</button>
+        <button onClick={() => handleMethod('setTitle', 'text for title')}>setTitle</button>
+        <button onClick={() => handleMethod('closeApplication')}>closeApplication</button>
       </div>
       <div className={classes.btnWrapper}>
         <button onClick={() => handleMethod('copyToClipboard', copyToClipboardParams)}>copyToClipboard</button>
