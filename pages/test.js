@@ -20,9 +20,13 @@ const styles = {
   }
 };
 
-const invokeMethods = ['getMe', 'getPhone', 'getContacts', 'enableNotifications', 'disableNotifications'];
+const invokeMethods = ['getMe', 'getPhone', 'getContacts', 'getUserProfile', 'enableNotifications', 'disableNotifications'];
 
 const copyToClipboardParams = ['some text'];
+
+const commonParams = {
+  userId: '4e8d2806-f3c7-11e8-a5aa-0242ac15000a',
+};
 
 const shareParams = {
   textOnly: ['privet ya kakaoi-to straniy text ЛАЛА'],
@@ -117,6 +121,7 @@ function Test({ classes }) {
         <button onClick={() => handleMethod('getGeo')}>getGeo</button>
         <button onClick={() => handleMethod('getQr')}>getQr</button>
         <button onClick={() => handleMethod('getSMSCode')}>getSMSCode</button>
+        <button onClick={() => handleMethod('getUserProfile', [{ id: commonParams.userId }])}>getUserProfile</button>
         <button onClick={() => handleMethod('openSettings')}>openSettings</button>
         <button onClick={() => handleMethod('selectContact')}>selectContact</button>
         <button onClick={() => handleMethod('setTitle', 'text for title')}>setTitle</button>
