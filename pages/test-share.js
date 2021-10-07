@@ -44,7 +44,7 @@ function Test({ classes }) {
       console.log('===============base64String');
       console.log(reader.result);
       if (typeof reader.result === 'string') {
-        handleMethod('shareFile', 'Test filename', [reader.result])
+        handleMethod('shareFile', ['Sample text', 'Test filename', reader.result])
       }
     };
   }
