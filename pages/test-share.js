@@ -41,7 +41,7 @@ function Test({ classes }) {
     const reader = new FileReader();
     reader.readAsDataURL(file);
     reader.onloadend = () => {
-      console.log('===============base64String');
+      console.log('===============base64String=');
       console.log(reader.result);
       if (typeof reader.result === 'string') {
         handleMethod('shareFile', ['Sample text', 'Test filename', reader.result])
