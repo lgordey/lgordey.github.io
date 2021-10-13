@@ -41,10 +41,16 @@ function Test({ classes }) {
     const reader = new FileReader();
     reader.readAsDataURL(file);
     reader.onloadend = () => {
-      console.log('===============base64String=');
+      console.log('===============base64String=!');
       console.log(reader.result);
       if (typeof reader.result === 'string') {
-        handleMethod('shareFile', ['Sample text', 'Test filename', reader.result])
+        // get extension from base64 mime type and merge with name
+        const ext = reader.result.substring('data:image/'.length, reader.result.indexOf(';base64'));
+        const filename = 'Text_FileName.' + ext;
+        // remove mime type
+        const base64Data = reader.result.substr(reader.result.indexOf(',') + 1);
+
+        handleMethod('shareFile', ['Sample text', filename, reader.result])
       }
     };
   }
