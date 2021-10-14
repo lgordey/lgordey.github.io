@@ -45,12 +45,16 @@ function Test({ classes }) {
       console.log(reader.result);
       if (typeof reader.result === 'string') {
         // get extension from base64 mime type and merge with name
-        const ext = reader.result.substring('data:image/'.length, reader.result.indexOf(';base64'));
+        const ext = reader.result.split(';')[0].split('/')[1];
         const filename = 'Text_FileName.' + ext;
         // remove mime type
         const base64Data = reader.result.substr(reader.result.indexOf(',') + 1);
 
-        handleMethod('shareFile', ['Sample text', filename, reader.result])
+        const params = ['Sample text', filename, base64Data];
+        console.log('params+++++');
+        console.log(params);
+
+        handleMethod('shareFile', params)
       }
     };
   }
