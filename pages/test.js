@@ -25,7 +25,8 @@ const invokeMethods = ['getMe', 'getPhone', 'getContacts', 'getUserProfile', 'en
 const copyToClipboardParams = ['some text'];
 
 const commonParams = {
-  userId: '4e8d2806-f3c7-11e8-a5aa-0242ac15000a',
+  userIdProd: '4e8d2806-f3c7-11e8-a5aa-0242ac15000a',
+  userIdDev: '48dc41ec-0424-11e9-a03c-ce89e00e5d74'
 };
 
 const shareParams = {
@@ -121,7 +122,8 @@ function Test({ classes }) {
         <button onClick={() => handleMethod('getGeo')}>getGeo</button>
         <button onClick={() => handleMethod('getQr')}>getQr</button>
         <button onClick={() => handleMethod('getSMSCode')}>getSMSCode</button>
-        <button onClick={() => handleMethod('getUserProfile', [{ id: commonParams.userId }])}>getUserProfile</button>
+        <button onClick={() => handleMethod('getUserProfile', [{ id: commonParams.userIdProd }])}>getUserProfile (prod)</button>
+        <button onClick={() => handleMethod('getUserProfile', [{ id: commonParams.userIdDev }])}>getUserProfile (dev)</button>
         <button onClick={() => handleMethod('openSettings')}>openSettings</button>
         <button onClick={() => handleMethod('selectContact')}>selectContact</button>
         <button onClick={() => handleMethod('setTitle', 'text for title')}>setTitle</button>
