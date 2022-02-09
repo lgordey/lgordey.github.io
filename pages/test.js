@@ -148,6 +148,10 @@ function Test({ classes }) {
         <button onClick={() => handleMethod('disableNotifications')}>disableNotifications</button>
       </div>
       <div className={classes.btnWrapper}>
+        <button onClick={() => handleMethod('enableScreenCapture')}>enableScreenCapture</button>
+        <button onClick={() => handleMethod('disableScreenCapture')}>disableScreenCapture</button>
+      </div>
+      <div className={classes.btnWrapper}>
         <a href="/javascriptquestions.pdf">PDF Link</a>
         <a href="https://i2.app.link/rNwc1ePWheb?promocode=ABCDE">Contest mini-app</a>
         <a href="https://i2.app.link/open_chat_with?user_id=a92a86e7-e677-11e8-89fc-5a93b0f4e028">DeepLink Open Chat</a>
