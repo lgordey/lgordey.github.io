@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/test-share.js"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/test.js"],{
 
 /***/ "./basedImages/gif.js":
 /*!****************************!*\
@@ -399,7 +399,7 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-function e(e,n){var t,o,i=(t={current:0,next:function(){return++this.current}},o={},{add:function(e,n){var i=null!=n?n:t.next();return o[i]=e,i},resolve:function(e,n,t,i){var r=o[e];r&&(t(i)?r.resolve(n):r.reject(i),o[e]=null)}});return n(function(e){if(e.detail&&"reqId"in e.detail){var n=e.detail,t=n.reqId;t&&i.resolve(t,n.data,function(e){return!e},n.error)}}),function(){var n=arguments;return new Promise(function(t,o){var r=i.add({resolve:t,reject:o});e.apply(void 0,[r].concat([].slice.call(n)))})}}var n;!function(e){e.getMe="GetMe",e.getPhone="GetPhone",e.getContacts="GetContacts",e.getUserProfile="GetUserProfile",e.enableNotifications="AllowNotifications",e.disableNotifications="DisableNotifications"}(n||(n={}));var t="invoke",o="storage",i="undefined"!=typeof window&&window.AndroidBridge,r="undefined"!=typeof window&&window.webkit&&window.webkit.messageHandlers,s="undefined"!=typeof window&&window.top!==window&&(window.WebBridge=window.WebBridge||{});if(s){var a=window.AITU_ORIGIN||"https://aitu.io";[t,o].forEach(function(e){s[e]||(s[e]=function(){return window.top.postMessage(JSON.stringify({method:e,payload:[].slice.call(arguments)}),a)})}),window.addEventListener("message",function(e){if(e.origin===a&&e.data)try{var n=JSON.parse(e.data);window.dispatchEvent(new CustomEvent("aituEvents",{detail:n}))}catch(e){}})}var d=function(){var a=[];"undefined"!=typeof window&&window.addEventListener("aituEvents",function(e){[].concat(a).map(function(n){return n.call(null,e)})});var d,l,c,u=function(e){a.push(e)},f=(d={current:0,next:function(){return++this.current}},l={},c={add:function(e,n){var t=null!=n?n:d.next();return l[t]=e,t},resolve:function(e,n,t,o){var i=l[e];i&&(t(o)?i.resolve(n):i.reject(o),l[e]=null)}},u(function(e){if(e.detail&&"reqId"in e.detail){var n=e.detail,t=n.reqId;t&&c.resolve(t,n.data,function(e){return!e},n.error)}}),function(e,n){return void 0===n&&(n={}),new Promise(function(o,a){!function(e,n,o){void 0===o&&(o={});var a=r&&r[t],d=s&&s[t];i&&i[t]?i[t](e,n,JSON.stringify(o)):a?r[t].postMessage({reqId:e,method:n,data:o}):d?s[t](e,n,o):"undefined"!=typeof window&&console.log("--invoke-isUnknown")}(c.add({resolve:o,reject:a},n.reqId),e,n)})}),g=function(e,n){var t,o,i=(t={current:0,next:function(){return++this.current}},o={},{add:function(e,n){var i="s"+(null!=n?n:t.next());return o[i]=e,i},resolve:function(e,n,t,i){var r=o[e];r&&(t(i)?r.resolve(n):r.reject(i),o[e]=null)}});return n(function(e){if(e.detail&&"reqId"in e.detail){var n=e.detail,t=n.reqId;t&&i.resolve(t,n.data,function(e){return!e},n.error)}}),{setItem:function(n,t){return new Promise(function(o,r){var s=i.add({resolve:o,reject:r});e(s,"setItem",{keyName:n,keyValue:t})})},getItem:function(n){return new Promise(function(t,o){var r=i.add({resolve:t,reject:o});e(r,"getItem",{keyName:n})})},clear:function(){return new Promise(function(n,t){var o=i.add({resolve:n,reject:t});e(o,"clear",{})})}}}(function(e,n,t){void 0===t&&(t={});var a=r&&r[o],d=s&&s[o];i&&i[o]?i[o](e,n,JSON.stringify(t)):a?r[o].postMessage({reqId:e,method:n,data:t}):d?s[o](e,n,t):"undefined"!=typeof window&&console.log("--storage-isUnknown")},u),p=e(function(e){var n=r&&r.getGeo;i&&i.getGeo?i.getGeo(e):n?r.getGeo.postMessage({reqId:e}):"undefined"!=typeof window&&console.log("--getGeo-isWeb")},u),w=e(function(e){var n=r&&r.getQr;i&&i.getQr?i.getQr(e):n?r.getQr.postMessage({reqId:e}):"undefined"!=typeof window&&console.log("--getQr-isWeb")},u),v=e(function(e){var n=r&&r.getSMSCode;i&&i.getSMSCode?i.getSMSCode(e):n?r.getSMSCode.postMessage({reqId:e}):"undefined"!=typeof window&&console.log("--getSMSCode-isWeb")},u),b=e(function(e){var n=r&&r.selectContact;i&&i.selectContact?i.selectContact(e):n?r.selectContact.postMessage({reqId:e}):"undefined"!=typeof window&&console.log("--selectContact-isWeb")},u),h=e(function(e){var n=r&&r.openSettings;i&&i.openSettings?i.openSettings(e):n?r.openSettings.postMessage({reqId:e}):"undefined"!=typeof window&&console.log("--openSettings-isWeb")},u),y=e(function(e){var n=r&&r.closeApplication;i&&i.closeApplication?i.closeApplication(e):n?r.closeApplication.postMessage({reqId:e}):"undefined"!=typeof window&&console.log("--closeApplication-isWeb")},u),I=e(function(e,n){var t=r&&r.share;i&&i.share?i.share(e,n):t?r.share.postMessage({reqId:e,text:n}):"undefined"!=typeof window&&console.log("--share-isWeb")},u),S=e(function(e,n){var t=r&&r.setTitle;i&&i.setTitle?i.setTitle(e,n):t?r.setTitle.postMessage({reqId:e,text:n}):"undefined"!=typeof window&&console.log("--setTitle-isWeb")},u),M=e(function(e,n){var t=r&&r.copyToClipboard;i&&i.copyToClipboard?i.copyToClipboard(e,n):t?r.copyToClipboard.postMessage({reqId:e,text:n}):"undefined"!=typeof window&&console.log("--copyToClipboard-isWeb")},u),m=e(function(e,n,t){var o=i&&i.shareFile,s=r&&r.shareFile,a="image."+t.substring("data:image/".length,t.indexOf(";base64")),d=t.substr(t.indexOf(",")+1);o?i.shareFile(e,n,a,d):s?r.shareFile.postMessage({reqId:e,text:n,filename:a,base64Data:d}):"undefined"!=typeof window&&console.log("--shareFile-isWeb")},u),C=e(function(e,n,t,o){var s=r&&r.shareFile;i&&i.shareFile?i.shareFile(e,n,t,o):s?r.shareFile.postMessage({reqId:e,text:n,filename:t,base64Data:o}):"undefined"!=typeof window&&console.log("--shareFile-isWeb")},u),q=e(function(e,n){if(!Array.isArray(n)||n.some(function(e){return e<1||e!==Math.floor(e)})||n.reduce(function(e,n){return e+n})>1e4)console.error("Pattern should be an array of positive integers no longer than 10000ms total");else{var t=r&&r.vibrate;i&&i.vibrate?i.vibrate(e,JSON.stringify(n)):t?r.vibrate.postMessage({reqId:e,pattern:n}):"undefined"!=typeof window&&console.log("--vibrate-isWeb")}},u);return{copyToClipboard:M,invoke:f,storage:g,getMe:function(){return f(n.getMe)},getPhone:function(){return f(n.getPhone)},getContacts:function(){return f(n.getContacts)},getGeo:p,getQr:w,getSMSCode:v,getUserProfile:function(e){return f(n.getUserProfile,{id:e})},selectContact:b,enableNotifications:function(){return f(n.enableNotifications)},disableNotifications:function(){return f(n.disableNotifications)},openSettings:h,closeApplication:y,setTitle:S,share:I,shareImage:m,shareFile:C,setShakeHandler:function(e){i&&i.setShakeHandler||r&&r.setShakeHandler?window.onAituBridgeShake=e:"undefined"!=typeof window&&console.log("--setShakeHandler-isWeb")},vibrate:q,isSupported:function(){var e=r&&window.webkit.messageHandlers.invoke;return Boolean(i||e||s)},supports:function(e){return i&&"function"==typeof i[e]||r&&r[e]&&"function"==typeof r[e].postMessage||s&&"function"==typeof s[e]},sub:u}}();/* harmony default export */ __webpack_exports__["default"] = (d);
+function e(e,t){var n,o,i=(n={current:0,next:function(){return++this.current}},o={},{add:function(e,t){var i=null!=t?t:n.next();return o[i]=e,i},resolve:function(e,t,n,i){var r=o[e];r&&(n(i)?r.resolve(t):r.reject(i),o[e]=null)}});return t(function(e){if(e.detail&&"reqId"in e.detail){var t=e.detail,n=t.reqId;n&&i.resolve(n,t.data,function(e){return!e},t.error)}}),function(){var t=arguments;return new Promise(function(n,o){var r=i.add({resolve:n,reject:o});e.apply(void 0,[r].concat([].slice.call(t)))})}}var t;!function(e){e.getMe="GetMe",e.getPhone="GetPhone",e.getContacts="GetContacts",e.getUserProfile="GetUserProfile",e.enableNotifications="AllowNotifications",e.disableNotifications="DisableNotifications"}(t||(t={}));var n="invoke",o="storage",i="undefined"!=typeof window&&window.AndroidBridge,r="undefined"!=typeof window&&window.webkit&&window.webkit.messageHandlers,s="undefined"!=typeof window&&window.top!==window&&(window.WebBridge=window.WebBridge||{});if(s){var a=window.AITU_ORIGIN||"https://aitu.io";[n,o].forEach(function(e){s[e]||(s[e]=function(){return window.top.postMessage(JSON.stringify({method:e,payload:[].slice.call(arguments)}),a)})}),window.addEventListener("message",function(e){if(e.origin===a&&e.data)try{var t=JSON.parse(e.data);window.dispatchEvent(new CustomEvent("aituEvents",{detail:t}))}catch(e){}})}var d=function(){var a=[];"undefined"!=typeof window&&window.addEventListener("aituEvents",function(e){[].concat(a).map(function(t){return t.call(null,e)})});var d,l,c,u=function(e){a.push(e)},f=(d={current:0,next:function(){return++this.current}},l={},c={add:function(e,t){var n=null!=t?t:d.next();return l[n]=e,n},resolve:function(e,t,n,o){var i=l[e];i&&(n(o)?i.resolve(t):i.reject(o),l[e]=null)}},u(function(e){if(e.detail&&"reqId"in e.detail){var t=e.detail,n=t.reqId;n&&c.resolve(n,t.data,function(e){return!e},t.error)}}),function(e,t){return void 0===t&&(t={}),new Promise(function(o,a){!function(e,t,o){void 0===o&&(o={});var a=r&&r[n],d=s&&s[n];i&&i[n]?i[n](e,t,JSON.stringify(o)):a?r[n].postMessage({reqId:e,method:t,data:o}):d?s[n](e,t,o):"undefined"!=typeof window&&console.log("--invoke-isUnknown")}(c.add({resolve:o,reject:a},t.reqId),e,t)})}),g=function(e,t){var n,o,i=(n={current:0,next:function(){return++this.current}},o={},{add:function(e,t){var i="s"+(null!=t?t:n.next());return o[i]=e,i},resolve:function(e,t,n,i){var r=o[e];r&&(n(i)?r.resolve(t):r.reject(i),o[e]=null)}});return t(function(e){if(e.detail&&"reqId"in e.detail){var t=e.detail,n=t.reqId;n&&i.resolve(n,t.data,function(e){return!e},t.error)}}),{setItem:function(t,n){return new Promise(function(o,r){var s=i.add({resolve:o,reject:r});e(s,"setItem",{keyName:t,keyValue:n})})},getItem:function(t){return new Promise(function(n,o){var r=i.add({resolve:n,reject:o});e(r,"getItem",{keyName:t})})},clear:function(){return new Promise(function(t,n){var o=i.add({resolve:t,reject:n});e(o,"clear",{})})}}}(function(e,t,n){void 0===n&&(n={});var a=r&&r[o],d=s&&s[o];i&&i[o]?i[o](e,t,JSON.stringify(n)):a?r[o].postMessage({reqId:e,method:t,data:n}):d?s[o](e,t,n):"undefined"!=typeof window&&console.log("--storage-isUnknown")},u),p=e(function(e){var t=r&&r.getGeo;i&&i.getGeo?i.getGeo(e):t?r.getGeo.postMessage({reqId:e}):"undefined"!=typeof window&&console.log("--getGeo-isWeb")},u),w=e(function(e){var t=r&&r.getQr;i&&i.getQr?i.getQr(e):t?r.getQr.postMessage({reqId:e}):"undefined"!=typeof window&&console.log("--getQr-isWeb")},u),v=e(function(e){var t=r&&r.getSMSCode;i&&i.getSMSCode?i.getSMSCode(e):t?r.getSMSCode.postMessage({reqId:e}):"undefined"!=typeof window&&console.log("--getSMSCode-isWeb")},u),b=e(function(e){var t=r&&r.selectContact;i&&i.selectContact?i.selectContact(e):t?r.selectContact.postMessage({reqId:e}):"undefined"!=typeof window&&console.log("--selectContact-isWeb")},u),h=e(function(e){var t=r&&r.openSettings;i&&i.openSettings?i.openSettings(e):t?r.openSettings.postMessage({reqId:e}):"undefined"!=typeof window&&console.log("--openSettings-isWeb")},u),y=e(function(e){var t=r&&r.closeApplication;i&&i.closeApplication?i.closeApplication(e):t?r.closeApplication.postMessage({reqId:e}):"undefined"!=typeof window&&console.log("--closeApplication-isWeb")},u),I=e(function(e,t){var n=r&&r.share;i&&i.share?i.share(e,t):n?r.share.postMessage({reqId:e,text:t}):"undefined"!=typeof window&&console.log("--share-isWeb")},u),S=e(function(e,t){var n=r&&r.setTitle;i&&i.setTitle?i.setTitle(e,t):n?r.setTitle.postMessage({reqId:e,text:t}):"undefined"!=typeof window&&console.log("--setTitle-isWeb")},u),M=e(function(e,t){var n=r&&r.copyToClipboard;i&&i.copyToClipboard?i.copyToClipboard(e,t):n?r.copyToClipboard.postMessage({reqId:e,text:t}):"undefined"!=typeof window&&console.log("--copyToClipboard-isWeb")},u),m=e(function(e,t,n){var o=i&&i.shareFile,s=r&&r.shareFile,a="image."+n.split(";")[0].split("/")[1],d=n.substr(n.indexOf(",")+1);o?i.shareFile(e,t,a,d):s?r.shareFile.postMessage({reqId:e,text:t,filename:a,base64Data:d}):"undefined"!=typeof window&&console.log("--shareFile-isWeb")},u),C=e(function(e,t,n,o){var s=r&&r.shareFile;i&&i.shareFile?i.shareFile(e,t,n,o):s?r.shareFile.postMessage({reqId:e,text:t,filename:n,base64Data:o}):"undefined"!=typeof window&&console.log("--shareFile-isWeb")},u),q=e(function(e,t){if(!Array.isArray(t)||t.some(function(e){return e<1||e!==Math.floor(e)})||t.reduce(function(e,t){return e+t})>1e4)console.error("Pattern should be an array of positive integers no longer than 10000ms total");else{var n=r&&r.vibrate;i&&i.vibrate?i.vibrate(e,JSON.stringify(t)):n?r.vibrate.postMessage({reqId:e,pattern:t}):"undefined"!=typeof window&&console.log("--vibrate-isWeb")}},u);return{copyToClipboard:M,invoke:f,storage:g,getMe:function(){return f(t.getMe)},getPhone:function(){return f(t.getPhone)},getContacts:function(){return f(t.getContacts)},getGeo:p,getQr:w,getSMSCode:v,getUserProfile:function(e){return f(t.getUserProfile,{id:e})},selectContact:b,enableNotifications:function(){return f(t.enableNotifications)},disableNotifications:function(){return f(t.disableNotifications)},openSettings:h,closeApplication:y,setTitle:S,share:I,shareImage:m,shareFile:C,setShakeHandler:function(e){i&&i.setShakeHandler||r&&r.setShakeHandler?window.onAituBridgeShake=e:"undefined"!=typeof window&&console.log("--setShakeHandler-isWeb")},vibrate:q,isSupported:function(){var e=r&&window.webkit.messageHandlers.invoke;return Boolean(i||e||s)},supports:function(e){return i&&"function"==typeof i[e]||r&&r[e]&&"function"==typeof r[e].postMessage||s&&"function"==typeof s[e]},sub:u}}();/* harmony default export */ __webpack_exports__["default"] = (d);
 //# sourceMappingURL=index.module.js.map
 
 
@@ -7432,21 +7432,21 @@ var index = create();
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Ftest-share&absolutePagePath=%2FUsers%2Flgordey%2FBTS%2Flgordey.github.io%2Fpages%2Ftest-share.js!./":
-/*!*******************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Ftest-share&absolutePagePath=%2FUsers%2Flgordey%2FBTS%2Flgordey.github.io%2Fpages%2Ftest-share.js ***!
-  \*******************************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Ftest&absolutePagePath=%2FUsers%2Flgordey%2FBTS%2Flgordey.github.io%2Fpages%2Ftest.js!./":
+/*!*******************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Ftest&absolutePagePath=%2FUsers%2Flgordey%2FBTS%2Flgordey.github.io%2Fpages%2Ftest.js ***!
+  \*******************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-    (window.__NEXT_P=window.__NEXT_P||[]).push(["/test-share", function() {
-      var mod = __webpack_require__(/*! ./pages/test-share.js */ "./pages/test-share.js")
+    (window.__NEXT_P=window.__NEXT_P||[]).push(["/test", function() {
+      var mod = __webpack_require__(/*! ./pages/test.js */ "./pages/test.js")
       if(true) {
-        module.hot.accept(/*! ./pages/test-share.js */ "./pages/test-share.js", function() {
-          if(!next.router.components["/test-share"]) return
-          var updatedPage = __webpack_require__(/*! ./pages/test-share.js */ "./pages/test-share.js")
-          next.router.update("/test-share", updatedPage)
+        module.hot.accept(/*! ./pages/test.js */ "./pages/test.js", function() {
+          if(!next.router.components["/test"]) return
+          var updatedPage = __webpack_require__(/*! ./pages/test.js */ "./pages/test.js")
+          next.router.update("/test", updatedPage)
         })
       }
       return mod
@@ -10521,10 +10521,10 @@ module.exports = function(originalModule) {
 
 /***/ }),
 
-/***/ "./pages/test-share.js":
-/*!*****************************!*\
-  !*** ./pages/test-share.js ***!
-  \*****************************/
+/***/ "./pages/test.js":
+/*!***********************!*\
+  !*** ./pages/test.js ***!
+  \***********************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -10534,8 +10534,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/json/stringify */ "./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js");
 /* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/toConsumableArray */ "./node_modules/@babel/runtime-corejs2/helpers/esm/toConsumableArray.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/toConsumableArray */ "./node_modules/@babel/runtime-corejs2/helpers/esm/toConsumableArray.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var react_jss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-jss */ "./node_modules/react-jss/dist/react-jss.esm.js");
@@ -10544,7 +10544,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/lgordey/BTS/lgordey.github.io/pages/test-share.js";
+var _jsxFileName = "/Users/lgordey/BTS/lgordey.github.io/pages/test.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement;
 
 
@@ -10565,7 +10565,23 @@ var styles = {
     }
   }
 };
-var invokeMethods = ['getMe', 'getPhone', 'getContacts', 'enableNotifications', 'disableNotifications'];
+var invokeMethods = ['getMe', 'getPhone', 'getContacts', 'getUserProfile', 'enableNotifications', 'disableNotifications'];
+var copyToClipboardParams = ['some text'];
+var commonParams = {
+  userIdProd: '4e8d2806-f3c7-11e8-a5aa-0242ac15000a',
+  userIdDev: '48dc41ec-0424-11e9-a03c-ce89e00e5d74'
+};
+var shareParams = {
+  textOnly: ['privet ya kakaoi-to straniy text ЛАЛА'],
+  gif: ['Look at this magical present!', _basedImages__WEBPACK_IMPORTED_MODULE_6__["basedGif"]],
+  jpg: ['Look at this silly upside-down cat!', _basedImages__WEBPACK_IMPORTED_MODULE_6__["basedJpg"]],
+  jpgOnly: ['', _basedImages__WEBPACK_IMPORTED_MODULE_6__["basedJpg"]],
+  png: ['Look at this beautiful Earth-in-space wallpaper!', _basedImages__WEBPACK_IMPORTED_MODULE_6__["basedPng"]]
+};
+var vibrateParams = {
+  once: [[1000]],
+  march: [[291, 291, 291, 291, 291, 291, 291, 291, 145, 146, 145, 146, 291, 291, 145, 146, 145, 728, 291, 291, 291, 291, 291, 291, 291, 291, 145, 146, 145, 146, 291, 291, 145, 146, 145, 146]]
+};
 
 function Test(_ref) {
   var classes = _ref.classes;
@@ -10596,95 +10612,130 @@ function Test(_ref) {
 
   Object(react__WEBPACK_IMPORTED_MODULE_4__["useEffect"])(function () {
     setUrl(window.location.href);
+    window.AITU_ORIGIN = 'http://localhost:3000';
     setAituBridge(__webpack_require__(/*! @btsd/aitu-bridge */ "./node_modules/@btsd/aitu-bridge/dist/index.module.js")["default"]);
   }, []);
-
-  var handleFileInput = function handleFileInput(e) {
-    var file = e.target.files[0]; // read file
-
-    var reader = new FileReader();
-    reader.readAsDataURL(file);
-
-    reader.onloadend = function () {
-      console.log('===============base64String=!');
-      console.log(reader.result);
-
-      if (typeof reader.result === 'string') {
-        // get extension from base64 mime type and merge with name
-        var ext = reader.result.split(';')[0].split('/')[1];
-        var filename = 'Text_FileName.' + ext; // remove mime type
-
-        var base64Data = reader.result.substr(reader.result.indexOf(',') + 1);
-        var params = ['Sample text', filename, base64Data];
-        console.log('params+++++');
-        console.log(params);
-        handleMethod('shareFile', params);
-      }
-    };
+  var setShakeHandlerParams = {
+    log: [function () {
+      return setReceivedData(function (prevArray) {
+        return [].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_3__["default"])(prevArray), ['Shaken']);
+      });
+    }],
+    off: [null]
   };
 
-  var handleMethod =
+  var handleInvokeFakeMethod =
   /*#__PURE__*/
   function () {
-    var _ref2 = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])(
+    var _ref2 = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])(
     /*#__PURE__*/
-    _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(methodName) {
-      var params,
+    _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+      var methodName,
           data,
-          errorText,
           _args = arguments;
       return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
-              params = _args.length > 1 && _args[1] !== undefined ? _args[1] : [];
-
-              if (!(!invokeMethods.includes(methodName) && !aituBridge.supports(methodName))) {
-                _context.next = 4;
-                break;
-              }
-
-              setErrors(function (prevArray) {
-                return [].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__["default"])(prevArray), ["\u041C\u0435\u0442\u043E\u0434 \"".concat(methodName, "\" \u043D\u0435 \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0435\u0442\u0441\u044F \u0432 \u0442\u0435\u043A\u0443\u0449\u0435\u0439 \u0432\u0435\u0440\u0441\u0438\u0438 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F")]);
-              });
-              return _context.abrupt("return");
-
-            case 4:
+              methodName = _args.length > 0 && _args[0] !== undefined ? _args[0] : 'fakeMethod';
               setCalledMethods(function (prevArray) {
-                return [].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__["default"])(prevArray), [methodName]);
+                return [].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_3__["default"])(prevArray), [methodName]);
               });
-              console.log("==handle ".concat(methodName, " method").concat(params.length > 0 ? " with params ".concat(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1___default()(params)) : ''));
-              _context.prev = 6;
-              _context.next = 9;
-              return aituBridge[methodName].apply(aituBridge, Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__["default"])(params));
+              console.log("===handle ".concat(methodName, " method"));
+              _context.prev = 3;
+              _context.next = 6;
+              return aituBridge.invoke(methodName);
 
-            case 9:
+            case 6:
               data = _context.sent;
               setReceivedData(function (prevArray) {
-                return [].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__["default"])(prevArray), [_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1___default()(data)]);
+                return [].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_3__["default"])(prevArray), [_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1___default()(data)]);
               });
-              _context.next = 18;
+              _context.next = 14;
               break;
 
-            case 13:
-              _context.prev = 13;
-              _context.t0 = _context["catch"](6);
+            case 10:
+              _context.prev = 10;
+              _context.t0 = _context["catch"](3);
               console.error(_context.t0);
-              errorText = _context.t0 instanceof Error ? "".concat(_context.t0.name, ": ").concat(_context.t0.message) : _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1___default()(_context.t0);
               setReceivedError(function (prevArray) {
-                return [].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__["default"])(prevArray), [errorText]);
+                return [].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_3__["default"])(prevArray), [_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1___default()(_context.t0)]);
               });
 
-            case 18:
+            case 14:
             case "end":
               return _context.stop();
           }
         }
-      }, _callee, null, [[6, 13]]);
+      }, _callee, null, [[3, 10]]);
+    }));
+
+    return function handleInvokeFakeMethod() {
+      return _ref2.apply(this, arguments);
+    };
+  }();
+
+  var handleMethod =
+  /*#__PURE__*/
+  function () {
+    var _ref3 = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])(
+    /*#__PURE__*/
+    _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2(methodName) {
+      var params,
+          _console,
+          data,
+          errorText,
+          _args2 = arguments;
+
+      return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
+        while (1) {
+          switch (_context2.prev = _context2.next) {
+            case 0:
+              params = _args2.length > 1 && _args2[1] !== undefined ? _args2[1] : [];
+              // if (!invokeMethods.includes(methodName) && !aituBridge.supports(methodName)) {
+              //   console.log(...params);
+              //   setErrors(prevArray => [...prevArray, `Метод "${methodName}" не поддерживается в текущей версии приложения`]);
+              //   return;
+              // }
+              setCalledMethods(function (prevArray) {
+                return [].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_3__["default"])(prevArray), [methodName]);
+              });
+              console.log("==handle ".concat(methodName, " method").concat(params.length > 0 ? " with params ".concat(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1___default()(params)) : ''));
+              _context2.prev = 3;
+              console.log('___...params');
+
+              (_console = console).log.apply(_console, Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_3__["default"])(params));
+
+              _context2.next = 8;
+              return aituBridge[methodName].apply(aituBridge, Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_3__["default"])(params));
+
+            case 8:
+              data = _context2.sent;
+              setReceivedData(function (prevArray) {
+                return [].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_3__["default"])(prevArray), [_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1___default()(data)]);
+              });
+              _context2.next = 17;
+              break;
+
+            case 12:
+              _context2.prev = 12;
+              _context2.t0 = _context2["catch"](3);
+              console.error(_context2.t0);
+              errorText = _context2.t0 instanceof Error ? "".concat(_context2.t0.name, ": ").concat(_context2.t0.message) : _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1___default()(_context2.t0);
+              setReceivedError(function (prevArray) {
+                return [].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_3__["default"])(prevArray), [errorText]);
+              });
+
+            case 17:
+            case "end":
+              return _context2.stop();
+          }
+        }
+      }, _callee2, null, [[3, 12]]);
     }));
 
     return function handleMethod(_x) {
-      return _ref2.apply(this, arguments);
+      return _ref3.apply(this, arguments);
     };
   }();
 
@@ -10692,88 +10743,340 @@ function Test(_ref) {
     className: classes.testWrapper,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81
+      lineNumber: 116
     },
     __self: this
   }, __jsx("a", {
-    href: "/test",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 82
-    },
-    __self: this
-  }, "To test"), __jsx("br", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 82
-    },
-    __self: this
-  }), __jsx("a", {
     href: "/test2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83
+      lineNumber: 117
     },
     __self: this
-  }, "To test2"), __jsx("div", {
+  }, "To test2"), __jsx("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 117
+    },
+    __self: this
+  }), __jsx("a", {
+    href: "/test-share",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 118
+    },
+    __self: this
+  }, "To test share"), __jsx("div", {
     className: classes.btnWrapper,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 84
+      lineNumber: 119
     },
     __self: this
   }, __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 84
+      lineNumber: 119
     },
     __self: this
   }, "Current url: ", url)), __jsx("div", {
     className: classes.btnWrapper,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 85
+      lineNumber: 120
     },
     __self: this
-  }, __jsx("input", {
-    type: "file",
-    onChange: handleFileInput,
-    style: {
-      margin: '20px 20px 0'
+  }, __jsx("button", {
+    onClick: function onClick() {
+      return handleMethod('getMe');
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86
+      lineNumber: 121
     },
     __self: this
-  }), __jsx("br", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 86
-    },
-    __self: this
-  }), __jsx("p", {
-    style: {
-      margin: '20px 20px 0'
+  }, "getMe"), __jsx("button", {
+    onClick: function onClick() {
+      return handleMethod('getPhone');
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 87
+      lineNumber: 122
     },
     __self: this
-  }, "\u041F\u0440\u0438 \u0432\u044B\u0431\u043E\u0440\u0435 \u0444\u0430\u0439\u043B\u0430 \u0432\u044B\u0437\u043E\u0432\u0435\u0442\u0441\u044F \u043C\u0435\u0442\u043E\u0434 shareFile() \u0441 filename: 'Test filename' \u0438 \u0441\u043E\u0434\u0435\u0440\u0436\u0438\u043C\u044B\u043C \u0432 base64")), __jsx("div", {
+  }, "getPhone"), __jsx("button", {
+    onClick: function onClick() {
+      return handleInvokeFakeMethod();
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 123
+    },
+    __self: this
+  }, "fakeMethod"), __jsx("button", {
+    onClick: function onClick() {
+      return handleMethod('getContacts');
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 124
+    },
+    __self: this
+  }, "getContacts"), __jsx("button", {
+    onClick: function onClick() {
+      return handleMethod('getGeo');
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 125
+    },
+    __self: this
+  }, "getGeo"), __jsx("button", {
+    onClick: function onClick() {
+      return handleMethod('getQr');
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 126
+    },
+    __self: this
+  }, "getQr"), __jsx("button", {
+    onClick: function onClick() {
+      return handleMethod('getSMSCode');
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 127
+    },
+    __self: this
+  }, "getSMSCode"), __jsx("button", {
+    onClick: function onClick() {
+      return handleMethod('getUserProfile', [{
+        id: commonParams.userIdProd
+      }]);
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 128
+    },
+    __self: this
+  }, "getUserProfile (prod)"), __jsx("button", {
+    onClick: function onClick() {
+      return handleMethod('getUserProfile', [{
+        id: commonParams.userIdDev
+      }]);
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 129
+    },
+    __self: this
+  }, "getUserProfile (dev)"), __jsx("button", {
+    onClick: function onClick() {
+      return handleMethod('openSettings');
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 130
+    },
+    __self: this
+  }, "openSettings"), __jsx("button", {
+    onClick: function onClick() {
+      return handleMethod('selectContact');
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 131
+    },
+    __self: this
+  }, "selectContact"), __jsx("button", {
+    onClick: function onClick() {
+      return handleMethod('setTitle', 'text for title');
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 132
+    },
+    __self: this
+  }, "setTitle"), __jsx("button", {
+    onClick: function onClick() {
+      return handleMethod('closeApplication');
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 133
+    },
+    __self: this
+  }, "closeApplication")), __jsx("div", {
+    className: classes.btnWrapper,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 135
+    },
+    __self: this
+  }, __jsx("button", {
+    onClick: function onClick() {
+      return handleMethod('copyToClipboard', copyToClipboardParams);
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 136
+    },
+    __self: this
+  }, "copyToClipboard"), __jsx("button", {
+    onClick: function onClick() {
+      return handleMethod('share', shareParams.textOnly);
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 137
+    },
+    __self: this
+  }, "share text"), __jsx("button", {
+    onClick: function onClick() {
+      return handleMethod('shareImage', shareParams.jpg);
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 138
+    },
+    __self: this
+  }, "shareImage jpg"), __jsx("button", {
+    onClick: function onClick() {
+      return handleMethod('shareImage', shareParams.gif);
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 139
+    },
+    __self: this
+  }, "shareImage gif"), __jsx("button", {
+    onClick: function onClick() {
+      return handleMethod('shareImage', shareParams.png);
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 140
+    },
+    __self: this
+  }, "shareImage png"), __jsx("button", {
+    onClick: function onClick() {
+      return handleMethod('shareImage', shareParams.jpgOnly);
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 141
+    },
+    __self: this
+  }, "shareImage jpg w/o caption")), __jsx("div", {
+    className: classes.btnWrapper,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 143
+    },
+    __self: this
+  }, __jsx("button", {
+    onClick: function onClick() {
+      return handleMethod('vibrate', vibrateParams.once);
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 144
+    },
+    __self: this
+  }, "vibrate once"), __jsx("button", {
+    onClick: function onClick() {
+      return handleMethod('vibrate', vibrateParams.march);
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 145
+    },
+    __self: this
+  }, "vibrate march"), __jsx("button", {
+    onClick: function onClick() {
+      return handleMethod('setShakeHandler', setShakeHandlerParams.log);
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 146
+    },
+    __self: this
+  }, "enable log on shake"), __jsx("button", {
+    onClick: function onClick() {
+      return handleMethod('setShakeHandler', setShakeHandlerParams.off);
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 147
+    },
+    __self: this
+  }, "disable log on shake")), __jsx("div", {
+    className: classes.btnWrapper,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 149
+    },
+    __self: this
+  }, __jsx("button", {
+    onClick: function onClick() {
+      return handleMethod('enableNotifications');
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 150
+    },
+    __self: this
+  }, "enableNotifications"), __jsx("button", {
+    onClick: function onClick() {
+      return handleMethod('disableNotifications');
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 151
+    },
+    __self: this
+  }, "disableNotifications")), __jsx("div", {
+    className: classes.btnWrapper,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 153
+    },
+    __self: this
+  }, __jsx("a", {
+    href: "/javascriptquestions.pdf",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 154
+    },
+    __self: this
+  }, "PDF Link"), __jsx("a", {
+    href: "https://i2.app.link/rNwc1ePWheb?promocode=ABCDE",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 155
+    },
+    __self: this
+  }, "Contest mini-app"), __jsx("a", {
+    href: "https://i2.app.link/open_chat_with?user_id=a92a86e7-e677-11e8-89fc-5a93b0f4e028",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 156
+    },
+    __self: this
+  }, "DeepLink Open Chat")), __jsx("div", {
     style: {
       marginTop: 20
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89
+      lineNumber: 158
     },
     __self: this
   }, __jsx("b", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 90
+      lineNumber: 159
     },
     __self: this
   }, "Errors:"), errors.map(function (errMessage, i) {
@@ -10781,7 +11084,7 @@ function Test(_ref) {
       key: i + errMessage,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 92
+        lineNumber: 161
       },
       __self: this
     }, errMessage);
@@ -10792,7 +11095,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 95
+      lineNumber: 164
     },
     __self: this
   }, __jsx("div", {
@@ -10801,7 +11104,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 96
+      lineNumber: 165
     },
     __self: this
   }, __jsx("b", {
@@ -10810,7 +11113,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 97
+      lineNumber: 166
     },
     __self: this
   }, "Invoked methods:"), calledMethods.map(function (method, i) {
@@ -10818,7 +11121,7 @@ function Test(_ref) {
       key: i + method,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 100
+        lineNumber: 169
       },
       __self: this
     }, i + 1 + ') ', method);
@@ -10828,7 +11131,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 104
+      lineNumber: 173
     },
     __self: this
   }, __jsx("b", {
@@ -10837,7 +11140,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 105
+      lineNumber: 174
     },
     __self: this
   }, "Received data:"), receivedData && receivedData.map(function (data, i) {
@@ -10845,7 +11148,7 @@ function Test(_ref) {
       key: i + data,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 108
+        lineNumber: 177
       },
       __self: this
     }, i + 1 + '. ', data);
@@ -10855,7 +11158,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 112
+      lineNumber: 181
     },
     __self: this
   }, __jsx("b", {
@@ -10864,7 +11167,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 113
+      lineNumber: 182
     },
     __self: this
   }, "Received errors:"), receivedError && receivedError.map(function (error, i) {
@@ -10872,7 +11175,7 @@ function Test(_ref) {
       key: i + error,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 116
+        lineNumber: 185
       },
       __self: this
     }, i + 1 + '. ', error);
@@ -10884,13 +11187,13 @@ function Test(_ref) {
 /***/ }),
 
 /***/ 3:
-/*!***********************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2Ftest-share&absolutePagePath=%2FUsers%2Flgordey%2FBTS%2Flgordey.github.io%2Fpages%2Ftest-share.js ***!
-  \***********************************************************************************************************************************************/
+/*!***********************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2Ftest&absolutePagePath=%2FUsers%2Flgordey%2FBTS%2Flgordey.github.io%2Fpages%2Ftest.js ***!
+  \***********************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Ftest-share&absolutePagePath=%2FUsers%2Flgordey%2FBTS%2Flgordey.github.io%2Fpages%2Ftest-share.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Ftest-share&absolutePagePath=%2FUsers%2Flgordey%2FBTS%2Flgordey.github.io%2Fpages%2Ftest-share.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Ftest&absolutePagePath=%2FUsers%2Flgordey%2FBTS%2Flgordey.github.io%2Fpages%2Ftest.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Ftest&absolutePagePath=%2FUsers%2Flgordey%2FBTS%2Flgordey.github.io%2Fpages%2Ftest.js!./");
 
 
 /***/ }),
@@ -10907,4 +11210,4 @@ module.exports = dll_b35e09dc2ca94ac6d9c1;
 /***/ })
 
 },[[3,"static/runtime/webpack.js"]]]);
-//# sourceMappingURL=test-share.js.map
+//# sourceMappingURL=test.js.map
