@@ -11,7 +11,7 @@ const styles = {
   },
   btnWrapper: {
     padding: '0 20px 20px 0',
-    border: '10px solid black',
+    border: '10px solid gray',
     marginTop: 20,
     '& button, & a, & span': {
       margin: '20px 0 0 20px',
