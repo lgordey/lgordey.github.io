@@ -78,6 +78,11 @@ function Test({ classes }) {
     off: [null],
   };
 
+  const setTabActiveHandlerParams = {
+    log: [(tabname) => setReceivedData(prevArray => [...prevArray, tabname])],
+    off: [null],
+  };
+
   const handleInvokeFakeMethod = async (methodName = 'fakeMethod') => {
     setCalledMethods(prevArray => [...prevArray, methodName])
 
@@ -142,6 +147,7 @@ function Test({ classes }) {
         <button onClick={() => handleMethod('vibrate', vibrateParams.march)}>vibrate march</button>
         <button onClick={() => handleMethod('setShakeHandler', setShakeHandlerParams.log)}>enable log on shake</button>
         <button onClick={() => handleMethod('setShakeHandler', setShakeHandlerParams.off)}>disable log on shake</button>
+        <button onClick={() => handleMethod('setTabActiveHandler', setTabActiveHandlerParams.log)}>enable log on tab click</button>
       </div>
       <div className={classes.btnWrapper}>
         <button onClick={() => handleMethod('enableNotifications')}>enableNotifications</button>
