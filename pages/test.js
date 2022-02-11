@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import withStyles from 'react-jss';
+import br from '@btsd/aitu-bridge';
 
 import { basedGif, basedJpg, basedPng } from '../basedImages';
 
@@ -116,6 +117,7 @@ function Test({ classes }) {
 
   return (
     <div className={classes.testWrapper}>
+      <h5>{br.version}</h5>
       <a href="/test2">To test2</a><br />
       <a href="/test-share">To test share</a>
       <div className={classes.btnWrapper}><span>Current url: {url}</span></div>
