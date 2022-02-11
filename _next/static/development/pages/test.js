@@ -399,7 +399,7 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-function e(e,n){var t,o,i=(t={current:0,next:function(){return++this.current}},o={},{add:function(e,n){var i=null!=n?n:t.next();return o[i]=e,i},resolve:function(e,n,t,i){var r=o[e];r&&(t(i)?r.resolve(n):r.reject(i),o[e]=null)}});return n(function(e){if(e.detail&&"reqId"in e.detail){var n=e.detail,t=n.reqId;t&&i.resolve(t,n.data,function(e){return!e},n.error)}}),function(){var n=arguments;return new Promise(function(t,o){var r=i.add({resolve:t,reject:o});e.apply(void 0,[r].concat([].slice.call(n)))})}}var n;!function(e){e.getMe="GetMe",e.getPhone="GetPhone",e.getContacts="GetContacts",e.getUserProfile="GetUserProfile",e.enableNotifications="AllowNotifications",e.disableNotifications="DisableNotifications"}(n||(n={}));var t="invoke",o="storage",i="undefined"!=typeof window&&window.AndroidBridge,r="undefined"!=typeof window&&window.webkit&&window.webkit.messageHandlers,a="undefined"!=typeof window&&window.top!==window&&(window.WebBridge=window.WebBridge||{});if(a){var s=window.AITU_ORIGIN||"https://aitu.io";[t,o].forEach(function(e){a[e]||(a[e]=function(){return window.top.postMessage(JSON.stringify({method:e,payload:[].slice.call(arguments)}),s)})}),window.addEventListener("message",function(e){if(e.origin===s&&e.data)try{var n=JSON.parse(e.data);window.dispatchEvent(new CustomEvent("aituEvents",{detail:n}))}catch(e){}})}var d=function(){var s=[];"undefined"!=typeof window&&window.addEventListener("aituEvents",function(e){[].concat(s).map(function(n){return n.call(null,e)})});var d,l,c,u=function(e){s.push(e)},f=(d={current:0,next:function(){return++this.current}},l={},c={add:function(e,n){var t=null!=n?n:d.next();return l[t]=e,t},resolve:function(e,n,t,o){var i=l[e];i&&(t(o)?i.resolve(n):i.reject(o),l[e]=null)}},u(function(e){if(e.detail&&"reqId"in e.detail){var n=e.detail,t=n.reqId;t&&c.resolve(t,n.data,function(e){return!e},n.error)}}),function(e,n){return void 0===n&&(n={}),new Promise(function(o,s){!function(e,n,o){void 0===o&&(o={});var s=r&&r[t],d=a&&a[t];i&&i[t]?i[t](e,n,JSON.stringify(o)):s?r[t].postMessage({reqId:e,method:n,data:o}):d?a[t](e,n,o):"undefined"!=typeof window&&console.log("--invoke-isUnknown")}(c.add({resolve:o,reject:s},n.reqId),e,n)})}),p=function(e,n){var t,o,i=(t={current:0,next:function(){return++this.current}},o={},{add:function(e,n){var i="s"+(null!=n?n:t.next());return o[i]=e,i},resolve:function(e,n,t,i){var r=o[e];r&&(t(i)?r.resolve(n):r.reject(i),o[e]=null)}});return n(function(e){if(e.detail&&"reqId"in e.detail){var n=e.detail,t=n.reqId;t&&i.resolve(t,n.data,function(e){return!e},n.error)}}),{setItem:function(n,t){return new Promise(function(o,r){var a=i.add({resolve:o,reject:r});e(a,"setItem",{keyName:n,keyValue:t})})},getItem:function(n){return new Promise(function(t,o){var r=i.add({resolve:t,reject:o});e(r,"getItem",{keyName:n})})},clear:function(){return new Promise(function(n,t){var o=i.add({resolve:n,reject:t});e(o,"clear",{})})}}}(function(e,n,t){void 0===t&&(t={});var s=r&&r[o],d=a&&a[o];i&&i[o]?i[o](e,n,JSON.stringify(t)):s?r[o].postMessage({reqId:e,method:n,data:t}):d?a[o](e,n,t):"undefined"!=typeof window&&console.log("--storage-isUnknown")},u),g=e(function(e){var n=r&&r.getGeo;i&&i.getGeo?i.getGeo(e):n?r.getGeo.postMessage({reqId:e}):"undefined"!=typeof window&&console.log("--getGeo-isWeb")},u),w=e(function(e){var n=r&&r.getQr;i&&i.getQr?i.getQr(e):n?r.getQr.postMessage({reqId:e}):"undefined"!=typeof window&&console.log("--getQr-isWeb")},u),v=e(function(e){var n=r&&r.getSMSCode;i&&i.getSMSCode?i.getSMSCode(e):n?r.getSMSCode.postMessage({reqId:e}):"undefined"!=typeof window&&console.log("--getSMSCode-isWeb")},u),b=e(function(e){var n=r&&r.selectContact;i&&i.selectContact?i.selectContact(e):n?r.selectContact.postMessage({reqId:e}):"undefined"!=typeof window&&console.log("--selectContact-isWeb")},u),y=e(function(e){var n=r&&r.openSettings;i&&i.openSettings?i.openSettings(e):n?r.openSettings.postMessage({reqId:e}):"undefined"!=typeof window&&console.log("--openSettings-isWeb")},u),h=e(function(e){var n=r&&r.closeApplication;i&&i.closeApplication?i.closeApplication(e):n?r.closeApplication.postMessage({reqId:e}):"undefined"!=typeof window&&console.log("--closeApplication-isWeb")},u),S=e(function(e,n){var t=r&&r.share;i&&i.share?i.share(e,n):t?r.share.postMessage({reqId:e,text:n}):"undefined"!=typeof window&&console.log("--share-isWeb")},u),C=e(function(e,n){var t=r&&r.setTitle;i&&i.setTitle?i.setTitle(e,n):t?r.setTitle.postMessage({reqId:e,text:n}):"undefined"!=typeof window&&console.log("--setTitle-isWeb")},u),I=e(function(e,n){var t=r&&r.copyToClipboard;i&&i.copyToClipboard?i.copyToClipboard(e,n):t?r.copyToClipboard.postMessage({reqId:e,text:n}):"undefined"!=typeof window&&console.log("--copyToClipboard-isWeb")},u),M=e(function(e,n,t){var o=i&&i.shareFile,a=r&&r.shareFile,s="image."+t.split(";")[0].split("/")[1],d=t.substr(t.indexOf(",")+1);o?i.shareFile(e,n,s,d):a?r.shareFile.postMessage({reqId:e,text:n,filename:s,base64Data:d}):"undefined"!=typeof window&&console.log("--shareFile-isWeb")},u),m=e(function(e,n,t,o){var a=r&&r.shareFile;i&&i.shareFile?i.shareFile(e,n,t,o):a?r.shareFile.postMessage({reqId:e,text:n,filename:t,base64Data:o}):"undefined"!=typeof window&&console.log("--shareFile-isWeb")},u),q=e(function(e,n){if(!Array.isArray(n)||n.some(function(e){return e<1||e!==Math.floor(e)})||n.reduce(function(e,n){return e+n})>1e4)console.error("Pattern should be an array of positive integers no longer than 10000ms total");else{var t=r&&r.vibrate;i&&i.vibrate?i.vibrate(e,JSON.stringify(n)):t?r.vibrate.postMessage({reqId:e,pattern:n}):"undefined"!=typeof window&&console.log("--vibrate-isWeb")}},u),A=e(function(e){var n=r&&r.enableScreenCapture;i&&i.enableScreenCapture?i.enableScreenCapture(e):n?r.enableScreenCapture.postMessage({reqId:e}):"undefined"!=typeof window&&console.log("--enableScreenCapture-isWeb")},u),T=e(function(e){var n=r&&r.disableScreenCapture;i&&i.disableScreenCapture?i.disableScreenCapture(e):n?r.disableScreenCapture.postMessage({reqId:e}):"undefined"!=typeof window&&console.log("--disableScreenCapture-isWeb")},u);return{copyToClipboard:I,invoke:f,storage:p,getMe:function(){return f(n.getMe)},getPhone:function(){return f(n.getPhone)},getContacts:function(){return f(n.getContacts)},getGeo:g,getQr:w,getSMSCode:v,getUserProfile:function(e){return f(n.getUserProfile,{id:e})},selectContact:b,enableNotifications:function(){return f(n.enableNotifications)},disableNotifications:function(){return f(n.disableNotifications)},openSettings:y,closeApplication:h,setTitle:C,share:S,shareImage:M,shareFile:m,setShakeHandler:function(e){i&&i.setShakeHandler||r&&r.setShakeHandler?window.onAituBridgeShake=e:"undefined"!=typeof window&&console.log("--setShakeHandler-isWeb")},setTabActiveHandler:function(e){i&&i.setTabActiveHandler||r&&r.setTabActiveHandler?window.onAituBridgeTabActive=e:"undefined"!=typeof window&&console.log("--setTabActiveHandler-isWeb")},vibrate:q,isSupported:function(){var e=r&&window.webkit.messageHandlers.invoke;return Boolean(i||e||a)},supports:function(e){return i&&"function"==typeof i[e]||r&&r[e]&&"function"==typeof r[e].postMessage||a&&"function"==typeof a[e]},sub:u,enableScreenCapture:A,disableScreenCapture:T}}();/* harmony default export */ __webpack_exports__["default"] = (d);
+var e;function n(e,n){var t,o,i=(t={current:0,next:function(){return++this.current}},o={},{add:function(e,n){var i=null!=n?n:t.next();return o[i]=e,i},resolve:function(e,n,t,i){var r=o[e];r&&(t(i)?r.resolve(n):r.reject(i),o[e]=null)}});return n(function(e){if(e.detail&&"reqId"in e.detail){var n=e.detail,t=n.reqId;t&&i.resolve(t,n.data,function(e){return!e},n.error)}}),function(){var n=arguments;return new Promise(function(t,o){var r=i.add({resolve:t,reject:o});e.apply(void 0,[r].concat([].slice.call(n)))})}}!function(e){e.getMe="GetMe",e.getPhone="GetPhone",e.getContacts="GetContacts",e.getUserProfile="GetUserProfile",e.enableNotifications="AllowNotifications",e.disableNotifications="DisableNotifications"}(e||(e={}));var t="invoke",o="storage",i="undefined"!=typeof window&&window.AndroidBridge,r="undefined"!=typeof window&&window.webkit&&window.webkit.messageHandlers,a="undefined"!=typeof window&&window.top!==window&&(window.WebBridge=window.WebBridge||{});if(a){var s=window.AITU_ORIGIN||"https://aitu.io";[t,o].forEach(function(e){a[e]||(a[e]=function(){return window.top.postMessage(JSON.stringify({method:e,payload:[].slice.call(arguments)}),s)})}),window.addEventListener("message",function(e){if(e.origin===s&&e.data)try{var n=JSON.parse(e.data);window.dispatchEvent(new CustomEvent("aituEvents",{detail:n}))}catch(e){}})}var d=function(){var s=[];"undefined"!=typeof window&&window.addEventListener("aituEvents",function(e){[].concat(s).map(function(n){return n.call(null,e)})});var d,l,c,u=function(e){s.push(e)},f=(d={current:0,next:function(){return++this.current}},l={},c={add:function(e,n){var t=null!=n?n:d.next();return l[t]=e,t},resolve:function(e,n,t,o){var i=l[e];i&&(t(o)?i.resolve(n):i.reject(o),l[e]=null)}},u(function(e){if(e.detail&&"reqId"in e.detail){var n=e.detail,t=n.reqId;t&&c.resolve(t,n.data,function(e){return!e},n.error)}}),function(e,n){return void 0===n&&(n={}),new Promise(function(o,s){!function(e,n,o){void 0===o&&(o={});var s=r&&r[t],d=a&&a[t];i&&i[t]?i[t](e,n,JSON.stringify(o)):s?r[t].postMessage({reqId:e,method:n,data:o}):d?a[t](e,n,o):"undefined"!=typeof window&&console.log("--invoke-isUnknown")}(c.add({resolve:o,reject:s},n.reqId),e,n)})}),p=function(e,n){var t,o,i=(t={current:0,next:function(){return++this.current}},o={},{add:function(e,n){var i="s"+(null!=n?n:t.next());return o[i]=e,i},resolve:function(e,n,t,i){var r=o[e];r&&(t(i)?r.resolve(n):r.reject(i),o[e]=null)}});return n(function(e){if(e.detail&&"reqId"in e.detail){var n=e.detail,t=n.reqId;t&&i.resolve(t,n.data,function(e){return!e},n.error)}}),{setItem:function(n,t){return new Promise(function(o,r){var a=i.add({resolve:o,reject:r});e(a,"setItem",{keyName:n,keyValue:t})})},getItem:function(n){return new Promise(function(t,o){var r=i.add({resolve:t,reject:o});e(r,"getItem",{keyName:n})})},clear:function(){return new Promise(function(n,t){var o=i.add({resolve:n,reject:t});e(o,"clear",{})})}}}(function(e,n,t){void 0===t&&(t={});var s=r&&r[o],d=a&&a[o];i&&i[o]?i[o](e,n,JSON.stringify(t)):s?r[o].postMessage({reqId:e,method:n,data:t}):d?a[o](e,n,t):"undefined"!=typeof window&&console.log("--storage-isUnknown")},u),g=n(function(e){var n=r&&r.getGeo;i&&i.getGeo?i.getGeo(e):n?r.getGeo.postMessage({reqId:e}):"undefined"!=typeof window&&console.log("--getGeo-isWeb")},u),w=n(function(e){var n=r&&r.getQr;i&&i.getQr?i.getQr(e):n?r.getQr.postMessage({reqId:e}):"undefined"!=typeof window&&console.log("--getQr-isWeb")},u),v=n(function(e){var n=r&&r.getSMSCode;i&&i.getSMSCode?i.getSMSCode(e):n?r.getSMSCode.postMessage({reqId:e}):"undefined"!=typeof window&&console.log("--getSMSCode-isWeb")},u),b=n(function(e){var n=r&&r.selectContact;i&&i.selectContact?i.selectContact(e):n?r.selectContact.postMessage({reqId:e}):"undefined"!=typeof window&&console.log("--selectContact-isWeb")},u),y=n(function(e){var n=r&&r.openSettings;i&&i.openSettings?i.openSettings(e):n?r.openSettings.postMessage({reqId:e}):"undefined"!=typeof window&&console.log("--openSettings-isWeb")},u),S=n(function(e){var n=r&&r.closeApplication;i&&i.closeApplication?i.closeApplication(e):n?r.closeApplication.postMessage({reqId:e}):"undefined"!=typeof window&&console.log("--closeApplication-isWeb")},u),h=n(function(e,n){var t=r&&r.share;i&&i.share?i.share(e,n):t?r.share.postMessage({reqId:e,text:n}):"undefined"!=typeof window&&console.log("--share-isWeb")},u),C=n(function(e,n){var t=r&&r.setTitle;i&&i.setTitle?i.setTitle(e,n):t?r.setTitle.postMessage({reqId:e,text:n}):"undefined"!=typeof window&&console.log("--setTitle-isWeb")},u),I=n(function(e,n){var t=r&&r.copyToClipboard;i&&i.copyToClipboard?i.copyToClipboard(e,n):t?r.copyToClipboard.postMessage({reqId:e,text:n}):"undefined"!=typeof window&&console.log("--copyToClipboard-isWeb")},u),M=n(function(e,n,t){var o=i&&i.shareFile,a=r&&r.shareFile,s="image."+t.split(";")[0].split("/")[1],d=t.substr(t.indexOf(",")+1);o?i.shareFile(e,n,s,d):a?r.shareFile.postMessage({reqId:e,text:n,filename:s,base64Data:d}):"undefined"!=typeof window&&console.log("--shareFile-isWeb")},u),m=n(function(e,n,t,o){var a=r&&r.shareFile;i&&i.shareFile?i.shareFile(e,n,t,o):a?r.shareFile.postMessage({reqId:e,text:n,filename:t,base64Data:o}):"undefined"!=typeof window&&console.log("--shareFile-isWeb")},u),q=n(function(e,n){if(!Array.isArray(n)||n.some(function(e){return e<1||e!==Math.floor(e)})||n.reduce(function(e,n){return e+n})>1e4)console.error("Pattern should be an array of positive integers no longer than 10000ms total");else{var t=r&&r.vibrate;i&&i.vibrate?i.vibrate(e,JSON.stringify(n)):t?r.vibrate.postMessage({reqId:e,pattern:n}):"undefined"!=typeof window&&console.log("--vibrate-isWeb")}},u),A=n(function(e){var n=r&&r.enableScreenCapture;i&&i.enableScreenCapture?i.enableScreenCapture(e):n?r.enableScreenCapture.postMessage({reqId:e}):"undefined"!=typeof window&&console.log("--enableScreenCapture-isWeb")},u),T=n(function(e){var n=r&&r.disableScreenCapture;i&&i.disableScreenCapture?i.disableScreenCapture(e):n?r.disableScreenCapture.postMessage({reqId:e}):"undefined"!=typeof window&&console.log("--disableScreenCapture-isWeb")},u);return{version:String("0.2.13"),copyToClipboard:I,invoke:f,storage:p,getMe:function(){return f(e.getMe)},getPhone:function(){return f(e.getPhone)},getContacts:function(){return f(e.getContacts)},getGeo:g,getQr:w,getSMSCode:v,getUserProfile:function(n){return f(e.getUserProfile,{id:n})},selectContact:b,enableNotifications:function(){return f(e.enableNotifications)},disableNotifications:function(){return f(e.disableNotifications)},openSettings:y,closeApplication:S,setTitle:C,share:h,shareImage:M,shareFile:m,setShakeHandler:function(e){i&&i.setShakeHandler||r&&r.setShakeHandler?window.onAituBridgeShake=e:"undefined"!=typeof window&&console.log("--setShakeHandler-isWeb")},setTabActiveHandler:function(e){i&&i.setTabActiveHandler||r&&r.setTabActiveHandler?window.onAituBridgeTabActive=e:"undefined"!=typeof window&&console.log("--setTabActiveHandler-isWeb")},vibrate:q,isSupported:function(){var e=r&&window.webkit.messageHandlers.invoke;return Boolean(i||e||a)},supports:function(e){return i&&"function"==typeof i[e]||r&&r[e]&&"function"==typeof r[e].postMessage||a&&"function"==typeof a[e]},sub:u,enableScreenCapture:A,disableScreenCapture:T}}();/* harmony default export */ __webpack_exports__["default"] = (d);
 //# sourceMappingURL=index.module.js.map
 
 
@@ -10539,13 +10539,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var react_jss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-jss */ "./node_modules/react-jss/dist/react-jss.esm.js");
-/* harmony import */ var _basedImages__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../basedImages */ "./basedImages/index.js");
+/* harmony import */ var _btsd_aitu_bridge__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @btsd/aitu-bridge */ "./node_modules/@btsd/aitu-bridge/dist/index.module.js");
+/* harmony import */ var _basedImages__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../basedImages */ "./basedImages/index.js");
 
 
 
 
 var _jsxFileName = "/Users/lgordey/BTS/lgordey.github.io/pages/test.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement;
+
 
 
 
@@ -10573,10 +10575,10 @@ var commonParams = {
 };
 var shareParams = {
   textOnly: ['privet ya kakaoi-to straniy text ЛАЛА'],
-  gif: ['Look at this magical present!', _basedImages__WEBPACK_IMPORTED_MODULE_6__["basedGif"]],
-  jpg: ['Look at this silly upside-down cat!', _basedImages__WEBPACK_IMPORTED_MODULE_6__["basedJpg"]],
-  jpgOnly: ['', _basedImages__WEBPACK_IMPORTED_MODULE_6__["basedJpg"]],
-  png: ['Look at this beautiful Earth-in-space wallpaper!', _basedImages__WEBPACK_IMPORTED_MODULE_6__["basedPng"]]
+  gif: ['Look at this magical present!', _basedImages__WEBPACK_IMPORTED_MODULE_7__["basedGif"]],
+  jpg: ['Look at this silly upside-down cat!', _basedImages__WEBPACK_IMPORTED_MODULE_7__["basedJpg"]],
+  jpgOnly: ['', _basedImages__WEBPACK_IMPORTED_MODULE_7__["basedJpg"]],
+  png: ['Look at this beautiful Earth-in-space wallpaper!', _basedImages__WEBPACK_IMPORTED_MODULE_7__["basedPng"]]
 };
 var vibrateParams = {
   once: [[1000]],
@@ -10608,12 +10610,13 @@ function Test(_ref) {
 
   var _useState6 = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])(),
       aituBridge = _useState6[0],
-      setAituBridge = _useState6[1];
+      setAituBridge = _useState6[1]; // const [version, setVersion] = useState('');
+
 
   Object(react__WEBPACK_IMPORTED_MODULE_4__["useEffect"])(function () {
     setUrl(window.location.href);
     window.AITU_ORIGIN = 'http://localhost:3000';
-    setAituBridge(__webpack_require__(/*! @btsd/aitu-bridge */ "./node_modules/@btsd/aitu-bridge/dist/index.module.js")["default"]);
+    setAituBridge(__webpack_require__(/*! @btsd/aitu-bridge */ "./node_modules/@btsd/aitu-bridge/dist/index.module.js")["default"]); // setVersion(require('@btsd/aitu-bridge').version);
   }, []);
   var setShakeHandlerParams = {
     log: [function () {
@@ -10752,47 +10755,53 @@ function Test(_ref) {
     className: classes.testWrapper,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 118
+      lineNumber: 121
     },
     __self: this
-  }, __jsx("a", {
+  }, __jsx("h5", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 122
+    },
+    __self: this
+  }, _btsd_aitu_bridge__WEBPACK_IMPORTED_MODULE_6__["default"].version), __jsx("a", {
     href: "/test2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 119
+      lineNumber: 123
     },
     __self: this
   }, "To test2"), __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 119
+      lineNumber: 123
     },
     __self: this
   }), __jsx("a", {
     href: "/test-share",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 120
+      lineNumber: 124
     },
     __self: this
   }, "To test share"), __jsx("div", {
     className: classes.btnWrapper,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 121
+      lineNumber: 125
     },
     __self: this
   }, __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 121
+      lineNumber: 125
     },
     __self: this
   }, "Current url: ", url)), __jsx("div", {
     className: classes.btnWrapper,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 122
+      lineNumber: 126
     },
     __self: this
   }, __jsx("button", {
@@ -10801,7 +10810,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 123
+      lineNumber: 127
     },
     __self: this
   }, "getMe"), __jsx("button", {
@@ -10810,7 +10819,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 124
+      lineNumber: 128
     },
     __self: this
   }, "getPhone"), __jsx("button", {
@@ -10819,7 +10828,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 125
+      lineNumber: 129
     },
     __self: this
   }, "fakeMethod"), __jsx("button", {
@@ -10828,7 +10837,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 126
+      lineNumber: 130
     },
     __self: this
   }, "getContacts"), __jsx("button", {
@@ -10837,7 +10846,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 127
+      lineNumber: 131
     },
     __self: this
   }, "getGeo"), __jsx("button", {
@@ -10846,7 +10855,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 128
+      lineNumber: 132
     },
     __self: this
   }, "getQr"), __jsx("button", {
@@ -10855,7 +10864,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 129
+      lineNumber: 133
     },
     __self: this
   }, "getSMSCode"), __jsx("button", {
@@ -10866,7 +10875,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 130
+      lineNumber: 134
     },
     __self: this
   }, "getUserProfile (prod)"), __jsx("button", {
@@ -10877,7 +10886,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 131
+      lineNumber: 135
     },
     __self: this
   }, "getUserProfile (dev)"), __jsx("button", {
@@ -10886,7 +10895,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 132
+      lineNumber: 136
     },
     __self: this
   }, "openSettings"), __jsx("button", {
@@ -10895,7 +10904,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 133
+      lineNumber: 137
     },
     __self: this
   }, "selectContact"), __jsx("button", {
@@ -10904,7 +10913,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 134
+      lineNumber: 138
     },
     __self: this
   }, "setTitle"), __jsx("button", {
@@ -10913,14 +10922,14 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 135
+      lineNumber: 139
     },
     __self: this
   }, "closeApplication")), __jsx("div", {
     className: classes.btnWrapper,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 137
+      lineNumber: 141
     },
     __self: this
   }, __jsx("button", {
@@ -10929,7 +10938,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 138
+      lineNumber: 142
     },
     __self: this
   }, "copyToClipboard"), __jsx("button", {
@@ -10938,7 +10947,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 139
+      lineNumber: 143
     },
     __self: this
   }, "share text"), __jsx("button", {
@@ -10947,7 +10956,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 140
+      lineNumber: 144
     },
     __self: this
   }, "shareImage jpg"), __jsx("button", {
@@ -10956,7 +10965,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 141
+      lineNumber: 145
     },
     __self: this
   }, "shareImage gif"), __jsx("button", {
@@ -10965,7 +10974,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 142
+      lineNumber: 146
     },
     __self: this
   }, "shareImage png"), __jsx("button", {
@@ -10974,14 +10983,14 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 143
+      lineNumber: 147
     },
     __self: this
   }, "shareImage jpg w/o caption")), __jsx("div", {
     className: classes.btnWrapper,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 145
+      lineNumber: 149
     },
     __self: this
   }, __jsx("button", {
@@ -10990,7 +10999,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 146
+      lineNumber: 150
     },
     __self: this
   }, "vibrate once"), __jsx("button", {
@@ -10999,7 +11008,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 147
+      lineNumber: 151
     },
     __self: this
   }, "vibrate march"), __jsx("button", {
@@ -11008,7 +11017,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 148
+      lineNumber: 152
     },
     __self: this
   }, "enable log on shake"), __jsx("button", {
@@ -11017,7 +11026,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 149
+      lineNumber: 153
     },
     __self: this
   }, "disable log on shake"), __jsx("button", {
@@ -11026,35 +11035,10 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 150
-    },
-    __self: this
-  }, "enable log on tab click")), __jsx("div", {
-    className: classes.btnWrapper,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 152
-    },
-    __self: this
-  }, __jsx("button", {
-    onClick: function onClick() {
-      return handleMethod('enableNotifications');
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 153
-    },
-    __self: this
-  }, "enableNotifications"), __jsx("button", {
-    onClick: function onClick() {
-      return handleMethod('disableNotifications');
-    },
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 154
     },
     __self: this
-  }, "disableNotifications")), __jsx("div", {
+  }, "enable log on tab click")), __jsx("div", {
     className: classes.btnWrapper,
     __source: {
       fileName: _jsxFileName,
@@ -11063,11 +11047,36 @@ function Test(_ref) {
     __self: this
   }, __jsx("button", {
     onClick: function onClick() {
-      return handleMethod('enableScreenCapture');
+      return handleMethod('enableNotifications');
     },
     __source: {
       fileName: _jsxFileName,
       lineNumber: 157
+    },
+    __self: this
+  }, "enableNotifications"), __jsx("button", {
+    onClick: function onClick() {
+      return handleMethod('disableNotifications');
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 158
+    },
+    __self: this
+  }, "disableNotifications")), __jsx("div", {
+    className: classes.btnWrapper,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 160
+    },
+    __self: this
+  }, __jsx("button", {
+    onClick: function onClick() {
+      return handleMethod('enableScreenCapture');
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 161
     },
     __self: this
   }, "enableScreenCapture"), __jsx("button", {
@@ -11076,35 +11085,35 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 158
+      lineNumber: 162
     },
     __self: this
   }, "disableScreenCapture")), __jsx("div", {
     className: classes.btnWrapper,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 160
+      lineNumber: 164
     },
     __self: this
   }, __jsx("a", {
     href: "/javascriptquestions.pdf",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 161
+      lineNumber: 165
     },
     __self: this
   }, "PDF Link"), __jsx("a", {
     href: "https://i2.app.link/rNwc1ePWheb?promocode=ABCDE",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 162
+      lineNumber: 166
     },
     __self: this
   }, "Contest mini-app"), __jsx("a", {
     href: "https://i2.app.link/open_chat_with?user_id=a92a86e7-e677-11e8-89fc-5a93b0f4e028",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 163
+      lineNumber: 167
     },
     __self: this
   }, "DeepLink Open Chat")), __jsx("div", {
@@ -11113,13 +11122,13 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 165
+      lineNumber: 169
     },
     __self: this
   }, __jsx("b", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 166
+      lineNumber: 170
     },
     __self: this
   }, "Errors:"), errors.map(function (errMessage, i) {
@@ -11127,7 +11136,7 @@ function Test(_ref) {
       key: i + errMessage,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 168
+        lineNumber: 172
       },
       __self: this
     }, errMessage);
@@ -11138,7 +11147,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 171
+      lineNumber: 175
     },
     __self: this
   }, __jsx("div", {
@@ -11147,7 +11156,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 172
+      lineNumber: 176
     },
     __self: this
   }, __jsx("b", {
@@ -11156,7 +11165,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 173
+      lineNumber: 177
     },
     __self: this
   }, "Invoked methods:"), calledMethods.map(function (method, i) {
@@ -11164,7 +11173,7 @@ function Test(_ref) {
       key: i + method,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 176
+        lineNumber: 180
       },
       __self: this
     }, i + 1 + ') ', method);
@@ -11174,7 +11183,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 180
+      lineNumber: 184
     },
     __self: this
   }, __jsx("b", {
@@ -11183,7 +11192,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 181
+      lineNumber: 185
     },
     __self: this
   }, "Received data:"), receivedData && receivedData.map(function (data, i) {
@@ -11191,7 +11200,7 @@ function Test(_ref) {
       key: i + data,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 184
+        lineNumber: 188
       },
       __self: this
     }, i + 1 + '. ', data);
@@ -11201,7 +11210,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 188
+      lineNumber: 192
     },
     __self: this
   }, __jsx("b", {
@@ -11210,7 +11219,7 @@ function Test(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 189
+      lineNumber: 193
     },
     __self: this
   }, "Received errors:"), receivedError && receivedError.map(function (error, i) {
@@ -11218,7 +11227,7 @@ function Test(_ref) {
       key: i + error,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 192
+        lineNumber: 196
       },
       __self: this
     }, i + 1 + '. ', error);
@@ -11229,7 +11238,7 @@ function Test(_ref) {
 
 /***/ }),
 
-/***/ 3:
+/***/ 0:
 /*!***********************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Ftest&absolutePagePath=%2FUsers%2Flgordey%2FBTS%2Flgordey.github.io%2Fpages%2Ftest.js ***!
   \***********************************************************************************************************************************/
@@ -11252,5 +11261,5 @@ module.exports = dll_b35e09dc2ca94ac6d9c1;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js"]]]);
+},[[0,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=test.js.map
