@@ -492,4 +492,4 @@ var FullCalendar = /** @class */ (function (_super) {
 /***/ })
 
 })
-//# sourceMappingURL=calendar.js.e40543d1a893638e88d8.hot-update.js.map
+//# sourceMappingURL=calendar.js.afcd2b323b8f9f294445.hot-update.js.map

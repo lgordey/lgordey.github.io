@@ -16619,7 +16619,8 @@ function (_React$Component) {
       return __jsx("div", {
         style: {
           maxWidth: 1000,
-          margin: '0 auto'
+          margin: '0 auto',
+          background: '#fff'
         },
         __source: {
           fileName: _jsxFileName,
