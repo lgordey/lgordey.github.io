@@ -7,7 +7,7 @@ import listPlugin from '@fullcalendar/list';
 export default class DemoApp extends React.Component {
   render() {
     return (
-      <div style={{ maxWidth: 1000, margin: '0 auto' }}>
+      <div style={{ maxWidth: 1000, margin: '0 auto', background: '#fff' }}>
         <FullCalendar
           plugins={[ dayGridPlugin, timeGridPlugin, listPlugin ]}
           initialView="dayGridMonth"
