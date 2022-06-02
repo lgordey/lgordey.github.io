@@ -297,13 +297,7 @@ const styles = {
     marginTop: 10,
     overflow: 'hidden'
   },
-  scheduleContent: {
-    '$scheduleSpeaker &': {
-      fontWeight: 600,
-      marginTop: 15,
-      lineHeight: '24px'
-    }
-  },
+  scheduleContent: {},
   scheduleTalkContent: {
     fontSize: 16,
     marginTop: 10,
@@ -422,7 +416,13 @@ const styles = {
       }
     },
     scheduleSpeaker: {
-      width: '100%'
+      width: '100%',
+      '& + div $scheduleContent': {
+        fontWeight: 600,
+        marginTop: 20,
+        marginBottom: 12,
+        lineHeight: '24px'
+      }
     },
     scheduleTime: {
       width: 110
@@ -679,17 +679,41 @@ function App({
       lineNumber: 582
     },
     __self: this
-  }), "\u0432\xA0\u041D\u0443\u0440-\u0421\u0443\u043B\u0442\u0430\u043D\u0435."), __jsx("div", {
+  }), "\u0432\xA0\u041D\u0443\u0440-\u0421\u0443\u043B\u0442\u0430\u043D\u0435.", __jsx("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 582
+    },
+    __self: this
+  }), __jsx("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 582
+    },
+    __self: this
+  }), "8 \u0438\u044E\u043D\u044F", __jsx("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 583
+    },
+    __self: this
+  }), "18:00", __jsx("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 583
+    },
+    __self: this
+  }), "Astana Hub"), __jsx("div", {
     className: "Main",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 584
+      lineNumber: 585
     },
     __self: this
   }, __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 585
+      lineNumber: 586
     },
     __self: this
   }, __jsx(rc_collapse__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -701,7 +725,7 @@ function App({
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 586
+      lineNumber: 587
     },
     __self: this
   }, __jsx(rc_collapse__WEBPACK_IMPORTED_MODULE_5__["Panel"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
@@ -709,19 +733,19 @@ function App({
   }, panelProps, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 594
+      lineNumber: 595
     },
     __self: this
   }), __jsx("b", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 595
+      lineNumber: 596
     },
     __self: this
   }, "8 \u0438\u044E\u043D\u044F"), " \u043C\u0438\u0442\u0430\u043F (\u0438\u043B\u0438 \u043A\u043E\u043D\u0444\u0435\u0440\u0435\u043D\u0446\u0438\u044F?) ", __jsx("b", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 595
+      lineNumber: 596
     },
     __self: this
   }, "AstanaJS"), " \u043F\u0440\u0438\u0433\u043B\u0430\u0448\u0430\u0435\u0442 \u0432\u0441\u0435\u0445, \u043A\u0442\u043E \u043F\u0438\u0448\u0435\u0442 \u043D\u0430 JavaScript. \u0410 \u0442\u0430\u043A\u0436\u0435 \u0432\u0441\u0435\u0445, \u043A\u043E\u043C\u0443 \u0438\u043D\u0442\u0435\u0440\u0435\u0441\u043D\u043E \u0443\u0437\u043D\u0430\u0442\u044C \u0431\u043E\u043B\u044C\u0448\u0435 \u043E frontend-\u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0435 \u2014 \u0431\u044D\u043A\u0435\u043D\u0434\u0435\u0440\u043E\u0432, \u0442\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0449\u0438\u043A\u043E\u0432, \u0434\u0438\u0437\u0430\u0439\u043D\u0435\u0440\u043E\u0432, \u043C\u0435\u043D\u0435\u0434\u0436\u0435\u0440\u043E\u0432, \u0438 \u0441\u0442\u0443\u0434\u0435\u043D\u0442\u043E\u0432, \u043A\u043E\u0442\u043E\u0440\u044B\u0435 \u043F\u043B\u0430\u043D\u0438\u0440\u0443\u044E\u0442 \u043A\u0430\u0440\u044C\u0435\u0440\u0443 \u0432 IT.", __jsx("div", {
@@ -731,7 +755,7 @@ function App({
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 596
+      lineNumber: 597
     },
     __self: this
   }, "\u044F\u0441\u043D\u043E")), __jsx(rc_collapse__WEBPACK_IMPORTED_MODULE_5__["Panel"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
@@ -739,31 +763,31 @@ function App({
   }, panelProps, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 598
+      lineNumber: 599
     },
     __self: this
   }), "\u041D\u0435\u0442! \u042D\u0442\u043E \u0443\u0436\u0435 ", __jsx("b", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 599
+      lineNumber: 600
     },
     __self: this
   }, "5-\u043E\u0435"), " \u043F\u043E \u0441\u0447\u0435\u0442\u0443 \u0441\u043E\u0431\u044B\u0442\u0438\u0435 ", __jsx("b", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 599
+      lineNumber: 600
     },
     __self: this
   }, "AstanaJS"), "!", __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 599
+      lineNumber: 600
     },
     __self: this
   }), "\u041A\u0430\u043A \u044D\u0442\u043E \u0431\u044B\u043B\u043E:", __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 600
+      lineNumber: 601
     },
     __self: this
   }), "- ", __jsx("a", {
@@ -772,13 +796,13 @@ function App({
     href: "https://www.facebook.com/events/304756690289447/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 601
+      lineNumber: 602
     },
     __self: this
   }, "AstanaJS #1"), " ", __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 601
+      lineNumber: 602
     },
     __self: this
   }), "- ", __jsx("a", {
@@ -787,13 +811,13 @@ function App({
     href: "https://www.facebook.com/events/2116889328332193/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 602
+      lineNumber: 603
     },
     __self: this
   }, "AstanaJS #2 "), "  ", __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 602
+      lineNumber: 603
     },
     __self: this
   }), "- ", __jsx("a", {
@@ -802,13 +826,13 @@ function App({
     href: "https://www.facebook.com/events/450018115541840/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 603
+      lineNumber: 604
     },
     __self: this
   }, "AstanaJS #3 "), " ", __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 603
+      lineNumber: 604
     },
     __self: this
   }), "- ", __jsx("a", {
@@ -817,7 +841,7 @@ function App({
     href: "/2019",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 604
+      lineNumber: 605
     },
     __self: this
   }, "AstanaJS #4 "), __jsx("div", {
@@ -827,7 +851,7 @@ function App({
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 605
+      lineNumber: 606
     },
     __self: this
   }, "\u044F\u0441\u043D\u043E")), __jsx(rc_collapse__WEBPACK_IMPORTED_MODULE_5__["Panel"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
@@ -835,14 +859,14 @@ function App({
   }, panelProps, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 607
+      lineNumber: 608
     },
     __self: this
   }), __jsx("div", {
     className: classes.speakers,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 608
+      lineNumber: 609
     },
     __self: this
   }, speakers.map(({
@@ -855,14 +879,14 @@ function App({
       key: name,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 612
+        lineNumber: 613
       },
       __self: this
     }, __jsx("div", {
       className: classes.outerImage,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 613
+        lineNumber: 614
       },
       __self: this
     }, __jsx("div", {
@@ -874,28 +898,28 @@ function App({
       className: classes.speakerImage,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 614
+        lineNumber: 615
       },
       __self: this
     })), __jsx("div", {
       className: classes.speakerText,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 618
+        lineNumber: 619
       },
       __self: this
     }, __jsx("div", {
       className: classes.speakerName,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 619
+        lineNumber: 620
       },
       __self: this
     }, name), __jsx("div", {
       className: classes.speakerDesc,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 620
+        lineNumber: 621
       },
       __self: this
     }, desc)));
@@ -906,7 +930,7 @@ function App({
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 627
+      lineNumber: 628
     },
     __self: this
   }, "\u043F\u043E\u043D\u044F\u043B")), __jsx(rc_collapse__WEBPACK_IMPORTED_MODULE_5__["Panel"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
@@ -914,14 +938,14 @@ function App({
   }, panelProps, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 629
+      lineNumber: 630
     },
     __self: this
   }), __jsx("div", {
     className: classes.schedule,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 630
+      lineNumber: 631
     },
     __self: this
   }, schedule.map(({
@@ -934,34 +958,34 @@ function App({
       key: time,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 634
+        lineNumber: 635
       },
       __self: this
     }, __jsx("div", {
       className: classes.scheduleTime,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 635
+        lineNumber: 636
       },
       __self: this
     }, time), speaker && __jsx("div", {
       className: classes.scheduleSpeaker,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 638
+        lineNumber: 639
       },
       __self: this
     }, __jsx("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 639
+        lineNumber: 640
       },
       __self: this
     }, speaker.name), __jsx("div", {
       className: classes.scheduleSpeakerImage,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 640
+        lineNumber: 641
       },
       __self: this
     }, __jsx("div", {
@@ -973,35 +997,35 @@ function App({
       className: classes.speakerImage,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 641
+        lineNumber: 642
       },
       __self: this
     }))), speaker ? __jsx("div", {
       className: classes.scheduleSpearkerWrapper,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 650
+        lineNumber: 651
       },
       __self: this
     }, __jsx("div", {
       className: classes.scheduleContent,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 651
+        lineNumber: 652
       },
       __self: this
     }, speaker.talkTitle), __jsx("div", {
       className: classes.scheduleTalkContent,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 652
+        lineNumber: 653
       },
       __self: this
     }, speaker.talkContent)) : __jsx("div", {
       className: classes.scheduleContent,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 654
+        lineNumber: 655
       },
       __self: this
     }, content));
@@ -1012,7 +1036,7 @@ function App({
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 661
+      lineNumber: 662
     },
     __self: this
   }, "\u043E\u043A-\u043E\u043A")), __jsx(rc_collapse__WEBPACK_IMPORTED_MODULE_5__["Panel"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
@@ -1020,60 +1044,60 @@ function App({
   }, panelProps, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 663
+      lineNumber: 664
     },
     __self: this
   }), __jsx("div", {
     className: classes.where,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 664
+      lineNumber: 665
     },
     __self: this
   }, __jsx("div", {
     className: classes.map,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 665
+      lineNumber: 666
     },
     __self: this
   }), __jsx("div", {
     className: classes.place,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 666
+      lineNumber: 667
     },
     __self: this
   }, __jsx("div", {
     className: classes.placeName,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 667
+      lineNumber: 668
     },
     __self: this
   }, "\u0410stana Hub"), __jsx("div", {
     className: classes.placeDesc,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 668
+      lineNumber: 669
     },
     __self: this
   }, "\u041C\u0438\u0442\u0430\u043F \u043F\u0440\u043E\u0439\u0434\u0435\u0442 \u043D\u0430 \u043F\u0435\u0440\u0432\u043E\u043C \u044D\u0442\u0430\u0436\u0435 \u043C\u0435\u0436\u0434\u0443\u043D\u0430\u0440\u043E\u0434\u043D\u043E\u0433\u043E \u0442\u0435\u0445\u043D\u043E\u043F\u0430\u0440\u043A\u0430 IT-\u0441\u0442\u0430\u0440\u0442\u0430\u043F\u043E\u0432  Astana Hub \u0432 \u0440\u0430\u0439\u043E\u043D\u0435 \u042D\u043A\u0441\u043F\u043E.", __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 669
+      lineNumber: 670
     },
     __self: this
   }), "\u0422\u043E\u0447\u043D\u044B\u0439 \u0430\u0434\u0440\u0435\u0441: \u0433. \u041D\u0443\u0440-\u0421\u0443\u043B\u0442\u0430\u043D, \u041C\u04D9\u04A3\u0433\u0456\u043B\u0456\u043A \u0415\u043B \u043F\u0440\u043E\u0441\u043F\u0435\u043A\u0442, \u04214.6", __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 671
+      lineNumber: 672
     },
     __self: this
   }), __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 671
+      lineNumber: 672
     },
     __self: this
   }), "2gis: ", __jsx("a", {
@@ -1082,7 +1106,7 @@ function App({
     rel: "noopener noreferrer",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 671
+      lineNumber: 672
     },
     __self: this
   }, "https://go.2gis.com/1a5of")))), __jsx("div", {
@@ -1092,7 +1116,7 @@ function App({
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 675
+      lineNumber: 676
     },
     __self: this
   }, "\u0433\u043E\u0434\u0438\u0442\u0441\u044F")), __jsx(rc_collapse__WEBPACK_IMPORTED_MODULE_5__["Panel"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
@@ -1100,13 +1124,13 @@ function App({
   }, panelProps, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 677
+      lineNumber: 678
     },
     __self: this
   }), __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 678
+      lineNumber: 679
     },
     __self: this
   }, "8 \u0438\u044E\u043D\u044F 2022 (\u0441\u0440\u0435\u0434\u0430) \u0432 18:00"), __jsx("div", {
@@ -1116,7 +1140,7 @@ function App({
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 681
+      lineNumber: 682
     },
     __self: this
   }, "\u0430\u0433\u0430")), __jsx(rc_collapse__WEBPACK_IMPORTED_MODULE_5__["Panel"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
@@ -1124,13 +1148,13 @@ function App({
   }, panelProps, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 683
+      lineNumber: 684
     },
     __self: this
   }), __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 684
+      lineNumber: 685
     },
     __self: this
   }, "\u0411\u043B\u0430\u0433\u043E\u0434\u0430\u0440\u044F \u043D\u0430\u0448\u0435\u043C\u0443 \u043F\u0430\u0440\u0442\u043D\u0435\u0440\u0443 BTS Digital \u0443\u0447\u0430\u0441\u0442\u0438\u0435 \u0432 \u043C\u0438\u0442\u0430\u043F\u0435 \u044F\u0432\u043B\u044F\u0435\u0442\u0441\u044F \u0431\u0435\u0441\u043F\u043B\u0430\u0442\u043D\u044B\u043C. \u041F\u0440\u043E\u0441\u0442\u043E \u0437\u0430\u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0438\u0440\u0443\u0439\u0442\u0435\u0441\u044C \u0438 \u043F\u0440\u0438\u0445\u043E\u0434\u0438\u0442\u0435."), __jsx("a", {
@@ -1140,7 +1164,7 @@ function App({
     className: classes.participate,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 687
+      lineNumber: 688
     },
     __self: this
   }, "\u044F \u0432 \u0434\u0435\u043B\u0435, \u0443\u0447\u0430\u0441\u0442\u0432\u0443\u044E!"), __jsx("div", {
@@ -1150,21 +1174,21 @@ function App({
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 693
+      lineNumber: 694
     },
     __self: this
   }, "\u0447\u0443\u0434\u043D\u0435\u043D\u044C\u043A\u043E"))))), __jsx("div", {
     className: classes.footer,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 698
+      lineNumber: 699
     },
     __self: this
   }, __jsx("div", {
     className: classes.footerItem,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 699
+      lineNumber: 700
     },
     __self: this
   }, __jsx("a", {
@@ -1174,7 +1198,7 @@ function App({
     rel: "noopener noreferrer",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 700
+      lineNumber: 701
     },
     __self: this
   }, "AstanaJS @ Facebook"))));
@@ -1185,4 +1209,4 @@ function App({
 /***/ })
 
 })
-//# sourceMappingURL=index.js.6a83958cc784747c0f35.hot-update.js.map
+//# sourceMappingURL=index.js.3c27f5818a3d5de89332.hot-update.js.map
