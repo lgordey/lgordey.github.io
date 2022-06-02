@@ -579,7 +579,8 @@ function App({ classes }) {
         </div>
       </div>
       <div className={classes.mainText}>
-        Вместе мы&nbsp;делаем еще один шаг к&nbsp;становлению frontend сообщества <br/>в&nbsp;Нур-Султане.
+        Вместе мы&nbsp;делаем еще один шаг к&nbsp;становлению frontend сообщества <br/>в&nbsp;Нур-Султане.<br /><br />
+        8 июня<br />18:00<br />Astana Hub
       </div>
       <div className="Main">
         <div>
