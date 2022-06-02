@@ -401,6 +401,12 @@ const styles = {
     },
     scheduleSpeaker: {
       width: '100%',
+      '& + div $scheduleContent': {
+        fontWeight: 600,
+        marginTop: 20,
+        marginBottom: 12,
+        lineHeight: '24px'
+      }
     },
     scheduleTime: {
       width: 110
