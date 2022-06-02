@@ -460,8 +460,8 @@ const speakers = [
   {
     name: 'Мусабек Коков',
     desc: 'Нальчик, Farzoom',
-    talkTitle: 'TBD...',
-    talkContent: 'TBD...',
+    talkTitle: 'Погоня за технологиями или как ничего сделать',
+    talkContent: 'Многие считают, что хороший продукт - это набор современных технологических стеков и модных подходов в разработке.\n\n\При этом у бизнеса зачастую свои цели, не требующие сложных технических решений.\n\nВ своём докладе Мусабек Коков постарается раскрыть, почему важно выбирать оптимальные инструменты для каждого конкретного бизнес кейса.',
     img: speaker2
   },
   {
@@ -555,7 +555,7 @@ function App({ classes }) {
             <IconJS />
           </div>
         </div>
-        <div className={classes.powered}>
+        <div className={classes.powered} onClick={() => {window.open('https://btsdigital.kz', '_blank')}}>
           <div className={classes.poweredText}>
             Powered by
           </div>
