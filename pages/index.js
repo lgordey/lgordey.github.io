@@ -147,6 +147,13 @@ const styles = {
     bottom: -2
   },
   registrationWrapper: {},
+  registrationMobileWrapper: {
+    display: 'none',
+    marginTop: 20,
+    '& > a': {
+      width: '100%'
+    }
+  },
   collapse: {
     background: yellow,
     border: 'none'
@@ -363,6 +370,9 @@ const styles = {
     registrationWrapper: {
       display: 'none'
     },
+    registrationMobileWrapper: {
+      display: 'block'
+    },
     outerImage: {
       width: 280,
       height: 280,
@@ -577,6 +587,14 @@ function App({ classes }) {
             className={classes.registration}
           >зарегистрироваться</a>
         </div>
+      </div>
+      <div className={classes.registrationMobileWrapper}>
+        <a
+          href="https://forms.gle/3m1jeprW16ymiG9V8"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={classes.registration}
+        >зарегистрироваться</a>
       </div>
       <div className={classes.mainText}>
         Вместе мы&nbsp;делаем еще один шаг к&nbsp;становлению frontend сообщества <br/>в&nbsp;Нур-Султане.<br /><br />
