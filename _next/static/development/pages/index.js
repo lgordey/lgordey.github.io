@@ -13114,7 +13114,7 @@ const styles = {
   registrationMobileWrapper: {
     display: 'none',
     marginTop: 20,
-    '& > a': {
+    '& $registration': {
       width: '100%'
     }
   },

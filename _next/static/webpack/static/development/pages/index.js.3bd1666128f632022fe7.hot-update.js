@@ -166,7 +166,7 @@ const styles = {
   registrationMobileWrapper: {
     display: 'none',
     marginTop: 20,
-    '& > a': {
+    '& $registration': {
       width: '100%'
     }
   },
@@ -1236,4 +1236,4 @@ function App({
 /***/ })
 
 })
-//# sourceMappingURL=index.js.69bfaacf721903e15ed3.hot-update.js.map
+//# sourceMappingURL=index.js.3bd1666128f632022fe7.hot-update.js.map
